@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Builds report/data.js from data/*.csv.
+Builds data.js from data/*.csv.
 
 Every series in the report is derived here so the HTML contains no hand-typed
 figures. Selections (which rows feed which chart) are explicit and auditable;
@@ -15,7 +15,7 @@ from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-OUT  = os.path.join(ROOT, "report", "data.js")
+OUT  = os.path.join(ROOT, "data.js")
 
 def read(name):
     with open(os.path.join(DATA, name), encoding="utf-8-sig") as f:

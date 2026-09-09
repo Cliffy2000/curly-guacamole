@@ -2,7 +2,7 @@
    Every figure is read from data/*.csv. Re-run the script after any data change. */
 window.REPORT_DATA = {
  "meta": {
-  "generated": "2026-09-09 21:12",
+  "generated": "2026-09-09 22:46",
   "products_total": 241,
   "products_collab": 231,
   "products_base": 10,
