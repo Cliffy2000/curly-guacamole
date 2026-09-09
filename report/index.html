@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联名耳机市场调查报告 · 日本／中国 · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="data.js"></script>
+<style>
+:root{
+  --abyss:#04070D;
+  --deep:#080E19;
+  --deep2:#0B1524;
+  --ocean1:#0F2438;
+  --ocean2:#16405C;
+  --ocean3:#1F6E8C;
+  --wave:#3D8FB0;
+  --foam:#7FB6CE;
+  --silver:#C5D3DE;
+  --moon:#EDF2F7;
+  --moonglow:#F3ECD8;
+  --gray:#7D8A97;
+  --dim:#5A6672;
+  --hair:rgba(197,211,222,0.13);
+  --hair2:rgba(197,211,222,0.07);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",SimSun,serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --display:"Cormorant Garamond",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;padding:0;
+  background:var(--abyss);
+  color:var(--silver);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* ---------- moonrise backdrop ---------- */
+.sky{position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 42% at 50% 6%, rgba(243,236,216,0.16) 0%, rgba(127,182,206,0.09) 26%, rgba(31,110,140,0.05) 46%, rgba(4,7,13,0) 68%),
+    radial-gradient(ellipse 120% 70% at 50% 100%, #0B1524 0%, #04070D 70%),
+    linear-gradient(#04070D,#060A12 40%,#04070D);
+}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5}
+.moon{position:absolute;top:78px;left:50%;transform:translateX(-50%);
+  width:104px;height:104px;border-radius:50%;
+  background:radial-gradient(circle at 36% 32%, #FFFDF6 0%, #FAF4E2 34%, #EFE6CC 62%, #D6CCB0 86%, #BDB49A 100%);
+  box-shadow:
+    0 0 0 1px rgba(255,253,246,.55),
+    0 0 26px 6px rgba(250,244,226,.55),
+    0 0 70px 22px rgba(243,236,216,.30),
+    0 0 150px 60px rgba(160,200,222,.16),
+    0 0 260px 110px rgba(31,110,140,.10);
+  z-index:-1}
+/* moon glare + reflection on the water */
+.moon::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);
+  width:120px;height:600px;
+  background:linear-gradient(180deg,rgba(250,244,226,.20) 0%,rgba(243,236,216,.10) 14%,
+    rgba(160,200,222,.05) 40%,rgba(4,7,13,0) 78%);
+  filter:blur(10px);pointer-events:none}
+/* the horizon the moon is rising over */
+.horizon-band{position:absolute;left:0;right:0;top:236px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(127,182,206,.05) 10%,
+    rgba(197,211,222,.22) 50%,rgba(127,182,206,.05) 90%,transparent);z-index:-1}
+.horizon-band::after{content:"";position:absolute;left:0;right:0;top:1px;height:200px;
+  background:linear-gradient(180deg,rgba(31,110,140,.10),rgba(4,7,13,0));}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px 140px}
+/* ---------- masthead ---------- */
+header.mast{padding:250px 0 74px;text-align:center;position:relative}
+.kicker{font-family:var(--display);font-size:15px;letter-spacing:.42em;text-transform:uppercase;color:var(--foam);opacity:.82;margin-bottom:30px}
+h1.title{font-family:var(--serif);font-weight:600;font-size:60px;line-height:1.24;letter-spacing:.055em;color:var(--moon);margin:0 0 22px;
+  text-shadow:0 0 46px rgba(243,236,216,.14)}
+.subtitle{font-family:var(--serif);font-size:19px;font-weight:300;color:var(--foam);letter-spacing:.18em;margin-bottom:40px}
+.mast-meta{display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:44px;
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:22px 0}
+.mast-meta div{padding:0 30px;border-right:1px solid var(--hair2);font-size:12.5px;letter-spacing:.12em;color:var(--gray)}
+.mast-meta div:last-child{border-right:none}
+.mast-meta b{display:block;font-family:var(--serif);font-size:23px;font-weight:600;color:var(--moon);letter-spacing:.02em;margin-bottom:2px}
+/* ---------- horizon rule ---------- */
+.horizon{height:1px;margin:96px 0 78px;position:relative;
+  background:linear-gradient(90deg,transparent,rgba(127,182,206,.06) 12%,rgba(197,211,222,.34) 50%,rgba(127,182,206,.06) 88%,transparent)}
+.horizon::after{content:"";position:absolute;left:50%;top:-3.5px;transform:translateX(-50%);
+  width:7px;height:7px;border-radius:50%;background:var(--moonglow);box-shadow:0 0 16px 4px rgba(243,236,216,.5)}
+/* ---------- sections ---------- */
+section{margin:0 0 30px;scroll-margin-top:28px}
+.sec-head{display:flex;align-items:flex-start;gap:26px;margin-bottom:14px}
+.sec-num{font-family:var(--display);font-size:74px;line-height:.82;font-weight:300;color:var(--ocean3);opacity:.62;min-width:96px;letter-spacing:-.02em}
+.sec-t{padding-top:8px}
+h2{font-family:var(--serif);font-weight:600;font-size:33px;letter-spacing:.05em;color:var(--moon);margin:0 0 8px;line-height:1.35}
+.sec-sub{font-size:13px;letter-spacing:.2em;color:var(--foam);opacity:.78;text-transform:uppercase;font-family:var(--display)}
+h3{font-family:var(--serif);font-weight:600;font-size:20.5px;letter-spacing:.05em;color:var(--moon);
+  margin:56px 0 16px;padding-bottom:11px;border-bottom:1px solid var(--hair)}
+h4{font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.06em;color:var(--foam);margin:34px 0 10px}
+p{margin:0 0 19px;font-size:15.2px;color:var(--silver);letter-spacing:.02em}
+p.lead{font-size:17.5px;color:var(--moon);font-family:var(--serif);font-weight:300;line-height:1.95;letter-spacing:.035em}
+em{color:var(--moon);font-style:normal;border-bottom:1px solid rgba(127,182,206,.42);padding-bottom:1px}
+strong{color:var(--moon);font-weight:500}
+a{color:var(--foam);text-decoration:none;border-bottom:1px dotted rgba(127,182,206,.4)}
+/* ---------- components ---------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:linear-gradient(160deg,rgba(22,64,92,.20),rgba(8,14,25,.55));
+  border:1px solid var(--hair);border-radius:3px;padding:24px 26px}
+.stat{text-align:left}
+.stat .n{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--moon);line-height:1.15;letter-spacing:.01em}
+.stat .n small{font-size:15px;font-weight:400;color:var(--foam);letter-spacing:.06em}
+.stat .l{font-size:12.5px;color:var(--gray);letter-spacing:.1em;margin-top:9px;line-height:1.6}
+.pull{border-left:2px solid var(--ocean3);padding:6px 0 6px 26px;margin:34px 0;
+  font-family:var(--serif);font-size:19px;line-height:1.9;color:var(--moon);font-weight:300;letter-spacing:.035em}
+.note{font-size:12.5px;color:var(--dim);letter-spacing:.05em;line-height:1.75;margin-top:12px}
+.note b{color:var(--gray);font-weight:500}
+.warn{border:1px solid rgba(243,236,216,.20);background:rgba(243,236,216,.035);
+  border-radius:3px;padding:17px 21px;margin:24px 0;font-size:13.6px;color:var(--silver);line-height:1.8}
+.warn .tag{display:inline-block;font-family:var(--display);font-size:10.5px;letter-spacing:.24em;
+  color:var(--moonglow);text-transform:uppercase;margin-right:11px;opacity:.9}
+.chart{margin:26px 0 8px}
+.chart-t{font-family:var(--serif);font-size:14.5px;color:var(--moon);letter-spacing:.09em;margin-bottom:3px}
+.chart-s{font-size:12px;color:var(--dim);letter-spacing:.06em;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:13.2px}
+th{text-align:left;font-family:var(--serif);font-weight:600;color:var(--foam);font-size:12.5px;
+  letter-spacing:.11em;padding:11px 12px;border-bottom:1px solid var(--hair);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--hair2);color:var(--silver);vertical-align:top}
+td.num{font-variant-numeric:tabular-nums;color:var(--moon);white-space:nowrap}
+tr:hover td{background:rgba(31,110,140,.06)}
+.tag2{display:inline-block;font-size:10.5px;letter-spacing:.13em;padding:2.5px 8px;border-radius:2px;
+  border:1px solid rgba(127,182,206,.34);color:var(--foam);margin-right:5px;white-space:nowrap}
+.tag2.hot{border-color:rgba(243,236,216,.4);color:var(--moonglow)}
+.tag2.off{border-color:rgba(125,138,151,.3);color:var(--dim)}
+/* ---------- nav ---------- */
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(4,7,13,.9);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hair);margin-bottom:60px}
+nav.toc ul{max-width:100%;margin:0 auto;padding:12px 28px;list-style:none;display:flex;gap:18px;justify-content:center;
+  flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc li{flex:0 0 auto}
+nav.toc a{font-size:11.5px;letter-spacing:.08em;color:var(--gray);border:none;white-space:nowrap}
+nav.toc a:hover{color:var(--moonglow)}
+/* ---------- timeline ---------- */
+.tl{position:relative;margin:30px 0 10px;padding-left:24px}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(180deg,rgba(127,182,206,.05),rgba(127,182,206,.45),rgba(127,182,206,.05))}
+.tl-i{position:relative;margin-bottom:26px}
+.tl-i::before{content:"";position:absolute;left:-24px;top:8px;width:9px;height:9px;border-radius:50%;
+  background:var(--deep);border:1px solid var(--wave)}
+.tl-i.major::before{background:var(--moonglow);border-color:var(--moonglow);box-shadow:0 0 12px 3px rgba(243,236,216,.35)}
+.tl-d{font-family:var(--display);font-size:13px;letter-spacing:.2em;color:var(--foam)}
+.tl-h{font-family:var(--serif);font-size:16px;color:var(--moon);margin:3px 0 6px;letter-spacing:.03em}
+.tl-b{font-size:13.6px;color:var(--silver);line-height:1.78}
+footer{margin-top:110px;padding-top:40px;border-top:1px solid var(--hair);font-size:12.5px;color:var(--dim);letter-spacing:.06em;line-height:1.9}
+.axis text{fill:var(--gray);font-size:10.5px;font-family:var(--sans);letter-spacing:.04em}
+.axis path,.axis line{stroke:rgba(197,211,222,.16)}
+.gridline line{stroke:rgba(197,211,222,.06)}
+.gridline path{stroke:none}
+.tip{position:fixed;pointer-events:none;background:rgba(8,14,25,.97);border:1px solid rgba(127,182,206,.4);
+  border-radius:3px;padding:9px 13px;font-size:12px;color:var(--moon);letter-spacing:.04em;z-index:99;
+  opacity:0;transition:opacity .13s;max-width:290px;line-height:1.65}
+@media(max-width:960px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  h1.title{font-size:34px;letter-spacing:.04em}.wrap{padding:0 22px 90px}
+  .sec-num{font-size:48px;min-width:58px}h2{font-size:23px}
+  .sec-head{gap:16px}
+  header.mast{padding:196px 0 44px}
+  .moon{width:74px;height:74px;top:62px}
+  .moon::after{width:86px;height:400px}
+  .horizon-band{top:170px}
+  .mast-meta{padding:16px 0}
+  .mast-meta div{padding:0 15px}
+  .mast-meta b{font-size:19px}
+  nav.toc ul{padding:11px 22px;gap:20px}
+  .pull{font-size:16.5px;padding-left:18px}
+  p.lead{font-size:16px}
+  p{font-size:14.6px}
+  table{font-size:12.2px}th,td{padding:9px 8px}
+  .horizon{margin:70px 0 56px}
+}
+</style>
+</head>
+<body>
+<div class="sky"></div>
+<div class="stars"><div class="moon"></div><div class="horizon-band"></div></div>
+<div class="tip" id="tip"></div>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">Market Intelligence Report</div>
+  <h1 class="title">声优联名耳机市场调查</h1>
+  <div class="subtitle">日本 · 中国 · 全球　｜　产业结构、销量证据、版权方与政策风险</div>
+  <div class="mast-meta">
+    <div><b id="m-src">—</b>已核查信源</div>
+    <div><b id="m-sku">—</b>联名 SKU</div>
+    <div><b id="m-co">—</b>企业主体</div>
+    <div><b id="m-pt">—</b>合作对象</div>
+    <div><b id="m-gp">—</b>数据缺口登记</div>
+  </div>
+  <div class="note" style="margin-top:26px">编制日期 <span id="m-gen">—</span>　·　全部图表与图注数字由 <code>scripts/build_report_data.py</code> 从 <code>data/*.csv</code> 生成（无手工录入）；正文叙述中的引述数字来自 <code>research/*.md</code> 与 <code>sources.csv</code> 对应条目　·　货币为各市场本币，未做汇率换算</div>
+</header>
+
+<nav class="toc"><ul>
+  <li><a href="#s0">核心发现</a></li>
+  <li><a href="#s1">一 · 谁在卖</a></li>
+  <li><a href="#s2">二 · 卖了多少</a></li>
+  <li><a href="#s3">三 · 与谁联名</a></li>
+  <li><a href="#s4">四 · 日本版权方</a></li>
+  <li><a href="#s5">五 · 行业背景</a></li>
+  <li><a href="#s6">六 · 女性声优</a></li>
+  <li><a href="#s7">七 · 宣发与竞品</a></li>
+  <li><a href="#s8">八 · 政策与法律</a></li>
+  <li><a href="#s9">九 · 抵制案例</a></li>
+  <li><a href="#s10">缺口</a></li>
+</ul></nav>
+
+<!-- ===================== 0 核心发现 ===================== -->
+<section id="s0">
+<div class="sec-head">
+  <div class="sec-num">00</div>
+  <div class="sec-t"><h2>核心发现</h2><div class="sec-sub">Executive Findings</div></div>
+</div>
+
+<p class="lead">这个品类不是一个市场，而是六种结构完全不同的生意共用了一个名字。价格跨度 <span id="m-span">—</span> 倍，从 <span id="m-pmin2">—</span> 日元的有线款到 <span id="m-pmax2">—</span> 日元的定制入耳式监听。真正的门槛不是声学或模具，而是版权被拆成三份、分属三个互不相通的对接口。</p>
+
+<div class="grid g4" style="margin:32px 0">
+  <div class="card stat"><div class="n">25,000<small> 台</small></div><div class="l">ag × 周防帕特拉第二弹年内配额售罄。开售 12 小时超 10,000 台。品类内唯一由厂商公布的单品销量</div></div>
+  <div class="card stat"><div class="n">300,000<small> 台</small></div><div class="l">final ASMR／睡眠向无线耳机累计销量（截至 2025-12）。帕特拉系列至少占其 8.8%</div></div>
+  <div class="card stat"><div class="n">100,000<small> 台</small></div><div class="l">ONKYO 2025 年耳机年度受注量，首次突破十万。9 个基础机型承载全部联名，仅直营渠道</div></div>
+  <div class="card stat"><div class="n">1.66<small> 亿日元</small></div><div class="l">声优小岩井ことり主导开发的 KPro01 众筹总额，10,003 人支持，目标额的 55 倍</div></div>
+</div>
+
+<div class="pull">四个关键结构性结论：一、联名溢价与基础价格成反比，联名附加的是约 8,000–12,000 日元的固定金额，不是固定比例；二、日本主流模式为完全受注生产，厂商不承担库存风险；三、中国不存在以本人身份联名的中文声优案例，九轮定向检索无一命中；四、日本四大声优事务所中三家已公开名册合计约 750 名声优（青二 ~492、マウス ~155、アイム 100+；81プロデュース 名册未找到），硬件联名先例为零。</div>
+
+<div class="chart">
+  <div class="chart-t">图 0-1　联名溢价与基础机型价格的反比关系</div>
+  <div class="chart-s">同一店铺会员价对会员价比较 · AVIOT <span id="m-plat">—</span> 个基础平台的 <span id="m-pair">—</span> 组配对（仅日元轴）</div>
+  <div id="c-premium"></div>
+</div>
+<p class="note"><b>读法：</b>横轴为基础机型价格，纵轴为联名版相对基础版的溢价率。廉价平台 TE-Q3R 溢价高达 <span id="m-pmax">—</span>%，旗舰 WA-J1 仅 <span id="m-pmin">—</span>%。中国唯一可配对的样本 <span id="m-cnp0">—</span>（<span id="m-cnp1">—</span> 元 → <span id="m-cnp2">—</span> 元）仅 +<span id="m-cnp">—</span>%，因计价货币不同未画入上图，是中日两个市场定价逻辑分野的唯一可测证据。拍卖市场流传的"联名约贵两成"说法与本数据不符。</p>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 1 谁在卖 ===================== -->
+<section id="s1">
+<div class="sec-head">
+  <div class="sec-num">01</div>
+  <div class="sec-t"><h2>谁在卖这类耳机</h2><div class="sec-sub">The Seller Census</div></div>
+</div>
+
+<p>已确认 <span id="m-brand">—</span> 个品牌、<span id="m-sku2">—</span> 个联名 SKU，销售主体分属六种角色：音频品牌获取授权（AVIOT、ONKYO、final、MOONDROP、SONGX、Zeeny、qdc、Hi-Unit）；大型消费电子品牌偶发进入（Sony、Victor／JVCKenwood）；媒体公司自行发行硬件（环球音乐 TOoKA BASE、日本电视台、Taito／Cafereo）；内容平台转型硬件品牌（猫耳FM，bilibili 旗下）；艺人主导开发（Owltech 与小岩井ことり）；软件语音皮肤平台（NAIN 的 Zeeny Assistant 与对外授权的 Yv）。</p>
+
+<div class="chart">
+  <div class="chart-t">图 1-1　各品牌已确认联名 SKU 数量</div>
+  <div class="chart-s">已剔除基础机型参照行 · 数据源 products.csv</div>
+  <div id="c-sku"></div>
+</div>
+
+<h3>价格结构：三段分布，不是一条曲线</h3>
+<div class="chart">
+  <div class="chart-t">图 1-2　日本市场联名产品价格分布</div>
+  <div class="chart-s">日元含税 · 每格 5,000 日元 · n = 已获价格的日本联名 SKU</div>
+  <div id="c-hist"></div>
+</div>
+<p>主峰集中在 18,000–23,000 日元，这是动漫 IP 与虚拟艺人单品的标准带。<span id="m-pmod">—</span> 日元一个价位点就承载了 <span id="m-p22">—</span> 个 SKU——AVIOT 用一个价格覆盖了绝大多数主要 IP。下方有一条 2,980–9,980 日元的低价尾部，主要是 final 的有线款、Victor 的迪士尼款与 Zeeny 的清仓款。上方 39,660 日元以上完全由两类产品构成：AVIOT 与摇滚歌手 HYDE 的联名，以及 ONKYO 与须山齿研（FitEar）共同开发的定制入耳式监听。</p>
+
+<div class="grid g2">
+  <div class="card">
+    <h4>价格上限由音乐人与定制 IEM 撑起，而非动漫</h4>
+    <p style="font-size:14px;margin:0">AVIOT WA-J1-666（HYDE 头戴）46,260 日元与 TE-J2-666（HYDE 入耳）39,660 日元均已售罄，是 TWS／头戴品类的顶点。ONKYO 的『GIRLS BAND CRY』定制 IEM 线 K1／K2／K3 覆盖 104,500 至 250,000 日元，由日本顶级母带工程师原田光晴担任开发设计顾问，以母带室大型监听为声音基准。这是整个品类中唯一真正意义上的高端 Hi-Fi 产品。</p>
+  </div>
+  <div class="card">
+    <h4>索尼走的是相反策略</h4>
+    <p style="font-size:14px;margin:0">『孤独摇滚！』联名已至第三弹。第二弹将四位角色刻印在旗舰 WF-1000XM5 上，单品 43,800 日元，与非联名版街价几乎持平——溢价接近于零。捆绑 Walkman 的套装分别为 93,300 与 153,800 日元。索尼卖的是刻印、包装、门店活动与捆绑，而非价格加成。</p>
+  </div>
+</div>
+
+<h3>耳机是锚点商品，不是全部生意</h3>
+<p>AVIOT 与 ONKYO 都在同一批授权下销售非音频周边：挂布、亚克力板、徽章、钥匙扣、T 恤、鼠标垫、抱枕、无线充电器，价格带 440 至 33,000 日元。最能说明问题的单品是 <em>3,850 日元的亚克力耳机展示架</em>——一件唯一用途是陈列联名耳机的配件。一家生产这种配件的公司，是把耳机当收藏品而非音频设备在经营。这一模式在两家头部厂商同时出现，说明它是品类惯例而非个别做法。</p>
+
+<div class="warn"><span class="tag">Correction</span>首轮调查曾记录索尼未参与本品类、并将 AVIOT 型号后缀 "-PNK" 误读为颜色。实际为：索尼参与且已至第三弹；"-PNK" 是鼓手<strong>ピエール中野</strong>（凛として時雨）监修的"ピヤホン"系列后缀，该系列已进行至<strong>第 9 弹</strong>，是数据集中持续时间最长的联名关系，旗舰 TE-ZX1-PNK 为 1 平板 + 1 动圈 + 3 动铁的五单元混合，售价 49,500 日元，由艺人同时监修设计与调音。</div>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 2 卖了多少 ===================== -->
+<section id="s2">
+<div class="sec-head">
+  <div class="sec-num">02</div>
+  <div class="sec-t"><h2>到底卖了多少</h2><div class="sec-sub">Volume Evidence</div></div>
+</div>
+
+<p class="lead">单品销量在这个市场结构性地不可观测，这是商业模式的属性而非调查的失败。日本主流为完全受注生产：受注窗口开启、关闭，然后投产。没有库存、没有渠道出货、没有 POS 轨迹，厂商也没有公布数字的商业理由。</p>
+
+<p>因此销量证据按可信度分四层保存，不做混合估算。第一层<strong>已披露</strong>：厂商公布的销量或众筹金额，5 个数据点。第二层<strong>可推导</strong>：价格与销量双方均有一手来源，可做乘法，2 个。第三层<strong>平台计数器</strong>：电商公开销量，仅中国有，1 个且信源等级低。第四层<strong>代理指标</strong>：售罄速度、返厂再版、二级市场，若干。</p>
+
+<div class="chart">
+  <div class="chart-t">图 2-1　已披露与可推导的销量证据</div>
+  <div class="chart-s">对数刻度 · 单位为台，众筹项目以支持人数计 · 悬停查看来源层级</div>
+  <div id="c-vol"></div>
+</div>
+
+<div class="grid g3" style="margin-top:26px">
+  <div class="card stat"><div class="n">2.05<small> 亿日元</small></div><div class="l">推导值：25,000 台 × 8,200 日元。两项输入均为一手来源，不含运费与超出配额的溢出订单</div></div>
+  <div class="card stat"><div class="n">370,000<small> 台</small></div><div class="l">AVIOT Q 系列平台累计出货（2026-08），取代 2024-05 的 250,000 台。混合联名与非联名，无法拆分</div></div>
+  <div class="card stat"><div class="n">≥8.8<small> %</small></div><div class="l">推导下限：周防帕特拉系列已知 26,400 台 ÷ final ASMR 品类 300,000 台。第 3、4、5 弹销量未公布，实际更高</div></div>
+</div>
+
+<h3>需求信号：返厂与续作</h3>
+<p>在受注生产市场里，<em>再版、二次受注、第 N 弹</em>是厂商在不披露数字的前提下对"需求超过供给"的事实陈述，也是这个品类能提供的最可靠的销量邻近证据。已记录：ag × 周防帕特拉第一弹售罄后再版、再版再次售罄、最终限定 1,000 台"最后一批"；第二弹 12 小时逾万台、25,000 台配额耗尽、溢出订单顺延约四个月；该系列共五弹，且第三弹在第四弹上市时同步复售；AVIOT hololive EN 做到第四个组合，Advent 弹售罄；ONKYO『GIRLS BAND CRY』TOGENASHI TOGEARI 款二次受注；Taito × hololive 一弹返厂并做到第三弹；环球音乐『オトもラジオ』做到第三弹；MOONDROP"猫饼"平台复用于三个 IP。</p>
+
+<div class="warn"><span class="tag">Data Trap</span>本项目共捕获<strong>四次量级误读</strong>：日方报道中的「1万台」「25000台」被自动摘要读作日元；COVER 营收 493 亿日元被读作 4933 亿；ANYCOLOR 556.81 亿日元被读作 5568 亿；AVIOT「約37万台」被读作 3700 万台。日本财报以「億円」计，中文资料以「亿元」计，凡涉及量级必须回溯原文单位。</div>
+
+<div class="chart">
+  <div class="chart-t">图 2-2　二级市场流动性</div>
+  <div class="chart-s">Aucfan 检索词「コラボイヤホン」近 30 日</div>
+  <div id="c-resale"></div>
+</div>
+<p class="note">近 30 日仅 5 笔成交，均价 11,883 日元。同时存在专门回收动漫／游戏／VTuber 联名耳机的服务（goods-mate.com），e☆イヤホン 亦在品类导购中指出人气联名款退出常规渠道后二级价格显著上涨。<b>解读：</b>专业化的二级基础设施存在，但月成交仅 5 笔说明浮筹极薄。对于按个人粉丝需求受注生产的商品，低流动性意味着买家在留存，而非需求疲弱。</p>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 3 与谁联名 ===================== -->
+<section id="s3">
+<div class="sec-head">
+  <div class="sec-num">03</div>
+  <div class="sec-t"><h2>与谁联名</h2><div class="sec-sub">Partners, Agencies & Talent Pools</div></div>
+</div>
+
+<p>合作对象已确认 <span id="m-pcls">—</span> 个类别，远超"动漫与 VTuber"两类。按 SKU 数量计，虚构 IP（动漫、游戏、特摄）占绝对多数；按合作对象人数计，虚拟艺人个人占主导，因为每位艺人各得一个专属 SKU，而一个动漫作品往往只对应一至四个。</p>
+
+<div class="chart">
+  <div class="chart-t">图 3-1　合作对象类别分布（按人／实体计）</div>
+  <div class="chart-s">仅统计艺人侧对象；动漫、游戏、特摄作品在 products.csv 中按 SKU 记录，此处不重复计入</div>
+  <div id="c-partner"></div>
+</div>
+
+<h3>语音条数是这个行业自己的"联名深度"计量单位</h3>
+<div class="chart">
+  <div class="chart-t">图 3-2　新录语音条数与售价</div>
+  <div class="chart-s">气泡大小表示同价位 SKU 数量 · 仅含双项数据齐备者</div>
+  <div id="c-voice"></div>
+</div>
+<p>区间自 <span id="m-vmin">—</span> 条（环球音乐 TOoKA BASE 的 D60A 与 diamond-cut，四人／二人阵容）至 <span id="m-vmax">—</span> 条（AVIOT hololive EN Advent 与『排球少年!!』），有条数记录的 SKU 共 <span id="m-vn">—</span> 个；final CyberPatra 的 8 条为 ASMR 单人款的下限。ONKYO 的『点兔』款把语音变成了购买时的<em>选项</em>——七位角色任选其一，每位 11 条。环球音乐则在语音之外附一段每位声优约 15 分钟的原创广播剧，通过 BUDDY PASS 卡上的二维码解锁。条数与合作对象的人数规模相关，而非单纯与价格相关。</p>
+
+<h3>事务所层：三家已公开名册合计约 750 名声优，硬件联名先例为零</h3>
+<table>
+<thead><tr><th>事务所</th><th>在籍人数</th><th>硬件联名</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>青二プロダクション</td><td class="num">约 492</td><td><span class="tag2 off">零</span></td><td>业界最大，自设青二塾养成所</td></tr>
+<tr><td>マウスプロモーション</td><td class="num">约 155</td><td><span class="tag2 off">零</span></td><td>外语片配音与旁白强项</td></tr>
+<tr><td>アイムエンタープライズ</td><td class="num">100+</td><td><span class="tag2 off">零</span></td><td>男女比约 3:7，主役级多</td></tr>
+<tr><td>81プロデュース</td><td class="num">未找到</td><td><span class="tag2 off">零</span></td><td>行业先驱，<strong>自身即经营音响与活动制作</strong></td></tr>
+<tr><td>Kiramune（唱片厂牌）</td><td class="num">20</td><td><span class="tag2 hot">有</span></td><td>AVIOT 一次交易触达 13 人</td></tr>
+<tr><td>にじさんじ／ANYCOLOR</td><td class="num">约 150–180</td><td><span class="tag2 hot">有</span></td><td>按<strong>个人</strong>授权，已 12 人以上</td></tr>
+<tr><td>hololive／COVER</td><td class="num">78</td><td><span class="tag2 hot">有</span></td><td>按<strong>组合</strong>授权，每 SKU 五人</td></tr>
+<tr><td>ななしいんく／774 inc.</td><td class="num">25</td><td><span class="tag2 hot">有</span></td><td>已产出三位合作对象，均为深度联名</td></tr>
+<tr><td>あおぎり高校／viviON</td><td class="num">11</td><td><span class="tag2 hot">有</span></td><td>viviON 同时持有 DLsite</td></tr>
+</tbody></table>
+<p class="note">四大声优事务所中，青二プロダクション ~492 名、マウスプロモーション ~155 名、アイムエンタープライズ 100+ 名，合计约 750 名；81プロデュース 的名册规模在所获信源中<b>未找到</b>。三家已知名册中<b>无一例硬件联名</b>。81プロデュース 甚至自身经营音响制作业务却仍无耳机产品。它们是主动拒绝还是从未被接触，<b>两个方向均无证据</b>，这是全项目最有价值的未知项。现有的声优联名全部绕道而行：经唱片厂牌（Kiramune）、经唱片公司自营硬件（环球音乐）、经广播中介（文化放送エクステンド）、经电视购物（日本电视台），或直接与本人签约。</p>
+
+<div class="pull">数据里最值得注意的一条：周防帕特拉在 2023-05-09 从 774 inc. 毕业转为个人。而 25,000 台售罄的第二弹在同年 8 月 20 日开始预订——比她离开事务所<strong>晚三个月</strong>。整个市场里商业成绩最完整的案例，不需要事务所、不需要版权方、也不需要多方授权。しぐれうい 与神楽めあ 同样为无所属，前者同时监修声音与设计。</div>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 4 日本版权方 ===================== -->
+<section id="s4">
+<div class="sec-head">
+  <div class="sec-num">04</div>
+  <div class="sec-t"><h2>日本版权方与事务所</h2><div class="sec-sub">Japanese Rightsholders</div></div>
+</div>
+
+<p class="lead">规模不对称是这一层的决定性事实。音频侧的经营主体全部是中小企业，而任何有分量的版权方都大出 25 至 600 倍。ONKYO 该品类推导年营业额约 20 亿日元，谈判对手万代南梦宫控股为 1.35 万亿日元。</p>
+
+<div class="chart">
+  <div class="chart-t">图 4-1　日本对手方规模阶梯</div>
+  <div class="chart-s">最新可得财年营业收入 · 轴与标签为亿日元（1 亿日元＝原始财报「1億円」）· 对数刻度 · 蓝色为版权／事务所侧，银色为音频侧</div>
+  <div id="c-ladder"></div>
+</div>
+
+<h3>版权收入是所有日本内容公司的增长引擎，且刚刚越过一个临界点</h3>
+<p><strong>集英社第 85 期（2025-06 至 2026-05）的"事业收入"（版权与物贩）突破 1,100 亿日元，历史上首次超过出版销售。</strong>这不是单家公司的特例。东映动画的版权事业为 489 亿日元，约占公司营收 52%；讲谈社披露"权利收入" 285 亿日元；小学馆第 87 期"版权收入等" 157 亿日元、同比 +26.8%，公司明确归因于漫画的影像化；COVER 的授权／联动为 72 亿日元、同比 +25.3%，并归因于交易件数与对手方公司数的增长。</p>
+
+<div class="chart">
+  <div class="chart-t">图 4-2　授权收入的可观测程度</div>
+  <div class="chart-s">能否从公开披露中读出授权经济 · 决定了签约前能否做基准比较</div>
+  <div id="c-disclose"></div>
+</div>
+<p>可比较的对手方只有四家：<em>东映动画</em>（版权为独立分部且占营收多数，附完整分部损益，是全项目最佳基准）、讲谈社、小学馆、COVER。集英社与三丽鸥将版权与物贩合并披露；KADOKAWA 只给变动率不给绝对值；ANYCOLOR、Yostar、カラー／グラウンドワークス、文化放送则完全不披露。<strong>建议优先接触数字可读的一侧。</strong></p>
+
+<div class="warn"><span class="tag">Timing</span>2026 财年对多家版权方而言是授权<strong>下行</strong>年：KADOKAWA 授权收入 −21.1%、动画与实拍分部转为营业亏损；讲谈社权利收入 −11.8%；円谷制作营业利润 −67.0%，中国方面的积木玩具与集换卡合作方缩减了商品线。刚经历授权下行年的对手方对新品类更有接受度。反向而言，COVER 授权 +25.3% 但净利润 −45.7%，并明确转向"重视收益质量与资本效率的规律性成长阶段"——这类表述通常意味着条件收紧。</div>
+
+<h4>授权走的是专门实体，不是创作公司</h4>
+<p>カラー 通过<em>グラウンドワークス</em>管理《EVA》版权（final 四款 + AVIOT 一款，共五个 SKU）；小学馆与集英社通过<em>小学館集英社プロダクション（ShoPro）</em>联合授权；文化放送通过<em>文化放送エクステンド</em>将广播衍生内容变现。接触创作公司本身是走错了门。</p>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 5 行业背景 ===================== -->
+<section id="s5">
+<div class="sec-head">
+  <div class="sec-num">05</div>
+  <div class="sec-t"><h2>行业背景与分级市场</h2><div class="sec-sub">Industry Background · Price Tiers · Consumers</div></div>
+</div>
+
+<h3>中国：量在跌，额在涨</h3>
+<div class="grid g4" style="margin-bottom:8px">
+  <div class="card stat"><div class="n">2.03<small> 亿副</small></div><div class="l">2025 全渠道销量，同比 −6.9%</div></div>
+  <div class="card stat"><div class="n">452<small> 亿元</small></div><div class="l">2025 全渠道销额，同比 +5.6%</div></div>
+  <div class="card stat"><div class="n">223<small> 元</small></div><div class="l">2025 均价，同比 +13.3%</div></div>
+  <div class="card stat"><div class="n">−2.2<small> %</small></div><div class="l">2026 销量预测，将回落至 2 亿副以下</div></div>
+</div>
+<div class="chart">
+  <div class="chart-t">图 5-1　中国耳机耳麦市场量价背离</div>
+  <div class="chart-s">洛图科技 RUNTO 全渠道数据 · 左轴销量（亿副）右轴销额（亿元）</div>
+  <div id="c-cnmkt"></div>
+</div>
+<p>销量下降而销额上升，均价一年涨 13.3%——市场在向上迁移而不是在增长。对定位偏高的新进入者而言，这是最重要的结构性事实。渠道方面，2024 上半年线上占全渠道销量的 <strong>84%</strong>，与日本 60–70% 依赖线下实体的结构完全相反。</p>
+
+<div class="chart">
+  <div class="chart-t">图 5-2　中国 2025 年分价格段表现</div>
+  <div class="chart-s">洛图科技口径 · 深色为已披露具体增幅，浅色为仅披露方向</div>
+  <div id="c-band"></div>
+</div>
+<div class="warn"><span class="tag">Scope</span>简报要求的八个价格段（1–100／101–300／301–512／513–1200／1201–3000／3001–9999／10000–20000／20000+）与任何已公开口径均不吻合。洛图科技的分段为 0–100／100–200／200–300／300–500／500–1000／1000–1500／1500–2000／2000+。其中<strong>把 100–200 与 200–300 合并进"101–300"会摧毁本数据集中最有价值的信号</strong>——这两段方向相反：前者量额齐跌，后者量额齐涨三成以上。日本仅有三个价格段公开，全球无任何分段数据。<strong>301–512 与 513–1200 的边界在三个市场都没有对应口径，512 这一数值是否有特定含义需确认。</strong></div>
+
+<h3>形态：开放式与头戴是增速冠军</h3>
+<div class="chart">
+  <div class="chart-t">图 5-3　中国无线耳机分形态出货（2025，IDC）</div>
+  <div class="chart-s">柱为出货量（万台），标签为同比增速</div>
+  <div id="c-form"></div>
+</div>
+<p>真无线 7,721 万台增 6.7%，但<em>开放式 OWS</em> 2,996 万台增 20.2%、<em>头戴</em> 878 万台增 26.3%。OWS 在 2024 年增速曾达 130%。2025 年度关键词候选中，"AI 耳机"最突出：2025 Q1 在 0–1,000 元段销量 19.9 万副，同比近 16 倍，占 AI 耳机市场 52.1%。</p>
+
+<div class="grid g2">
+<div>
+<h4>日本价格带构成（BCN POS，现行）</h4>
+<div class="chart"><div id="c-jpband"></div></div>
+<p class="note">1 万日元以下 40%、1 万至 2 万 20%、2 万以上 40%。价格两极化自 2020 年前后开始。<b>联名 SKU 落位：</b>18,700 日元档位于中间的薄弱 20% 区间，22,880 日元档已进入上方 40% 区间，而 ONKYO 定制 IEM（104,500–250,000 日元）远在整个消费分布之外。销售峰值月为 3 月、7 月、12 月。</p>
+</div>
+<div>
+<h4>中国消费者画像（2025 白皮书系列）</h4>
+<div class="chart"><div id="c-demo"></div></div>
+<p class="note">31–40 岁占 40.01% 为主力，其次为更年轻群体 31.63%。普通用户性别女性 51.97% 略高于男性 48.03%；但创作者中女性 67.36%，音频从业者中男性 64.29%。日均使用 2 小时以上者过半，5 小时以上者 38.38%。换新周期约一年。<b>职业构成与复购率未找到。</b></p>
+</div>
+</div>
+
+<div class="warn"><span class="tag">Unusable</span>全球市场货值数据在多家商业预测机构之间冲突近两倍：同为 2025 年口径，出现 USD 883 亿、USD 1,219 亿、USD 654 亿三个数字，定义分别为纯 TWS、全部耳塞、全部耳机。<strong>不应给出单一全球货值。</strong>可信锚点是 Canalys 的出货量：2024 年耳塞总出货 4.55 亿台，其中 TWS 3.316 亿台，占智能个人音频 72.8%。真正相关的子口径是 Hi-Fi：2026 年全球 Hi-Fi 耳机预计 USD 18.2 亿，即约为 TWS 市场的 1.5–2%，其中中国贡献亚太区需求逾 35%。</div>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 6 女性声优 ===================== -->
+<section id="s6">
+<div class="sec-head">
+  <div class="sec-num">06</div>
+  <div class="sec-t"><h2>女性声优人口与作品筛选</h2><div class="sec-sub">Female Seiyuu Population & Selection Method</div></div>
+</div>
+
+<p class="lead">『声優名鑑』提供了完整的二十五年序列。女性声优从 2001 年首版的 225 人增至 2026 年的 1,135 人，为 5.04 倍；男女合计从 370 人增至 1,837 人，为 4.96 倍。女性占比在整个五倍扩张过程中几乎未变，从 60.8% 到 61.8%。</p>
+
+<div class="chart">
+  <div class="chart-t">图 6-1　日本声优人口，2001–2026</div>
+  <div class="chart-s">『声優名鑑』刊载人数 · 女性为连续序列，男性仅两个端点可得 · 数据源 Oricon</div>
+  <div id="c-seiyuu"></div>
+</div>
+
+<div class="grid g4" style="margin-top:8px">
+  <div class="card stat"><div class="n">1,135</div><div class="l">2026 年女性刊载人数，连续 15 年刷新历史最高</div></div>
+  <div class="card stat"><div class="n">×5.04</div><div class="l">25 年增幅。2008 年破 500 人，2022 年破 1,000 人</div></div>
+  <div class="card stat"><div class="n">702</div><div class="l">2026 年男性，连续 14 年刷新最高。合计 1,837 人</div></div>
+  <div class="card stat"><div class="n">~18<small> %</small></div><div class="l">名鑑覆盖率。2022 年发布会称日本自称声优者<strong>逾 1 万人</strong></div></div>
+</div>
+<p class="note"><b>重要限定：</b>名鑑不等于人口。它是一个知名度筛选器——对本简报而言这大概正是需要的筛选口径，但必须如此标注，不能当作从业人口。</p>
+
+<h3>作品筛选口径：名作之壁吧方法已还原</h3>
+<p>简报指定以名作之壁吧为参考、下调 bangumi 权重、中日其他按 3:4:3。实际方法为：仅取<strong>四个</strong>评分站——<em>Bangumi</em>（中文圈）、<em>Filmarks</em>（日本）、<em>MyAnimeList</em>与<em>AniList</em>（英文圈）。这与 3:4:3 完全对应：Bangumi 30%、Filmarks 40%、MAL + AniList 合计 30%。Bangumi 单站承担全部中文圈 30%，相对于四站均分 25% 的朴素做法，这本身就是下调。收录门槛为单集 20 分钟以上、总集数 8 集以上；每季出<strong>首月</strong>与<strong>完结</strong>两份榜单，各有明示的数据截止日；延期作品逐个判定归季。</p>
+<div class="warn"><span class="tag">Blocker</span>榜单本身<strong>仅以 Bilibili 视频形式存在</strong>，页面直接抓取返回 HTTP 412，加权算法只在视频开头口述、无文本版。<strong>建议不沿用其算法，而是直接从四个源站重建</strong>——这样权重是显式且可复核的，而不是继承一个无文档的算法。此外简报中"流媒体表现较好的作品"与"评分网站参考"是两个不同指标，会产出不同的前 25 名；覆盖季数亦未指定。</div>
+
+<h4>可填与不可填的字段</h4>
+<table>
+<thead><tr><th>字段</th><th>可得性</th><th>来源或替代方案</th></tr></thead>
+<tbody>
+<tr><td>姓名／出道时间／事务所</td><td><span class="tag2 hot">可得</span></td><td>声優名鑑、事务所官网</td></tr>
+<tr><td>出演作品数</td><td><span class="tag2 hot">可得</span></td><td>声優共演検索 提供分季"出演数順"名单</td></tr>
+<tr><td>主要成员作品数</td><td><span class="tag2">需人工</span></td><td>需先定义合唱团式作品的人数上限，MyGO 单作即 5–10 人</td></tr>
+<tr><td>推特／INS／B 站关注数</td><td><span class="tag2 hot">可得</span></td><td>各平台公开数据，需注明抓取日</td></tr>
+<tr><td>广播剧作品数与出演回数</td><td><span class="tag2">部分</span></td><td>日方可从作品数据库汇总；回数需逐作核对</td></tr>
+<tr><td>线下活动参与数</td><td><span class="tag2">部分</span></td><td>可由活动信息汇总，费工且不完整</td></tr>
+<tr><td>写真集数量</td><td><span class="tag2 hot">可得</span></td><td>アニメイトタイムズ 维护 2026 年女性声优写真集清单</td></tr>
+<tr><td>写真集销量</td><td><span class="tag2">部分</span></td><td>Oricon 仅覆盖上榜作品，且为累计非首周</td></tr>
+<tr><td>周边品类销量／销额冠军</td><td><span class="tag2 off">不可得</span></td><td>按人分品类的周边销量与销额几乎从不披露</td></tr>
+</tbody></table>
+<p class="note"><b>量级校准：</b>女性声优写真集销量榜首佐倉綾音 10,712 册、次席水樹奈々 5,664 册（Oricon 累计口径）。对照顶级偶像写真集首周 178,688 册，<b>顶级声优写真集约为顶级偶像的十七分之一</b>。这是设定周边附着率预期时的现实基准。</p>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 7 宣发与竞品 ===================== -->
+<section id="s7">
+<div class="sec-head">
+  <div class="sec-num">07</div>
+  <div class="sec-t"><h2>宣发渠道与竞品节奏</h2><div class="sec-sub">Publicity & Competitor Cadence</div></div>
+</div>
+
+<p>简报要求单篇文章点击量与直方图区间。<strong>新闻站不公开单篇点击数据</strong>。它们在广告刊登资料中公开的是站点级 PV 与 UU，这是正确的替代口径，且可跨站比较。</p>
+
+<div class="chart">
+  <div class="chart-t">图 7-1　声优情报站月度流量</div>
+  <div class="chart-s">アニメイトタイムズ 为 2025-09 实测值；其余站点流量数据待补</div>
+  <div id="c-pv"></div>
+</div>
+<p><em>アニメイトタイムズ</em>为绝对主导，月 PV 约 <span id="m-pv1">—</span> 万、UU 约 <span id="m-uu1">—</span> 万（2025-09 实测），另有 <span id="m-pv2">—</span> 万 PV／<span id="m-uu2">—</span> 万 UU 的 PC+SP 合计口径；官方推特约 <span id="m-tw">—</span> 万关注；受众男女各 50%，25–34 岁约占 <span id="m-a25">—</span>%。其余已识别站点包括 声優グランプリ（seigura.com）、アニメハック、<em>声優共演検索</em>（含分季出演数排序，可直接填充"出演作品数"字段）、声優アニメディア（有刊载费率表）。</p>
+<p>联名耳机的实际发布链路是可映射的：<em>PR TIMES</em> 为主导发布渠道，实际报道本品类的媒体是一个可枚举的小集合——PHILE WEB、AV Watch、電撃ホビー／オンライン、PANORA、Mogura VR、Real Sound、4Gamer、Fami通、以及 e☆イヤホン 自营博客，加上版权方官方渠道。这份映射比点击量更具操作性。</p>
+
+<h3>竞品：上新节奏与再版</h3>
+<div class="chart">
+  <div class="chart-t">图 7-2　AVIOT 与 ONKYO 上新节奏（可得日期）</div>
+  <div class="chart-s">按联名 SKU 的公告月计数 · 数据源为两家官方新闻／发布存档 · 空缺月为零</div>
+  <div id="c-cadence"></div>
+</div>
+<p>图 7-2 按<em>联名 SKU 的公告月</em>计数，与"项目"数不等价——一个项目可含多个 SKU，且非音频联名不进入 products.csv。ONKYO 在 2026-08 至 2026-09 两个月内公告 <span id="m-onk">—</span> 个联名 SKU，对应项目包括『GIRLS BAND CRY』定制 IEM、凉宫春日二十周年、高达 X 三十周年、Keroro 军曹、银河特急、皇美绪奈、Neo-Porte 夜绊ニウ，以及非音频的魔法使之约 × LUPICIA 联名茶与『邻家天使』头皮护理品。AVIOT 的公告存档显示其 2025 年 11 月至 2026 年 9 月间几乎每月一至两项。</p>
+<div class="warn"><span class="tag">Activity</span>竞品名单若不标注活跃状态会造成误判。<strong>已确认两家休眠：</strong>环球音乐 TOoKA BASE 的 <span id="m-tooka">—</span> 个 SKU 几乎全为 2021–2022 年，其站点 2025-11 至 2026-07 的全部公告均为 PEOPLE 1 乐队周边，无任何联名耳机；Zeeny 的全部有日期公告落在 2022-12 至 2023-09 之间，此后为空。<strong>确认不参与者：</strong>铁三角（有完整声优资源、只做宣传片、不出产品，且为 BCN 音频配件类目份额第一 22.7%）、radius、NUARL、Acoustune，以及中国全部主流 Hi-Fi 品牌——飞傲、山灵、HiFiMAN、七赫兹、KZ、TinHiFi、达音科、铄耳，无一例联名。<strong>中国联名 Hi-Fi 不存在在位者。</strong></div>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 8 政策与法律 ===================== -->
+<section id="s8">
+<div class="sec-head">
+  <div class="sec-num">08</div>
+  <div class="sec-t"><h2>政策、认证与法律</h2><div class="sec-sub">Certification & Legal Framework</div></div>
+</div>
+
+<div class="chart">
+  <div class="chart-t">图 8-1　中日 TWS 上市认证周期</div>
+  <div class="chart-s">工作日／周为公开口径 · 悬停查看有效期与费用</div>
+  <div id="c-cert"></div>
+</div>
+
+<div class="grid g2">
+<div class="card">
+<h4>中国销售</h4>
+<p style="font-size:14px"><strong>SRRC 无线电发射设备型号核准</strong>：强制。发射功率大于 10 mW 者须取得工信部核准证。前期申请约 5 个工作日，至取得证书另约 30 个工作日，含测试全流程约 <em>8 周</em>。<strong>有效期 5 年</strong>，现行收费标准为不收费，但取得后须提交合同材料。<br><strong>CCC／3C</strong>：强制，蓝牙耳机在目录范围内，周期 4–6 周、最多两个月。<br><strong>进网许可证</strong>：资料中与上述并列列为必需。</p>
+<p class="note">⚠ 有讨论质疑蓝牙耳机当前是否同时需要 CCC 与 SRRC，强制性产品认证目录历经修订，<b>依赖前须核对现行目录</b>。</p>
+</div>
+<div class="card">
+<h4>日本销售</h4>
+<p style="font-size:14px"><strong>技適／工事設計認証</strong>：蓝牙属电波法无线设备范围，仅总务大臣登录的认证机关可发证。两条路径中量产品适用<em>按机型</em>的工事設計認証。需无线测试样机与文件组，有案例自首次联系认证机关起约 <em>1 个月</em>完成。主要机关为 TELEC。费用数据未找到。<br><strong>PSE</strong>：见下方更正。<br><strong>关税</strong>：耳机归 HS 8518.30，日本现行税率 0%，但进口消费税照征。<br><strong>自营网店</strong>：须做特定商取引法表记。</p>
+</div>
+</div>
+
+<div class="warn"><span class="tag">Correction</span><strong>PSE 适用范围比公司资料的判断更严。</strong>经产省于 2018 年 2 月修订电气用品安全法的解释，将便携式锂离子蓄电池纳入规制；自 <strong>2019 年 2 月 1 日</strong>起，未标示 PSE 的移动电源<em>以及完全无线耳机——具体指其充电盒</em>，不得在日本制造、进口或销售。公司资料所述"锂电池已完整安装于最终设备内部则不视为电池本身的进出口"这一细则确实存在，但<strong>并不豁免 TWS 充电盒</strong>。钠离子电池不在 PSE 规制范围内，技术上成立但不具现实路径。</div>
+
+<h3>声音权利：两个法域方向完全相反</h3>
+<div class="grid g2">
+<div class="card">
+<h4>日本：声音本身无确立保护</h4>
+<p style="font-size:14px">パブリシティ権 由最高裁 2012 年<em>ピンク・レディー事件</em>判决确立。要点：一、该权利源自人格权；二、未经许可使用肖像，在<strong>专以利用顾客吸引力为目的</strong>时构成侵权；三、该情形指将肖像本身作为独立鉴赏对象或商品、为商品差异化而附加肖像、以及用作商品化广告。</p>
+<p style="font-size:14px;margin-bottom:0"><strong>关键：声音、说话方式、签名、服装、举止是否作为"姓名与肖像之外的人的特征"受保护，在日本法上并无确立见解。</strong>对语音联名产品而言，这意味着<em>合同承担全部重量</em>——授权条款若对声音用途含糊，没有成文法可以兜底。</p>
+</div>
+<div class="card">
+<h4>中国：声音明确受保护，且已有合成声音判例</h4>
+<p style="font-size:14px"><strong>民法典第 1023 条</strong>：对自然人声音的保护参照适用肖像权，将声音权益作为特殊人格利益。</p>
+<p style="font-size:14px"><strong>2024-04-23 北京互联网法院</strong>全国首例 AI 生成声音人格权侵权案一审宣判。原告为配音师，发现其 AI 声音被用于平台配音视频。认定：<em>在具备可识别性的前提下，人格权保护及于 AI 生成声音</em>；商业化 AI 使用<strong>必须取得专项明示授权，笼统的声音著作权授权不足</strong>；可识别性以相关领域普通听众能否识别为准。判赔 <strong>25 万元</strong>。</p>
+<p style="font-size:14px;margin-bottom:0">⚠ 另有法院其后认定 AI 声音<em>未</em>侵犯人格权，标准可能仍在演进。<strong>直接影响：</strong>若产品 App 含语音包功能并在中国销售，须就该用途取得专项明示授权，一般联名授权不足以覆盖。</p>
+</div>
+</div>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 9 抵制案例 ===================== -->
+<section id="s9">
+<div class="sec-head">
+  <div class="sec-num">09</div>
+  <div class="sec-t"><h2>中文互联网抵制案例</h2><div class="sec-sub">Reputational Risk Log</div></div>
+</div>
+
+<p>以下为有公开报道、且有可观察商业后果的事件。因机制重复出现，此处按<strong>风险类型学</strong>组织而非人名清单。触发类别共五类：一、靖国神社，包括披露多年前的参拜；二、以国家称谓对待台湾，含旗帜、地图标注、分析后台的国家列表、以及"国"字；三、香港政治表态；四、历史或战时相关内容与家世，含原作者过往言论；五、因作品而非因本人被牵连。</p>
+
+<div class="chart">
+  <div class="chart-t">图 9-1　案例时间轴与商业后果严重度</div>
+  <div class="chart-s">纵轴为后果层级 · 悬停查看详情</div>
+  <div id="c-risk"></div>
+</div>
+
+<div class="tl">
+<div class="tl-i major"><div class="tl-d">2018 · 06</div><div class="tl-h">『二度目の人生を異世界で』——本项目所见最严重案例</div>
+<div class="tl-b">原作者过往在推特的仇恨言论曝光并致歉。2018-06-06 约 10 时，<strong>四位主要声优同日同时宣布下车</strong>：增田俊树、<em>安野希世乃</em>、中岛爱、山下七海。同日，原定 10 月播出的电视动画<strong>宣布中止播出与制作</strong>。ホビージャパン 决定将已刊 18 卷小说全部停止出货，实体书绝版并自主回收，系列腰斩。<strong>后果：一部动画改编与一条 18 卷小说线终止。</strong></div></div>
+
+<div class="tl-i"><div class="tl-d">2019</div><div class="tl-h">朴璐美、置鮎龍太郎</div>
+<div class="tl-b">因涉香港议题的言论遭抵制。</div></div>
+
+<div class="tl-i major"><div class="tl-d">2020 · 09</div><div class="tl-h">桐生ココ 与 赤井はあと（hololive／COVER）——双向风险的唯一完整样本</div>
+<div class="tl-b">2020-09-25 直播中展示 Google Analytics，来访国家列表显示"台湾"，而该直播正被镜像至 hololive 的 bilibili 官方频道；赤井はあと 另曾提及"台湾这个国家"。至 <strong>09-26 上午，hololive 全体艺人失去 bilibili 直播权限</strong>，已排定的アキロゼ bilibili 限定直播与湊あくあ 新衣装公开等均无法观看。COVER 在与中国合作公司审慎商议后发表声明，两位艺人<strong>停止活动（謹慎）</strong>。<em>而 COVER 的"一个中国"表述随即在台湾与日本引发第二轮反弹</em>，hololive 其后退出 bilibili 运营。</div></div>
+
+<div class="tl-i major"><div class="tl-d">2021 · 02 → 06</div><div class="tl-h">茅野愛衣——单人案例中商业后果最重</div>
+<div class="tl-b">于个人十周年纪念频道的广播中提及前往工作地附近的<strong>靖国神社</strong>参拜以祈求工作顺利。中方强烈反弹，事务所致歉。自 <strong>2021 年 6 月起在中国作品中被陆续下架或替换</strong>：『明日方舟』（表述为"依开发方要求"）、『崩坏学园』、『阴阳师』、『永远的七日之都』。<strong>2021-06-20『碧蓝航线』国服在更新中移除其配音的七艘舰船全部语音</strong>——含爱宕、加贺、声望、齐柏林伯爵——且未事先通知玩家。</div>
+<div class="note" style="margin-top:8px">⚠ 多份英文摘要将此事件误记为"内田真礼"。中文信源明确写作茅野爱衣，且受影响的碧蓝航线舰船确为其角色。<b>本条主体为茅野愛衣。</b>另有信源将时间记为 2020 年 2 月，2021 年 2 月的记载更可靠。</div></div>
+
+<div class="tl-i"><div class="tl-d">2021</div><div class="tl-h">本渡楓、桑原由気</div>
+<div class="tl-b">于靖国神社与军国主义相关人物塑像合影的照片流传。本渡楓 另在广播中自述为东乡平八郎后裔。</div></div>
+
+<div class="tl-i"><div class="tl-d">2025 · 02</div><div class="tl-h">BanG Dream! 系列一位女声优</div>
+<div class="tl-b">使用台湾旗帜，在中国引发大规模争议。具体姓名在所获信源中未标明。</div></div>
+
+<div class="tl-i"><div class="tl-d">2025 · 03</div><div class="tl-h">森久保祥太郎</div>
+<div class="tl-b">在一款中国游戏中<strong>被替换掉三个角色</strong>且未获任何说明，在日本侧引发强烈反弹。据报由寺岛惇太接替。</div></div>
+
+<div class="tl-i"><div class="tl-d">2025 · 09</div><div class="tl-h">『鸣潮』更换女主中文配音</div>
+<div class="tl-b">因配音演员言论争议，官方宣布更换女主角普通话配音。<em>注：鸣潮是 MOONDROP 的联名对象（U.C.T.S.）。</em></div></div>
+
+<div class="tl-i major"><div class="tl-d">2025 · 12</div><div class="tl-h">行业级：日本艺人在华演出集体取消</div>
+<div class="tl-b">在首相<strong>高市早苗</strong>涉台言论之后，日本艺人在中国的演出接连取消，中方发布旅行提示，台湾行政院长公开表示欢迎。<strong>这是记录中首次触发点既非艺人本人亦非作品，而是日本政府——任何合作对象筛选流程都无法覆盖的暴露。</strong></div></div>
+
+<div class="tl-i"><div class="tl-d">2026 · 03</div><div class="tl-h">佐藤拓也</div>
+<div class="tl-b">因过往发言，自『恋与深空』（Rey）与『明日方舟』（Midnight）下车。另有报道称其曾因<strong>17 年前</strong>的靖国神社参拜而在一款中国游戏中被替换。</div></div>
+</div>
+
+<div class="pull">对合作对象筛选最直接的一条：<strong>已经拥有耳机联名产品的声优中，有四位出现在这份记录里。</strong>茅野愛衣（环球音乐 TOoKA BASE，SKU P0081）、森久保祥太郎（同厂牌，P0169）、增田俊树（同厂牌，P0165），以及安野希世乃——<strong>MOONDROP 梦回联名的对象，也是整个中国数据集中唯一的真人联名</strong>（P0097）。<br><br>安野希世乃的案例方向相反且最具启发性：一位从中国争议作品中下车的声优，其后成为一家<em>中国</em>音频品牌唯一真人联名的门面。下车被读作与冒犯性作品<strong>划清界限</strong>，而非负债。</div>
+
+<p class="note"><b>另需注意：</b>记录中没有任何一起事件影响到硬件产品。已观察到的商业后果全部是游戏语音移除、动画中止、或活动取消。<b>尚缺：</b>2006–2017 年间案例（记录自 2018 年起才密集）；茅野愛衣事件 2021-02 与 2020-02 的日期冲突；BanG Dream! 涉事声优姓名；森久保祥太郎被换的具体游戏与三个角色；日本侧反弹（镜像风险）目前仅 hololive 一例有据；日本艺人合同中声誉与解约条款的行业惯例尚未检索。</p>
+</section>
+
+<div class="horizon"></div>
+
+<!-- ===================== 10 缺口 ===================== -->
+<section id="s10">
+<div class="sec-head">
+  <div class="sec-num">10</div>
+  <div class="sec-t"><h2>数据缺口与可信度</h2><div class="sec-sub">Gap Register</div></div>
+</div>
+
+<p>共登记 79 项缺口。凡主动检索而未获得者均已记录，附已尝试的检索路径。以下为高优先级项。</p>
+
+<table>
+<thead><tr><th>缺口</th><th>状态</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>任何一笔交易的版税率或授权费率</td><td><span class="tag2 off">永久未找到</span></td><td><span id="m-src2">—</span> 个已核查信源中无一披露。东洋经济对 AVIOT 副社长的访谈明确讨论授权结构，仍未给出费率。仅能通过行业直接接触获得</td></tr>
+<tr><td>中文声优以本人身份的联名案例</td><td><span class="tag2 off">已证伪</span></td><td>九轮定向检索：边江、阿杰、姜广涛、夏磊、杨天翔、山新、季冠霖；广播剧＋联名＋耳机；VUP＋联名；猫耳商城；天猫京东。<strong>这是一项发现，不是缺失</strong></td></tr>
+<tr><td>猫耳FM 自营耳机的价格、规格、代工方</td><td><span class="tag2 off">未找到</span></td><td>产品确认存在（2026-07-10 上线），全部商业数据无法获取。中国侧最具战略相关性的产品</td></tr>
+<tr><td>简报八个价格段在日本与全球的填充</td><td><span class="tag2 off">不可填</span></td><td>日本仅三段公开，全球无分段。301–512 与 513–1200 无任何对应口径</td></tr>
+<tr><td>products.csv 日期覆盖率</td><td><span class="tag2" id="m-dtag">—</span></td><td>年月精度（YYYY-MM）<span id="m-dm">—</span> 行，含仅有年份者 <span id="m-da">—</span> 行，合计 <span id="m-dt">—</span> 行；图 7-2 上新节奏仅使用年月精度行。已从 AVIOT 公告存档、Zeeny 的 PR TIMES 源、ONKYO 的 DreamNews 存档回填。剩余集中于 2021 年前后的环球音乐存货</td></tr>
+<tr><td>青二プロダクション 与 81プロデュース 是拒绝还是未被接触</td><td><span class="tag2 off">无证据</span></td><td>决定唱片厂牌路径是绕道还是唯一入口。全项目最有价值的未知项</td></tr>
+<tr><td>中国在线广播剧市场规模序列</td><td><span class="tag2 off">数据自相矛盾</span></td><td>所述 89.5% CAGR 与其自身端点不符；"27 亿用户"超出中国人口。已记录并标注为不可用</td></tr>
+<tr><td>全球市场单一货值</td><td><span class="tag2 off">不应给出</span></td><td>同口径下三家机构相差近两倍</td></tr>
+<tr><td>按人分品类的周边销量与销额冠军</td><td><span class="tag2 off">未找到</span></td><td>此类数据几乎从不公开披露</td></tr>
+<tr><td>单篇文章点击量与直方图</td><td><span class="tag2 off">不存在</span></td><td>新闻站不公开。已以广告刊登资料中的站点级 PV／UU 替代</td></tr>
+</tbody></table>
+
+<div class="warn"><span class="tag">Method</span>本报告的信源分为六级：一级为品牌／事务所官方，二级为法定披露与 IR 文件，三级为众筹平台，四级为已确立行业媒体，五级为一般媒体，六级为社区与聚合站。<strong>六级信源仅用于发现线索，绝不用于引用数字。</strong>所有推导值均标注为推导并列出算式。空值即为"未找到"，从不以邻近数值填补，也从不以零代替。未固定任何汇率，因此日元与人民币数值不可直接比较。</div>
+</section>
+
+<footer>
+<p style="color:var(--gray)">声优联名耳机市场调查报告　·　编制于 2026-09-09　·　数据集：<span id="m-foot">—</span></p>
+<p>货币均为本币，未做汇率换算。日本财报以「億円」计；数据集以百万日元存储，图表标注统一换算为亿日元（1 亿日元＝100 百万日元）。所有图表由 D3.js 依据上述数据集绘制。</p>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+/* ============================================================
+   DATA — generated by scripts/build_report_data.py from data/*.csv
+   This file contains NO hand-typed figures.
+   ============================================================ */
+const D = window.REPORT_DATA;
+if(!D){document.body.insertAdjacentHTML("afterbegin",
+  '<div style="background:#3a1a1a;color:#F3ECD8;padding:14px;text-align:center;font-size:14px">'
+  +'data.js 未加载 · 请先运行 python scripts/build_report_data.py</div>');}
+const M = (D&&D.meta)||{};
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const C={abyss:"#04070D",deep:"#080E19",o1:"#0F2438",o2:"#16405C",o3:"#1F6E8C",
+  wave:"#3D8FB0",foam:"#7FB6CE",silver:"#C5D3DE",moon:"#EDF2F7",glow:"#F3ECD8",gray:"#7D8A97",dim:"#5A6672"};
+const tip=d3.select("#tip");
+function showTip(ev,html){tip.html(html).style("opacity",1)
+  .style("left",Math.min(ev.clientX+14,window.innerWidth-310)+"px")
+  .style("top",Math.max(ev.clientY-12,8)+"px");}
+function hideTip(){tip.style("opacity",0);}
+function frame(sel,h,m){
+  const el=document.querySelector(sel); if(!el) return null;
+  let w=el.clientWidth||900;
+  if(w<300) w=300;                       // never render into a collapsed box
+  let l=m.l,r=m.r;
+  const MINPLOT=110;                     // keep a usable plot area
+  if(l+r+MINPLOT>w){                     // shrink side margins proportionally
+    const k=Math.max(.22,(w-MINPLOT)/(l+r));
+    l=Math.round(l*k); r=Math.round(r*k);
+  }
+  const iw=Math.max(40,w-l-r), ih=Math.max(60,h-m.t-m.b);
+  const svg=d3.select(sel).append("svg").attr("width",w).attr("height",h)
+    .attr("viewBox",`0 0 ${w} ${h}`).style("overflow","visible");
+  const g=svg.append("g").attr("transform",`translate(${l},${m.t})`);
+  return {svg,g,iw,ih,w,h,ml:l,mr:r};
+}
+function fmtJP(v){ if(v>=1000000) return (v/1000000).toFixed(2)+"万亿"; if(v>=10000) return (v/10000).toFixed(1)+"千亿"; if(v>=1000) return (v/1000).toFixed(0)+"百亿"; return v.toLocaleString();}
+
+/* ---------- 0-1 premium scatter ---------- */
+(function(){
+  const F=frame("#c-premium",340,{t:18,r:26,b:52,l:56}); if(!F)return;
+  const x=d3.scaleLinear().domain([8000,40000]).range([0,F.iw]);
+  const y=d3.scaleLinear().domain([0,125]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(5).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(6).tickFormat(d=>(d/1000)+"k"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(5).tickFormat(d=>d+"%"));
+  // trend
+  const line=d3.line().x(d=>x(d.base)).y(d=>y(d.pct)).curve(d3.curveMonotoneX);
+  const sorted=[...D.premium].sort((a,b)=>a.base-b.base);
+  F.g.append("path").datum(sorted).attr("fill","none").attr("stroke",C.o3)
+    .attr("stroke-width",1).attr("stroke-dasharray","3,4").attr("opacity",.55).attr("d",line);
+  F.g.selectAll("circle").data(D.premium).join("circle")
+    .attr("cx",d=>x(d.base)).attr("cy",d=>y(d.pct)).attr("r",6.5)
+    .attr("fill",C.foam).attr("fill-opacity",.28).attr("stroke",C.glow).attr("stroke-width",1.1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.p}</b><br>基础 ${d.base.toLocaleString()} 円 → 联名 ${d.collab.toLocaleString()} 円<br>溢价 <b>+${d.pct}%</b><br><span style="color:#7D8A97">${d.note}</span>`))
+    .on("mouseleave",hideTip);
+  F.g.selectAll("text.lab").data(D.premium).join("text").attr("class","lab")
+    .attr("x",d=>x(d.base)+11).attr("y",d=>y(d.pct)+4)
+    .attr("fill",C.silver).attr("font-size",10.5).text(d=>d.p+" +"+d.pct+"%");
+  F.g.append("text").attr("x",F.iw).attr("y",F.ih+40).attr("text-anchor","end")
+    .attr("fill",C.dim).attr("font-size",10.5).text("基础机型会员价（日元）");
+})();
+
+/* ---------- 1-1 sku bars ---------- */
+(function(){
+  const F=frame("#c-sku",496,{t:10,r:76,b:52,l:160}); if(!F)return;
+  const x=d3.scaleLinear().domain([0,(d3.max(D.sku,d=>d.n)||1)*1.06]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.sku.map(d=>d.b)).range([0,F.ih]).padding(.28);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(7).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(7).tickFormat(d3.format("d")));
+  F.g.append("text").attr("x",F.iw).attr("y",F.ih+34).attr("text-anchor","end")
+    .attr("fill",C.dim).attr("font-size",10.5).text("已确认联名 SKU 数");
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  const gr=F.svg.append("defs").append("linearGradient").attr("id","gb").attr("x1","0").attr("x2","1");
+  gr.append("stop").attr("offset","0%").attr("stop-color",C.o2);
+  gr.append("stop").attr("offset","100%").attr("stop-color",C.wave);
+  F.g.selectAll("rect").data(D.sku).join("rect")
+    .attr("x",0).attr("y",d=>y(d.b)).attr("height",y.bandwidth()).attr("width",d=>x(d.n))
+    .attr("fill","url(#gb)").attr("rx",1).style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.b}</b><br>已确认联名 SKU <b>${d.n}</b> 个`)).on("mouseleave",hideTip);
+  F.g.selectAll("text.v").data(D.sku).join("text").attr("class","v")
+    .attr("x",d=>x(d.n)+8).attr("y",d=>y(d.b)+y.bandwidth()/2+4)
+    .attr("fill",d=>d.n>20?C.glow:C.gray).attr("font-size",11).text(d=>d.n);
+})();
+
+/* ---------- 1-2 price histogram ---------- */
+(function(){
+  const F=frame("#c-hist",332,{t:26,r:20,b:56,l:44}); if(!F)return;
+  const max=260000, bin=d3.bin().domain([0,max]).thresholds(d3.range(0,max,5000));
+  const bins=bin(D.prices);
+  const x=d3.scaleLinear().domain([0,max]).range([0,F.iw]);
+  const y=d3.scaleLinear().domain([0,d3.max(bins,d=>d.length)]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(5).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([0,25000,50000,100000,150000,200000,250000]).tickFormat(d=>d/10000+"万"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(5));
+  F.g.selectAll("rect").data(bins).join("rect")
+    .attr("x",d=>x(d.x0)).attr("y",d=>y(d.length))
+    .attr("width",d=>Math.max(1.5,x(d.x1)-x(d.x0)-1)).attr("height",d=>F.ih-y(d.length))
+    .attr("fill",d=>d.x0>=39000?C.glow:C.wave).attr("fill-opacity",d=>d.x0>=39000?.85:.72)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`${d.x0.toLocaleString()}–${d.x1.toLocaleString()} 円<br>SKU 数 <b>${d.length}</b>`))
+    .on("mouseleave",hideTip);
+  const pc=d3.rollup(D.prices,v=>v.length,p=>p);
+  const modal=[...pc.entries()].sort((a,b)=>b[1]-a[1]||b[0]-a[0])[0];
+  const topP=d3.max(D.prices);
+  const ann=[{v:modal[0],t:`${modal[0].toLocaleString()} 円 · ${modal[1]} 个 SKU`},
+             {v:46260,t:"HYDE 46,260"},
+             {v:topP,t:`ONKYO 定制 IEM ${topP.toLocaleString()}`}];
+  F.g.selectAll("line.an").data(ann).join("line").attr("class","an")
+    .attr("x1",d=>x(d.v)).attr("x2",d=>x(d.v)).attr("y1",-6).attr("y2",F.ih)
+    .attr("stroke",C.glow).attr("stroke-width",.6).attr("stroke-dasharray","2,3").attr("opacity",.5);
+  F.g.selectAll("text.an").data(ann).join("text").attr("class","an")
+    .attr("x",d=>x(d.v)>F.iw*.8?x(d.v)-5:x(d.v)+5)
+    .attr("text-anchor",d=>x(d.v)>F.iw*.8?"end":"start")
+    .attr("y",(d,i)=>i===0?-10:12+i*13)
+    .attr("fill",C.glow).attr("font-size",10).attr("opacity",.85).text(d=>d.t);
+  F.g.append("text").attr("x",F.iw).attr("y",F.ih+44).attr("text-anchor","end")
+    .attr("fill",C.dim).attr("font-size",10.5).text("售价（日元含税）");
+})();
+
+/* ---------- 2-1 volume log bars ---------- */
+(function(){
+  const F=frame("#c-vol",400,{t:10,r:80,b:34,l:220}); if(!F)return;
+  const data=[...D.vol].sort((a,b)=>b.v-a.v);
+  const x=d3.scaleLog().domain([300,500000]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(data.map(d=>d.l)).range([0,F.ih]).padding(.3);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([1000,10000,100000,500000]).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([1000,10000,100000,500000]).tickFormat(d3.format(",")));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(data).join("rect")
+    .attr("x",0).attr("y",d=>y(d.l)).attr("height",y.bandwidth()).attr("width",d=>x(d.v))
+    .attr("fill",d=>d.t==="六级信源"?"#3A4652":C.o3).attr("fill-opacity",d=>d.t==="六级信源"?.6:.9)
+    .attr("stroke",d=>d.t==="六级信源"?C.dim:"none").attr("stroke-dasharray","2,2").attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.l}</b><br>${d.v.toLocaleString()}<br><span style="color:#7FB6CE">${d.t}</span> · ${d.s}`))
+    .on("mouseleave",hideTip);
+  F.g.selectAll("text.v").data(data).join("text").attr("class","v")
+    .attr("x",d=>x(d.v)+7).attr("y",d=>y(d.l)+y.bandwidth()/2+4)
+    .attr("fill",d=>d.t==="六级信源"?C.dim:C.glow).attr("font-size",10.5)
+    .text(d=>d.v.toLocaleString());
+})();
+
+/* ---------- 2-2 resale ---------- */
+(function(){
+  const F=frame("#c-resale",120,{t:22,r:20,b:26,l:20}); if(!F)return;
+  const boxes=5, bw=Math.min(52,F.iw/12);
+  for(let i=0;i<boxes;i++){
+    F.g.append("rect").attr("x",i*(bw+9)).attr("y",8).attr("width",bw).attr("height",34)
+      .attr("fill",C.o2).attr("fill-opacity",.55).attr("stroke",C.foam).attr("stroke-opacity",.3).attr("rx",2);
+  }
+  F.g.append("text").attr("x",boxes*(bw+9)+16).attr("y",22).attr("fill",C.moon).attr("font-size",13)
+    .text("近 30 日成交 5 笔");
+  F.g.append("text").attr("x",boxes*(bw+9)+16).attr("y",40).attr("fill",C.gray).attr("font-size",11.5)
+    .text("均价 11,883 日元 · 浮筹极薄");
+})();
+
+/* ---------- 3-1 partner classes ---------- */
+(function(){
+  const F=frame("#c-partner",476,{t:10,r:56,b:52,l:150}); if(!F)return;
+  const x=d3.scaleLinear().domain([0,(d3.max(D.partner,d=>d.n)||1)*1.05]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.partner.map(d=>d.c)).range([0,F.ih]).padding(.28);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(7).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(7).tickFormat(d3.format("d")));
+  F.g.append("text").attr("x",F.iw).attr("y",F.ih+34).attr("text-anchor","end")
+    .attr("fill",C.dim).attr("font-size",10.5).text("对象数（位／个）");
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(D.partner).join("rect")
+    .attr("x",0).attr("y",d=>y(d.c)).attr("height",y.bandwidth()).attr("width",d=>x(d.n))
+    .attr("fill",d=>/声优/.test(d.c)?C.glow:C.wave).attr("fill-opacity",d=>/声优/.test(d.c)?.78:.8).attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.c}</b><br>${d.n} 位／个`)).on("mouseleave",hideTip);
+  F.g.selectAll("text.v").data(D.partner).join("text").attr("class","v")
+    .attr("x",d=>x(d.n)+7).attr("y",d=>y(d.c)+y.bandwidth()/2+4)
+    .attr("fill",C.gray).attr("font-size",10.5).text(d=>d.n);
+})();
+
+/* ---------- 3-2 voice vs price ---------- */
+(function(){
+  const F=frame("#c-voice",340,{t:22,r:24,b:52,l:56}); if(!F)return;
+  const nx=d3.extent(D.voice,d=>d.n), py=d3.extent(D.voice,d=>d.p);
+  const x=d3.scaleLog().domain([nx[0]*.86,nx[1]*1.16]).range([0,F.iw]);
+  const y=d3.scaleLinear().domain([py[0]*.9,py[1]*1.06]).nice(5).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(5).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([nx[0],20,50,100,200,nx[1]]).tickFormat(d3.format("d")));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(5).tickFormat(d=>(d/1000)+"k"));
+  F.g.selectAll("circle").data(D.voice).join("circle")
+    .attr("cx",d=>x(d.n)).attr("cy",d=>y(d.p)).attr("r",d=>4+Math.sqrt(d.n)/3.4)
+    .attr("fill",C.foam).attr("fill-opacity",.24).attr("stroke",C.wave).attr("stroke-width",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.l}</b><br>新录语音 <b>${d.n}</b> 条 · ${d.p.toLocaleString()} 円`))
+    .on("mouseleave",hideTip);
+  F.g.append("text").attr("x",F.iw).attr("y",F.ih+40).attr("text-anchor","end")
+    .attr("fill",C.dim).attr("font-size",10.5).text("新录语音条数（对数）");
+  F.g.append("text").attr("x",-44).attr("y",-4).attr("fill",C.dim).attr("font-size",10.5).text("售价 円");
+})();
+
+/* ---------- 4-1 scale ladder ---------- */
+(function(){
+  const F=frame("#c-ladder",520,{t:10,r:96,b:34,l:180}); if(!F)return;
+  const x=d3.scaleLog().domain([1500,1600000]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.ladder.map(d=>d.c)).range([0,F.ih]).padding(.26);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([10000,100000,1000000]).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([10000,100000,1000000]).tickFormat(d=>d/10000+" 千亿日元"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(D.ladder).join("rect")
+    .attr("x",0).attr("y",d=>y(d.c)).attr("height",y.bandwidth()).attr("width",d=>x(d.v))
+    .attr("fill",d=>d.k==="audio"?C.silver:C.o3).attr("fill-opacity",d=>d.k==="audio"?.9:.85).attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.c}</b><br>营业收入 <b>${d.v.toLocaleString()}</b> 百万日元${d.k==="audio"?"<br><span style='color:#F3ECD8'>音频侧 · 推导值</span>":""}`))
+    .on("mouseleave",hideTip);
+  F.g.selectAll("text.v").data(D.ladder).join("text").attr("class","v")
+    .attr("x",d=>x(d.v)+7).attr("y",d=>y(d.c)+y.bandwidth()/2+4)
+    .attr("fill",d=>d.k==="audio"?C.glow:C.gray).attr("font-size",10)
+    .text(d=>(d.v/100).toFixed(0)+" 亿日元");
+})();
+
+/* ---------- 4-2 disclosure ---------- */
+(function(){
+  const F=frame("#c-disclose",250,{t:10,r:110,b:26,l:220}); if(!F)return;
+  const x=d3.scaleLinear().domain([0,115000]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.disclose.map(d=>d.c)).range([0,F.ih]).padding(.3);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(5).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d=>d/100+" 亿"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(D.disclose).join("rect")
+    .attr("x",0).attr("y",d=>y(d.c)).attr("height",y.bandwidth())
+    .attr("width",d=>Math.max(d.v>0?2:0,x(d.v)))
+    .attr("fill",d=>d.d===1?C.wave:d.d===2?C.o2:"#2A323C")
+    .attr("stroke",d=>d.d===0?C.dim:"none").attr("stroke-dasharray","2,2").attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.c}</b><br>${d.v>0?d.v.toLocaleString()+" 百万日元":"不披露"}${d.pct?"<br>占营收 "+d.pct+"%":""}<br><span style="color:#7FB6CE">${d.d===1?"独立科目 · 可基准比较":d.d===2?"合并披露 · 不可拆分":"完全不披露"}</span>`))
+    .on("mouseleave",hideTip);
+  F.g.selectAll("text.v").data(D.disclose).join("text").attr("class","v")
+    .attr("x",d=>x(d.v)+7).attr("y",d=>y(d.c)+y.bandwidth()/2+4)
+    .attr("fill",d=>d.d===1?C.glow:C.dim).attr("font-size",10.5)
+    .text(d=>d.v>0?(d.v/100).toFixed(0)+" 亿日元"+(d.pct?"（"+d.pct+"%）":""):"零");
+})();
+
+/* ---------- 5-1 cn market dual ---------- */
+(function(){
+  const F=frame("#c-cnmkt",290,{t:20,r:64,b:40,l:56}); if(!F)return;
+  const x=d3.scaleBand().domain(D.cnmkt.map(d=>d.y)).range([0,F.iw]).padding(.42);
+  const yu=d3.scaleLinear().domain([0,2.6]).range([F.ih,0]);
+  const yv=d3.scaleLinear().domain([0,520]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(yu).ticks(5).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`).call(d3.axisBottom(x).tickSize(0));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(yu).ticks(5).tickFormat(d=>d.toFixed(1)));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(${F.iw},0)`)
+    .call(d3.axisRight(yv).ticks(5));
+  F.g.selectAll("rect").data(D.cnmkt).join("rect")
+    .attr("x",d=>x(d.y)).attr("y",d=>yu(d.u)).attr("width",x.bandwidth())
+    .attr("height",d=>F.ih-yu(d.u))
+    .attr("fill",(d,i)=>i===2?"#243040":C.o2).attr("fill-opacity",(d,i)=>i===2?.75:.9)
+    .attr("stroke",(d,i)=>i===2?C.dim:"none").attr("stroke-dasharray","3,3").attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.y}</b><br>销量 ${d.u} 亿副${d.v?"<br>销额 "+d.v+" 亿元":"<br><span style='color:#7D8A97'>销额未预测</span>"}`))
+    .on("mouseleave",hideTip);
+  const vd=D.cnmkt.filter(d=>d.v);
+  F.g.append("path").datum(vd).attr("fill","none").attr("stroke",C.glow).attr("stroke-width",1.8)
+    .attr("d",d3.line().x(d=>x(d.y)+x.bandwidth()/2).y(d=>yv(d.v)));
+  F.g.selectAll("circle.v").data(vd).join("circle").attr("class","v")
+    .attr("cx",d=>x(d.y)+x.bandwidth()/2).attr("cy",d=>yv(d.v)).attr("r",4.5)
+    .attr("fill",C.abyss).attr("stroke",C.glow).attr("stroke-width",1.8);
+  F.g.selectAll("text.vl").data(vd).join("text").attr("class","vl")
+    .attr("x",d=>x(d.y)+x.bandwidth()/2).attr("y",d=>yv(d.v)-12).attr("text-anchor","middle")
+    .attr("fill",C.glow).attr("font-size",11).text(d=>d.v+" 亿元");
+  F.g.append("text").attr("x",-46).attr("y",-6).attr("fill",C.dim).attr("font-size",10).text("销量 亿副");
+  F.g.append("text").attr("x",F.iw+8).attr("y",-6).attr("fill",C.glow).attr("font-size",10).text("销额 亿元");
+})();
+
+/* ---------- 5-2 price band diverging ---------- */
+(function(){
+  const F=frame("#c-band",338,{t:34,r:120,b:34,l:130}); if(!F)return;
+  const x=d3.scaleLinear().domain([-24,50]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.band.map(d=>d.b)).range([0,F.ih]).padding(.3);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(8).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(8).tickFormat(d=>d+"%"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.append("line").attr("x1",x(0)).attr("x2",x(0)).attr("y1",0).attr("y2",F.ih)
+    .attr("stroke",C.silver).attr("stroke-opacity",.35);
+  const bh=y.bandwidth()/2-1.5;
+  D.band.forEach(d=>{
+    const known=d.vol!==null;
+    [["vol",d.vol,0],["val",d.val,bh+3]].forEach(([k,v,off])=>{
+      if(known){
+        F.g.append("rect").attr("x",x(0)).attr("y",y(d.b)+off).attr("height",bh)
+          .attr("width",x(v)-x(0)).attr("fill",k==="vol"?C.wave:C.glow)
+          .attr("fill-opacity",k==="vol"?.85:.7).attr("rx",1)
+          .style("cursor","pointer")
+          .on("mousemove",e=>showTip(e,`<b>${d.b}</b><br>${k==="vol"?"销量":"销额"}同比 <b>+${v}%</b>`))
+          .on("mouseleave",hideTip);
+      }
+    });
+    if(!known){
+      const neg=d.dir<0;
+      F.g.append("rect").attr("x",neg?x(-13):x(0)).attr("y",y(d.b)+1)
+        .attr("height",y.bandwidth()-2).attr("width",Math.abs(x(neg?-13:11)-x(0)))
+        .attr("fill","none").attr("stroke",neg?"#8A5A5A":C.o3).attr("stroke-dasharray","3,3")
+        .attr("stroke-width",1).attr("rx",1)
+        .style("cursor","pointer")
+        .on("mousemove",e=>showTip(e,`<b>${d.b}</b><br>${neg?"量额齐跌":"两位数增长"}<br><span style="color:#7D8A97">仅披露方向，未披露具体数值</span>`))
+        .on("mouseleave",hideTip);
+      F.g.append("text").attr("x",neg?x(-13)-6:x(11)+7).attr("y",y(d.b)+y.bandwidth()/2+4)
+        .attr("text-anchor",neg?"end":"start").attr("fill",C.dim).attr("font-size",10)
+        .text(neg?"下降·数值未披露":"两位数·数值未披露");
+    }else{
+      F.g.append("text").attr("x",x(Math.max(d.vol,d.val))+7).attr("y",y(d.b)+y.bandwidth()/2+4)
+        .attr("fill",C.glow).attr("font-size",10).text(`量+${d.vol}% 额+${d.val}%`);
+    }
+  });
+  const lg=F.g.append("g").attr("transform",`translate(0,-18)`);
+  [["销量",C.wave],["销额",C.glow]].forEach((s,i)=>{
+    lg.append("rect").attr("x",i*72).attr("y",-8).attr("width",11).attr("height",7).attr("fill",s[1]).attr("fill-opacity",.85);
+    lg.append("text").attr("x",i*72+16).attr("y",-1.5).attr("fill",C.gray).attr("font-size",10.5).text(s[0]);
+  });
+})();
+
+/* ---------- 5-3 form factor ---------- */
+(function(){
+  const F=frame("#c-form",250,{t:26,r:26,b:38,l:56}); if(!F)return;
+  const x=d3.scaleBand().domain(D.form.map(d=>d.f)).range([0,F.iw]).padding(.46);
+  const y=d3.scaleLinear().domain([0,8600]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(5).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`).call(d3.axisBottom(x).tickSize(0));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(5).tickFormat(d=>d/1000+"k"));
+  F.g.selectAll("rect").data(D.form).join("rect")
+    .attr("x",d=>x(d.f)).attr("y",d=>y(d.v)).attr("width",x.bandwidth()).attr("height",d=>F.ih-y(d.v))
+    .attr("fill",d=>d.g>20?C.glow:C.o3).attr("fill-opacity",d=>d.g>20?.8:.9).attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.f}</b><br>出货 ${d.v.toLocaleString()} 万台<br>同比 <b>+${d.g}%</b>`))
+    .on("mouseleave",hideTip);
+  F.g.selectAll("text.g").data(D.form).join("text").attr("class","g")
+    .attr("x",d=>x(d.f)+x.bandwidth()/2).attr("y",d=>y(d.v)-9).attr("text-anchor","middle")
+    .attr("fill",d=>d.g>20?C.glow:C.foam).attr("font-size",12.5).text(d=>"+"+d.g+"%");
+  F.g.append("text").attr("x",-48).attr("y",-8).attr("fill",C.dim).attr("font-size",10).text("万台");
+})();
+
+/* ---------- jp band donut ---------- */
+(function(){
+  const F=frame("#c-jpband",250,{t:8,r:8,b:8,l:8}); if(!F)return;
+  const R=Math.min(F.iw,F.ih)/2-6, cx=F.iw/2, cy=F.ih/2;
+  const g=F.g.append("g").attr("transform",`translate(${cx},${cy})`);
+  const pie=d3.pie().value(d=>d.v).sort(null).padAngle(.02);
+  const arc=d3.arc().innerRadius(R*.58).outerRadius(R);
+  const cols=[C.o2,"#2A323C",C.glow];
+  g.selectAll("path").data(pie(D.jpband)).join("path").attr("d",arc)
+    .attr("fill",(d,i)=>cols[i]).attr("fill-opacity",.86)
+    .attr("stroke",C.abyss).attr("stroke-width",1.4).style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.data.b}</b><br>占比 <b>${d.data.v}%</b>`)).on("mouseleave",hideTip);
+  g.selectAll("text.p").data(pie(D.jpband)).join("text").attr("class","p")
+    .attr("transform",d=>`translate(${arc.centroid(d)})`).attr("text-anchor","middle")
+    .attr("fill",(d,i)=>i===2?C.abyss:C.moon).attr("font-size",13).attr("font-weight",500)
+    .text(d=>d.data.v+"%");
+  g.append("text").attr("y",-4).attr("text-anchor","middle").attr("fill",C.moon).attr("font-size",12).text("日本价格带");
+  g.append("text").attr("y",13).attr("text-anchor","middle").attr("fill",C.dim).attr("font-size",10).text(D.jpband.map(d=>d.v).join(" / "));
+  const lg=F.g.append("g").attr("transform","translate(0,"+(F.ih-4)+")");
+  D.jpband.forEach((d,i)=>{
+    lg.append("rect").attr("x",i*(F.iw/3)).attr("y",-9).attr("width",9).attr("height",9).attr("fill",cols[i]);
+    lg.append("text").attr("x",i*(F.iw/3)+13).attr("y",-1).attr("fill",C.gray).attr("font-size",9.5).text(d.b);
+  });
+})();
+
+/* ---------- demo donut ---------- */
+(function(){
+  const F=frame("#c-demo",250,{t:8,r:8,b:8,l:8}); if(!F)return;
+  const R=Math.min(F.iw,F.ih)/2-6, g=F.g.append("g").attr("transform",`translate(${F.iw/2},${F.ih/2})`);
+  const pie=d3.pie().value(d=>d.v).sort(null).padAngle(.02);
+  const arc=d3.arc().innerRadius(R*.58).outerRadius(R);
+  const cols=[C.glow,C.o3,"#2A323C"];
+  g.selectAll("path").data(pie(D.demo)).join("path").attr("d",arc)
+    .attr("fill",(d,i)=>cols[i]).attr("fill-opacity",.86).attr("stroke",C.abyss).attr("stroke-width",1.4)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.data.k}</b><br>占比 <b>${d.data.v}%</b>`)).on("mouseleave",hideTip);
+  g.selectAll("text.p").data(pie(D.demo)).join("text").attr("class","p")
+    .attr("transform",d=>`translate(${arc.centroid(d)})`).attr("text-anchor","middle")
+    .attr("fill",(d,i)=>i===0?C.abyss:C.moon).attr("font-size",12.5).attr("font-weight",500)
+    .text(d=>d.data.v+"%");
+  g.append("text").attr("y",-4).attr("text-anchor","middle").attr("fill",C.moon).attr("font-size",12).text("中国年龄构成");
+  g.append("text").attr("y",13).attr("text-anchor","middle").attr("fill",C.dim).attr("font-size",10).text("31–40 岁主导");
+  const lg=F.g.append("g").attr("transform","translate(0,"+(F.ih-4)+")");
+  D.demo.forEach((d,i)=>{
+    lg.append("rect").attr("x",i*(F.iw/3)).attr("y",-9).attr("width",9).attr("height",9).attr("fill",cols[i]);
+    lg.append("text").attr("x",i*(F.iw/3)+13).attr("y",-1).attr("fill",C.gray).attr("font-size",9.5).text(d.k);
+  });
+})();
+
+/* ---------- 6-1 seiyuu population ---------- */
+(function(){
+  const F=frame("#c-seiyuu",400,{t:22,r:70,b:44,l:56}); if(!F)return;
+  const x=d3.scaleLinear().domain([2001,2026]).range([0,F.iw]);
+  const y=d3.scaleLinear().domain([0,1250]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(6).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickValues([2001,2008,2014,2018,2022,2026]).tickFormat(d3.format("d")));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(6));
+  const gr=F.svg.append("defs").append("linearGradient").attr("id","ga")
+    .attr("x1","0").attr("y1","0").attr("x2","0").attr("y2","1");
+  gr.append("stop").attr("offset","0%").attr("stop-color",C.glow).attr("stop-opacity",.34);
+  gr.append("stop").attr("offset","100%").attr("stop-color",C.o3).attr("stop-opacity",.02);
+  const area=d3.area().x(d=>x(d.y)).y0(F.ih).y1(d=>y(d.f)).curve(d3.curveMonotoneX);
+  const line=d3.line().x(d=>x(d.y)).y(d=>y(d.f)).curve(d3.curveMonotoneX);
+  F.g.append("path").datum(D.seiyuu).attr("fill","url(#ga)").attr("d",area);
+  F.g.append("path").datum(D.seiyuu).attr("fill","none").attr("stroke",C.glow).attr("stroke-width",2).attr("d",line);
+  F.g.selectAll("circle.f").data(D.seiyuu).join("circle").attr("class","f")
+    .attr("cx",d=>x(d.y)).attr("cy",d=>y(d.f)).attr("r",3.6)
+    .attr("fill",C.abyss).attr("stroke",C.glow).attr("stroke-width",1.5).style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.y} 年</b><br>女性 <b>${d.f}</b> 人${d.m?"<br>男性 "+d.m+" 人<br>合计 "+(d.f+d.m)+" 人":""}`))
+    .on("mouseleave",hideTip);
+  const md=D.seiyuu.filter(d=>d.m);
+  F.g.append("path").datum(md).attr("fill","none").attr("stroke",C.wave).attr("stroke-width",1.3)
+    .attr("stroke-dasharray","5,4").attr("d",d3.line().x(d=>x(d.y)).y(d=>y(d.m)));
+  F.g.selectAll("circle.m").data(md).join("circle").attr("class","m")
+    .attr("cx",d=>x(d.y)).attr("cy",d=>y(d.m)).attr("r",4)
+    .attr("fill",C.abyss).attr("stroke",C.wave).attr("stroke-width",1.6);
+  F.g.append("text").attr("x",x(2026)+8).attr("y",y(1135)+4).attr("fill",C.glow).attr("font-size",11.5).text("女性 1,135");
+  F.g.append("text").attr("x",x(2026)+8).attr("y",y(702)+4).attr("fill",C.wave).attr("font-size",11.5).text("男性 702");
+  F.g.append("text").attr("x",x(2001)+6).attr("y",y(225)-9).attr("fill",C.gray).attr("font-size",10.5).text("2001 · 225 人");
+  [[2008,535,"破 500"],[2022,1003,"破 1,000"]].forEach(([yy,vv,t])=>{
+    F.g.append("line").attr("x1",x(yy)).attr("x2",x(yy)).attr("y1",y(vv)).attr("y2",F.ih)
+      .attr("stroke",C.foam).attr("stroke-opacity",.22).attr("stroke-dasharray","2,3");
+    F.g.append("text").attr("x",x(yy)).attr("y",F.ih+30).attr("text-anchor","middle")
+      .attr("fill",C.dim).attr("font-size",10).text(t);
+  });
+  F.g.append("text").attr("x",-48).attr("y",-8).attr("fill",C.dim).attr("font-size",10).text("刊载人数");
+})();
+
+/* ---------- 7-1 pv ---------- */
+(function(){
+  const F=frame("#c-pv",160,{t:20,r:130,b:30,l:150}); if(!F)return;
+  const x=d3.scaleLinear().domain([0,2700]).range([0,F.iw]);
+  const rows=[{s:"アニメイトタイムズ · PV",v:2416,c:C.glow},{s:"アニメイトタイムズ · UU",v:1069,c:C.o3}];
+  const y=d3.scaleBand().domain(rows.map(d=>d.s)).range([0,F.ih]).padding(.34);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(5).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d=>d+"万"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(rows).join("rect")
+    .attr("x",0).attr("y",d=>y(d.s)).attr("height",y.bandwidth()).attr("width",d=>x(d.v))
+    .attr("fill",d=>d.c).attr("fill-opacity",.82).attr("rx",1);
+  F.g.selectAll("text.v").data(rows).join("text").attr("class","v")
+    .attr("x",d=>x(d.v)+8).attr("y",d=>y(d.s)+y.bandwidth()/2+4)
+    .attr("fill",C.glow).attr("font-size",11).text(d=>d.v.toLocaleString()+" 万／月");
+  F.g.append("text").attr("x",0).attr("y",-8).attr("fill",C.dim).attr("font-size",10)
+    .text("2025-09 实测 · 受众男女各 50% · 25–34 岁约 31%");
+})();
+
+/* ---------- 7-2 cadence ---------- */
+(function(){
+  const F=frame("#c-cadence",250,{t:26,r:24,b:44,l:48}); if(!F)return;
+  /* fill the gap months so an empty month reads as zero rather than disappearing */
+  const cm=new Map(D.cadence.map(d=>[d.m,d]));
+  const ms=D.cadence.map(d=>d.m).sort();
+  const months=[]; if(ms.length){
+    let [yy,mm]=ms[0].split("-").map(Number);
+    const [ey,em]=ms[ms.length-1].split("-").map(Number);
+    while(yy*12+mm<=ey*12+em){
+      const k=yy+"-"+String(mm).padStart(2,"0");
+      months.push(cm.get(k)||{m:k,a:0,o:0});
+      mm++; if(mm>12){mm=1;yy++;}
+    }
+  }
+  const x=d3.scaleBand().domain(months.map(d=>d.m)).range([0,F.iw]).padding(.3);
+  const ymax=Math.max(3,d3.max(months,d=>Math.max(d.a,d.o)));
+  const y=d3.scaleLinear().domain([0,ymax]).nice().range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).ticks(Math.min(ymax,6)).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).tickSize(0)).selectAll("text")
+    .attr("transform","rotate(-38)").attr("text-anchor","end").attr("dx",-4).attr("dy",4);
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(Math.min(ymax,6)).tickFormat(d3.format("d")));
+  const sub=d3.scaleBand().domain(["a","o"]).range([0,x.bandwidth()]).padding(.12);
+  months.forEach(d=>{
+    [["a",d.a,C.wave,"AVIOT"],["o",d.o,C.glow,"ONKYO"]].forEach(([k,v,col,nm])=>{
+      if(v>0) F.g.append("rect").attr("x",x(d.m)+sub(k)).attr("y",y(v))
+        .attr("width",sub.bandwidth()).attr("height",F.ih-y(v))
+        .attr("fill",col).attr("fill-opacity",.85).attr("rx",1).style("cursor","pointer")
+        .on("mousemove",e=>showTip(e,`<b>${nm}</b> ${d.m}<br>公告 <b>${v}</b> 项`)).on("mouseleave",hideTip);
+    });
+  });
+  const lg=F.g.append("g");
+  [["AVIOT",C.wave],["ONKYO",C.glow]].forEach((s,i)=>{
+    lg.append("rect").attr("x",i*76).attr("y",-20).attr("width",11).attr("height",8).attr("fill",s[1]).attr("fill-opacity",.85);
+    lg.append("text").attr("x",i*76+16).attr("y",-13).attr("fill",C.gray).attr("font-size",10.5).text(s[0]);
+  });
+  F.g.append("text").attr("x",-40).attr("y",-8).attr("fill",C.dim).attr("font-size",10).text("项");
+})();
+
+/* ---------- 8-1 cert ---------- */
+(function(){
+  const F=frame("#c-cert",220,{t:14,r:210,b:30,l:190}); if(!F)return;
+  const x=d3.scaleLinear().domain([0,10]).range([0,F.iw]);
+  const y=d3.scaleBand().domain(D.cert.map(d=>d.c)).range([0,F.ih]).padding(.32);
+  F.g.append("g").attr("class","gridline").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(10).tickSize(-F.ih).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(10).tickFormat(d=>d+" 周"));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickSize(0));
+  F.g.selectAll("rect").data(D.cert).join("rect")
+    .attr("x",0).attr("y",d=>y(d.c)).attr("height",y.bandwidth())
+    .attr("width",d=>d.w>0?x(d.w):3)
+    .attr("fill",d=>d.w===0?C.glow:(d.k==="cn"?C.o3:C.wave)).attr("fill-opacity",.86).attr("rx",1)
+    .style("cursor","pointer")
+    .on("mousemove",(e,d)=>showTip(e,`<b>${d.c}</b><br>${d.note}`)).on("mouseleave",hideTip);
+  F.g.selectAll("text.n").data(D.cert).join("text").attr("class","n")
+    .attr("x",d=>(d.w>0?x(d.w):3)+9).attr("y",d=>y(d.c)+y.bandwidth()/2+4)
+    .attr("fill",d=>d.w===0?C.glow:C.gray).attr("font-size",10).text(d=>d.note);
+})();
+
+/* ---------- 9-1 risk timeline ---------- */
+(function(){
+  const F=frame("#c-risk",348,{t:52,r:34,b:56,l:96}); if(!F)return;
+  const parse=s=>{const p=s.split("-");return new Date(+p[0],p[1]?+p[1]-1:6,1);};
+  /* risk_log.csv holds one row per documented consequence, so a single event can
+     occupy several rows. Collapse to one dot per 月份·当事人·后果层级 and list every
+     consequence in the tooltip, otherwise the 2021-06 茅野愛衣 rows stack. */
+  const ev=[...d3.group(D.risk,d=>d.d+"|"+d.l+"|"+d.sev).values()].map(rs=>({
+    d:rs[0].d, l:rs[0].l, sev:rs[0].sev, sevl:rs[0].sevl, trg:rs[0].trg,
+    collab:rs.some(r=>r.collab), xs:rs.map(r=>r.x)
+  })).sort((a,b)=>a.d.localeCompare(b.d));
+  const x=d3.scaleTime().domain([new Date(2017,6,1),new Date(2026,9,1)]).range([0,F.iw]);
+  const y=d3.scaleLinear().domain([1,5.6]).range([F.ih,0]);
+  F.g.append("g").attr("class","gridline").call(d3.axisLeft(y).tickValues([2,3,4,5]).tickSize(-F.iw).tickFormat(""));
+  F.g.append("g").attr("class","axis").attr("transform",`translate(0,${F.ih})`)
+    .call(d3.axisBottom(x).ticks(9).tickFormat(d3.timeFormat("%Y")));
+  F.g.append("g").attr("class","axis").call(d3.axisLeft(y).tickValues([2,3,4,5])
+    .tickFormat(d=>({2:"言论争议",3:"角色替换",4:"多作品下架",5:"项目终止"})[d]||""));
+  const labs=[];
+  ev.forEach(d=>{
+    const cx=x(parse(d.d)), cy=y(d.sev);
+    F.g.append("line").attr("x1",cx).attr("x2",cx).attr("y1",cy).attr("y2",F.ih)
+      .attr("stroke",d.sev>=5?C.glow:C.o3).attr("stroke-opacity",.3).attr("stroke-width",1);
+    F.g.append("circle").attr("cx",cx).attr("cy",cy).attr("r",d.sev>=5?7:5.2)
+      .attr("fill",d.sev>=5?C.glow:C.foam).attr("fill-opacity",d.sev>=5?.9:.32)
+      .attr("stroke",d.sev>=5?C.glow:C.wave).attr("stroke-width",1.3).style("cursor","pointer")
+      .on("mousemove",e=>showTip(e,`<b>${d.d}</b> · ${d.l}<br><span style="color:#7D8A97">${d.trg}</span><br>`
+        +d.xs.map(v=>"· "+v).join("<br>")
+        +(d.collab?'<br><span style="color:#F3ECD8">该当事人已有耳机联名 SKU</span>':""))).on("mouseleave",hideTip);
+    const anchor=cx>F.iw-46?"end":cx<46?"start":"middle";
+    const sel=F.g.append("text").attr("x",cx).attr("text-anchor",anchor)
+      .attr("fill",d.sev>=5?C.glow:C.silver).attr("font-size",9.5)
+      .text(d.l.length>13?d.l.slice(0,13)+"…":d.l);
+    labs.push({sel,node:sel.node(),d,cx,cy,anchor});
+  });
+  /* stack labels into tiers so neighbouring events in the same severity row
+     never overprint each other */
+  d3.groups(labs,o=>o.d.sev).forEach(([,arr])=>{
+    arr.sort((a,b)=>a.cx-b.cx);
+    const placed=[];
+    arr.forEach(o=>{
+      const w=o.node.getComputedTextLength();
+      const x0=o.anchor==="end"?o.cx-w:o.anchor==="middle"?o.cx-w/2:o.cx;
+      let tier=0;
+      while(placed.some(p=>p.tier===tier&&x0<p.x1+5&&x0+w>p.x0-5)) tier++;
+      placed.push({tier,x0,x1:x0+w});
+      const base=o.cy-(o.d.sev>=5?13:11)-tier*13;
+      o.sel.attr("y",base);
+      if(tier>0){
+        F.g.insert("line",":first-child").attr("x1",o.cx).attr("x2",o.cx)
+          .attr("y1",base+3).attr("y2",o.cy-(o.d.sev>=5?8:6))
+          .attr("stroke",C.dim).attr("stroke-opacity",.45).attr("stroke-width",.7);
+      }
+    });
+  });
+})();
+
+/* ---------- label fit pass ----------
+   At narrow viewports frame() shrinks the side margins, so long CJK axis and
+   annotation labels can extend past the svg box. Truncate any label that spills
+   and keep the full string in a <title> for hover. Idempotent: the untruncated
+   text is stashed in data-full, so this can safely re-run after fonts load. */
+function fitLabels(){
+  if(!window.d3) return;
+  document.querySelectorAll('[id^="c-"] svg').forEach(svg=>{
+    const W=+svg.getAttribute("width");
+    const sb=svg.getBoundingClientRect();
+    svg.querySelectorAll("text").forEach(node=>{
+      const t=d3.select(node);
+      const full=node.getAttribute("data-full")||node.textContent;
+      if(!full) return;
+      node.setAttribute("data-full",full);
+      t.text(full);
+      const fits=()=>{const r=node.getBoundingClientRect();
+        return (r.left-sb.left)>=-1 && (r.right-sb.left)<=W+1;};
+      if(fits()) return;
+      let str=full;
+      while(str.length>1){
+        str=str.slice(0,-1);
+        t.text(str+"…");
+        if(fits()) break;
+      }
+      t.append("title").text(full);
+    });
+  });
+}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitLabels);}
+else{fitLabels();}
+setTimeout(fitLabels,1200);
+
+/* ---------- bind meta ---------- */
+(function(){
+  if(!D) return;
+  const set=(id,v)=>{const e=document.getElementById(id); if(e) e.textContent=v;};
+  set("m-src",M.sources); set("m-sku",M.products_collab); set("m-co",M.companies);
+  set("m-pt",M.partners); set("m-gp",M.gaps); set("m-gen",M.generated);
+  set("m-brand",M.brands); set("m-sku2",M.products_collab);
+  const pcnt=d3.rollup(D.prices,v=>v.length,v=>v);
+  const md=[...pcnt.entries()].sort((a,b)=>b[1]-a[1]||b[0]-a[0])[0];
+  set("m-pmod",md[0].toLocaleString()); set("m-p22",md[1]);
+  set("m-vmin",M.voice_min); set("m-vmax",M.voice_max); set("m-vn",M.voice_n);
+  set("m-src2",M.sources);
+  set("m-plat",new Set(D.premium.map(x=>x.p)).size); set("m-pair",D.premium.length);
+  set("m-onk",d3.sum(D.cadence.filter(c=>c.m>="2026-08"),c=>c.o));
+  set("m-pmax",d3.max(D.premium,x=>x.pct)); set("m-pmin",d3.min(D.premium,x=>x.pct));
+  if(D.premium_cn){set("m-cnp0",D.premium_cn.p); set("m-cnp1",D.premium_cn.base);
+    set("m-cnp2",D.premium_cn.collab); set("m-cnp",D.premium_cn.pct);}
+  set("m-pcls",D.partner.length);
+  const lo=d3.min(D.prices), hi=d3.max(D.prices);
+  set("m-span",(hi/lo).toFixed(0)); set("m-pmin2",lo.toLocaleString()); set("m-pmax2",hi.toLocaleString());
+  const at=(D.pv||[]).find(o=>/アニメイト/.test(o.s));
+  if(at){set("m-pv1",at.pv.toLocaleString()); set("m-uu1",at.uu.toLocaleString());
+    set("m-pv2",at.pv_alt.toLocaleString()); set("m-uu2",at.uu_alt.toLocaleString());
+    set("m-tw",(at.tw/10000).toFixed(0)); set("m-a25",at.a2534);}
+  set("m-dtag",M.date_month_pct+"% / "+M.date_any_pct+"%");
+  set("m-dm",M.date_month); set("m-da",M.date_any-M.date_month); set("m-dt",M.date_any);
+  const tk=(D.sku.find(x=>/TOoKA/.test(x.b))||{}).n; if(tk) set("m-tooka",tk);
+  set("m-foot",`products.csv（${M.products_total} 行，其中联名 ${M.products_collab}）`
+    +`、partners.csv（${M.partners}）、companies.csv（${M.companies}）`
+    +`、financials.csv（${M.financials}）、sources.csv（${M.sources}）`
+    +`、gaps.csv（${M.gaps}）、market_series.csv、risk_log.csv`);
+})();
+</script>
+</body>
+</html>

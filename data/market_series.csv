@@ -1,0 +1,70 @@
+series,item,metric,value,unit,label,source_url
+seiyuu_population,2001,female,225,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2441186/full/
+seiyuu_population,2001,male,145,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2441186/full/
+seiyuu_population,2004,female,438,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2008,female,535,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2014,female,644,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2016,female,728,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2018,female,800,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2019,female,847,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2020,female,907,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2183721/full/
+seiyuu_population,2021,female,955,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2183721/full/
+seiyuu_population,2022,female,1003,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2223606/full/
+seiyuu_population,2023,female,1039,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2368259/full/
+seiyuu_population,2024,female,1063,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2368259/full/
+seiyuu_population,2025,female,1099,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2368259/full/
+seiyuu_population,2026,female,1135,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2435784/full/
+seiyuu_population,2026,male,702,persons,声優名鑑 刊载人数,https://www.oricon.co.jp/news/2441186/full/
+cn_market,2024,units_yi,2.18,亿副,洛图科技 全渠道,https://wearable.ofweek.com/2025-03/ART-8420-5000-30658918.html
+cn_market,2024,value_yi,428,亿元,洛图科技 全渠道,https://wearable.ofweek.com/2025-03/ART-8420-5000-30658918.html
+cn_market,2024,asp,196,元,推导值 428亿/2.18亿副,derived
+cn_market,2025,units_yi,2.03,亿副,洛图科技 全渠道,https://finance.sina.com.cn/roll/2026-03-27/doc-inhskmqh2345071.shtml
+cn_market,2025,value_yi,452,亿元,洛图科技 全渠道,https://finance.sina.com.cn/roll/2026-03-27/doc-inhskmqh2345071.shtml
+cn_market,2025,asp,223,元,洛图科技 均价 同比+13.3%,https://finance.sina.com.cn/roll/2026-03-27/doc-inhskmqh2345071.shtml
+cn_market,2026F,units_yi,1.99,亿副,预测 同比-2.2% 回落至2亿副以下,https://finance.sina.com.cn/roll/2026-03-27/doc-inhskmqh2345071.shtml
+cn_priceband,0-100,volume_yoy,,percent,量额齐跌 数值未披露,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,0-100,direction,-1,flag,下降,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,100-200,volume_yoy,,percent,量额齐跌 数值未披露,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,100-200,direction,-1,flag,下降,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,200-300,volume_yoy,30,percent,销量同比 增幅超三成,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,200-300,value_yoy,30,percent,销额同比 增幅超三成,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,200-300,direction,1,flag,增长,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,300-500,direction,1,flag,两位数增长 数值未披露,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,500-1000,volume_yoy,33,percent,销量同比,https://zhuanlan.zhihu.com/p/1948675813827380547
+cn_priceband,500-1000,value_yoy,30,percent,销额同比 增幅超三成,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,500-1000,direction,1,flag,增长,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,1000-1500,volume_yoy,40,percent,销量同比,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,1000-1500,value_yoy,42,percent,销额同比 全市场最快,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,1000-1500,direction,1,flag,增长,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,1500-2000,direction,1,flag,两位数增长 数值未披露,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_priceband,2000+,direction,1,flag,两位数增长 数值未披露,https://zhuanlan.zhihu.com/p/2020637012248535999
+cn_form,TWS,shipments_wan,7721,万台,IDC 2025 真无线,https://news.qq.com/rain/a/20260323A03RMQ00
+cn_form,TWS,yoy,6.7,percent,IDC 2025,https://news.qq.com/rain/a/20260323A03RMQ00
+cn_form,OWS,shipments_wan,2996,万台,IDC 2025 开放式,https://news.qq.com/rain/a/20260323A03RMQ00
+cn_form,OWS,yoy,20.2,percent,IDC 2025,https://news.qq.com/rain/a/20260323A03RMQ00
+cn_form,OverEar,shipments_wan,878,万台,IDC 2025 头戴式,https://news.qq.com/rain/a/20260323A03RMQ00
+cn_form,OverEar,yoy,26.3,percent,IDC 2025,https://news.qq.com/rain/a/20260323A03RMQ00
+jp_priceband,under10k,share,40,percent,BCN POS 1万日元以下,https://www.bcnretail.com/news/detail/20251129_574920.html
+jp_priceband,10k-20k,share,20,percent,BCN POS 1-2万日元,https://www.bcnretail.com/news/detail/20251129_574920.html
+jp_priceband,over20k,share,40,percent,BCN POS 2万日元以上,https://www.bcnretail.com/news/detail/20251129_574920.html
+cn_demo,31-40,share,40.01,percent,2025耳机品类用户价值洞察白皮书,https://www.douban.com/note/873735750/
+cn_demo,younger,share,31.63,percent,2025耳机品类用户价值洞察白皮书,https://www.douban.com/note/873735750/
+cn_demo,other,share,28.36,percent,推导余值,derived
+cn_demo,female,share,51.97,percent,普通用户性别构成,https://www.douban.com/note/873735750/
+cn_demo,male,share,48.03,percent,普通用户性别构成,https://www.douban.com/note/873735750/
+cn_demo,use5h,share,38.38,percent,日均使用5小时以上,https://www.douban.com/note/873735750/
+pv_site,アニメイトタイムズ,pv_wan,2416,万/月,2025-09 实测,https://media-radar.jp/detail6638.html
+pv_site,アニメイトタイムズ,uu_wan,1069,万/月,2025-09 实测,https://media-radar.jp/detail6638.html
+cert,cn_srrc,weeks,8,周,含测试全流程约8周 有效期5年 现行不收费,https://www.52audio.com/archives/12793.html
+cert,cn_ccc,weeks,5,周,4-6周 最多两个月,http://cqa-cert.com/xwzx/info_30_itemid_2497.html
+cert,jp_giteki,weeks,4,周,有案例约1个月 需无线测试样机 TELEC等登录机关,https://www.telec.or.jp/services/tech/
+cert,jp_pse,weeks,0,周,自2019-02-01起为强制前提 非周期项,https://www.meti.go.jp/policy/consumer/seian/denan/mlb_faq.html
+resale,aucfan_30d,deals,5,笔,检索词 コラボイヤホン 近30日成交,https://aucfan.com/intro/q-~a5b3a5e9a5dca5a4a5e4a5dba5f3/
+resale,aucfan_30d,avg_price,11883,日元,近30日均价,https://aucfan.com/intro/q-~a5b3a5e9a5dca5a4a5e4a5dba5f3/
+photobook,佐倉綾音,copies,10712,册,Oricon 累计口径 女性声优写真集第一,https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14257125974
+photobook,水樹奈々,copies,5664,册,Oricon 累计口径 第二,https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14257125974
+photobook,生田絵梨花_对照,copies,178688,册,顶级偶像写真集首周 量级对照,https://the0ries.com/nshphotobook/
+pv_site,アニメイトタイムズ,pv_wan_alt,2818,万/月,PC+SP 合计口径 较早期间,https://www.animatetimes.com/ad/
+pv_site,アニメイトタイムズ,uu_wan_alt,1214,万/月,PC+SP 合计口径 较早期间,https://www.animatetimes.com/ad/
+pv_site,アニメイトタイムズ,twitter_followers,670000,人,官方推特 2023-04,https://www.animatetimes.com/ad/
+pv_site,アニメイトタイムズ,age_25_34,31,percent,受众 25-34 岁占比,https://media-radar.jp/detail6638.html

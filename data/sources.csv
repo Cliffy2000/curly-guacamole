@@ -1,0 +1,425 @@
+source_id,url,publisher,publisher_type,doc_type,language,reliability_tier,retrieved_date,topic
+S001,https://shop.aviot.jp/collections/collaboration,AVIOT,brand_official,product_index,ja,1,2026-09-07,AVIOT full collab catalogue and prices
+S002,https://shop.aviot.jp/collections/hololive-all,AVIOT,brand_official,product_index,ja,1,2026-09-07,AVIOT hololive line and sold-out status
+S003,https://aviot.jp/about/,AVIOT,brand_official,corporate,ja,1,2026-09-07,AVIOT brand identity and history
+S004,https://preseedjapan.co.jp/company/company_profile/,Preseed Japan,brand_official,corporate,ja,1,2026-09-07,Preseed Japan company profile
+S005,https://aviot.jp/press/aviot-radio/,AVIOT,brand_official,press_release,ja,1,2026-09-07,AVIOT own radio programme on Bunka Broadcasting
+S006,https://aviot.jp/press/te-v1r-gt-series/,AVIOT,brand_official,press_release,ja,1,2026-09-07,Gintama TE-V1R-GT four models price dates 360+ voices
+S007,https://prtimes.jp/main/html/rd/p/000000148.000027368.html,Preseed Japan via PR Times,brand_official,press_release,ja,1,2026-09-07,AVIOT x Kiramune TE-D01v-KRM full spec and price
+S008,https://shop.aviot.jp/products/te-q3-ksr,AVIOT,brand_official,product_page,ja,1,2026-09-07,Apothecary Diaries model
+S009,https://shop.aviot.jp/products/te-q3-hk,AVIOT,brand_official,product_page,ja,1,2026-09-07,Haikyu!! model
+S010,https://shop.aviot.jp/products/te-v1r-gt,AVIOT,brand_official,product_page,ja,1,2026-09-07,Gintama series product page
+S011,https://shop.aviot.jp/products/te-v1r-jk,AVIOT,brand_official,product_page,ja,1,2026-09-07,Jujutsu Kaisen model
+S012,https://www.phileweb.com/news/d-av/202507/01/63000.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,AVIOT Oshi no Ko TE-V1R-ONK 220 voices price spec
+S013,https://www.eva-info.jp/25439,Evangelion official,agency_official,press_release,ja,1,2026-09-07,AVIOT x Evangelion 9-character guidance voices
+S014,https://www.anime-gintama.com/news/detail.html?id=21695,Gintama official,agency_official,press_release,ja,1,2026-09-07,AVIOT four Gintama wireless models
+S015,https://hololivepro.com/news/20240816-aviot-x-ホロライブenglish-myth-コラボイヤホンの予約販売が開/,COVER Corp,agency_official,press_release,ja,1,2026-09-07,AVIOT x hololive EN Myth pre-order
+S016,https://uzurea.net/aviot-hololive-en-advent-earphones/,uzurea.net,general_press,article,ja,5,2026-09-07,hololive EN Advent 370 voices 22880 JPY
+S017,https://toyokeizai.net/articles/-/893363?display=b,Toyo Keizai,trade_press,interview,ja,4,2026-09-07,INDUSTRY ANALYSIS - rights fragmentation barrier; Preseed EVP and Bunka Broadcast Extend CEO interviewed; 350+ character voices
+S018,https://onkyodirect.jp/shop/pages/collabo.aspx,ONKYO,brand_official,product_index,ja,1,2026-09-07,ONKYO full collab index
+S019,https://www.dreamnews.jp/press/0000360233,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-07,Girls Band Cry Custom IEM K1/K2/K3 ALL PRICES driver config FitEar co-development
+S020,https://news.yahoo.co.jp/articles/a34fe9608e92ff2661264f626b2322d6111d9086,PHILE WEB via Yahoo,trade_press,article,ja,4,2026-09-07,ONKYO Girls Band Cry custom IEM magnesium BA
+S021,https://onkyoanime.com/info/6636623,ONKYO Oto-Ani,brand_official,press_release,ja,1,2026-09-07,Girls Band Cry Custom IEM release
+S022,https://hobby.dengeki.com/news/2543901/,Dengeki Hobby,trade_press,article,ja,4,2026-09-07,ANIMA AOW01 Girls Band Cry 20000 JPY spec 11 words
+S023,https://onkyoanime.com/info/5868915,ONKYO Oto-Ani,brand_official,press_release,ja,1,2026-09-07,Girls Band Cry wireless made-to-order
+S024,https://onkyoanime.com/menu/c1230073,ONKYO Oto-Ani,brand_official,product_index,ja,1,2026-09-07,Girls Band Cry product index
+S025,https://www.4gamer.net/games/999/G999902/20260513044/,4Gamer,trade_press,article,ja,4,2026-09-07,ONKYO Nijisanji Usami Lito and Saeki Ittetsu 18000 JPY
+S026,https://www.phileweb.com/news/d-av/202503/13/62267.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,ONKYO Nijisanji Koyanagi Rou and Hoshidou Shou 18000 JPY 11 words
+S027,https://www.dreamnews.jp/press/0000306512/,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-07,ONKYO Nijisanji Kanae fully made-to-order
+S028,https://onkyoanime.com/info/5950233,ONKYO Oto-Ani,brand_official,press_release,ja,1,2026-09-07,Nijisanji Kanae model
+S029,https://onkyoanime.com/info/6712614,ONKYO Oto-Ani,brand_official,press_release,ja,1,2026-09-07,Nijisanji Hiyahachi Mana model
+S030,https://onkyodirect.jp/shop/g/gMO1_SUZUTUKI1AOW04W/,ONKYO,brand_official,product_page,ja,1,2026-09-07,AOW04 Suzutsuki Sui model
+S031,https://onkyodirect.jp/shop/g/gMO1_KANAN1AOW04B/,ONKYO,brand_official,product_page,ja,1,2026-09-07,AOW04 Kanan-sama model
+S032,https://onkyodirect.jp/shop/pages/MONO_EARPHONE.aspx,ONKYO,brand_official,product_page,ja,1,2026-09-07,AOW04 MONO anime model
+S033,https://onkyoanime.com/info/6127457,ONKYO Oto-Ani,brand_official,press_release,ja,1,2026-09-07,AOW04 MONO limited-period order
+S034,https://hobby.dengeki.com/news/2551734/,Dengeki Hobby,trade_press,article,ja,4,2026-09-07,ONKYO AOW04 Makeine Yanami Anna voice
+S035,https://www.anima-audio.jp/,ONKYO,brand_official,brand_site,ja,1,2026-09-07,ANIMA brand site
+S036,https://onkyoanime.com/,ONKYO,brand_official,retail_site,ja,1,2026-09-07,Oto-Ani Akihabara anime-audio store
+S037,https://prtimes.jp/main/html/rd/p/000000010.000121822.html,final Inc. via PR Times,brand_official,press_release,ja,1,2026-09-07,COTSUBU ASMR Patra BLACK - 10000 units in 12 hours; 8200 JPY; 25000 allocation; full spec
+S038,https://prtimes.jp/main/html/rd/p/000000009.000121822.html,final Inc. via PR Times,brand_official,press_release,ja,1,2026-09-07,COTSUBU ASMR Patra BLACK detail announcement
+S039,https://prtimes.jp/main/html/rd/p/000000224.000121822.html,final Inc. via PR Times,brand_official,press_release,ja,1,2026-09-07,ZE500 for ASMR CyberPatra 5th installment 10800 JPY ASMRPort two ASMR modes
+S040,https://www.phileweb.com/news/d-av/202308/22/58764.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,COTSUBU Patra 2nd wave sell-out. CAUTION: automated read misparsed 台 (units) as yen
+S041,https://news.yahoo.co.jp/articles/6041124b644900da4e5a0cc690cc0370a0b23410,PHILE WEB via Yahoo,trade_press,article,ja,4,2026-09-07,25000 units within-year allocation sold out
+S042,https://panora.tokyo/archives/70813,PANORA,trade_press,article,ja,4,2026-09-07,COTSUBU Patra BLACK full spec QCC3040 14 voices bundle contents
+S043,https://panora.tokyo/archives/69124,PANORA,trade_press,article,ja,4,2026-09-07,COTSUBU Patra 1st installment 1000-unit final restock
+S044,https://av.watch.impress.co.jp/docs/news/1495782.html,AV Watch,trade_press,article,ja,4,2026-09-07,COTSUBU Patra 1st installment 400-slot handover event
+S045,https://av.watch.impress.co.jp/docs/news/2087560.html,AV Watch,trade_press,article,ja,4,2026-09-07,VR1000 for ASMR 4th installment general sale; 3rd installment re-release
+S046,https://www.phileweb.com/news/d-av/202602/20/64611.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,VR1000 for ASMR Patra general retail launch
+S047,https://www.moguravr.com/suo-patra-final-vr1000-asmr/,Mogura VR,trade_press,article,ja,4,2026-09-07,VR1000 for ASMR Patra spec and ASMR sound design
+S048,https://kakaku.com/item/J0000049958/,Kakaku.com,retailer,listing,ja,4,2026-09-07,final VR1000 for ASMR price comparison
+S049,https://e-earphone.blog/?p=1541653,e-earphone,retailer,article,ja,4,2026-09-07,VR1000 for ASMR Patra launch 5980 JPY spec
+S050,https://www.phileweb.com/news/d-av/202608/10/65741.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,ZE500 CyberPatra 5th installment order sale
+S051,https://premium.gamepedia.jp/hobby/archives/225613,Chara Hobby,general_press,article,ja,5,2026-09-07,ZE500 CyberPatra pre-order and bonus info
+S052,https://www.appbank.net/2026/08/11/youtubernews/3076151.php,AppBank,general_press,article,ja,5,2026-09-07,ZE500 CyberPatra new ASMR sound and Touch de Patra
+S053,https://x.com/final_audio/status/1974095472324456923,final Inc.,brand_official,social_post,ja,1,2026-09-07,4th installment pre-order announcement
+S054,https://final-inc.com/en/blogs/value-ws-1/news-293,final Inc.,brand_official,press_release,en,1,2026-09-07,VR1000 4th installment first general sale
+S055,https://snext-final.com/products/detail/TWSN73,final Inc.,brand_official,product_page,ja,1,2026-09-07,Namikawa Daisuke TWSN73 - 100+ prototypes; 32 voices; 4 seiyuu; full spec; Nippon TV channel
+S056,https://realsound.jp/tech/2024/07/post-1726555.html,Real Sound,trade_press,article,ja,4,2026-09-07,COTSUBU for ASMR Blue Archive YUUKA Ver.
+S057,https://news.denfaminicogamer.jp/news/250719a,Denfaminicogamer,trade_press,article,ja,4,2026-09-07,COTSUBU for ASMR 3D Blue Archive HINA Ver.
+S058,https://suoupatra.fanbox.cc/posts/6559020,Suou Patra,talent_official,social_post,ja,1,2026-09-07,Talent's own promotion of the collab
+S059,https://online.stereosound.co.jp/_ct/17649347,Stereo Sound,trade_press,article,ja,4,2026-09-07,COTSUBU Patra BLACK pre-order period
+S060,https://www.nikkan.co.jp/releases/view/160594,Nikkan Kogyo,trade_press,press_release,ja,4,2026-09-07,COTSUBU Patra BLACK corporate release mirror
+S061,https://store.compoff-plus.jp/products/mt1229,Compoff Plus,retailer,listing,ja,4,2026-09-07,EVIDENCE: Suou Patra is 774 inc. not VOMS
+S062,https://zeeny.com/collections/collaboration,Zeeny / NAIN,brand_official,product_index,ja,1,2026-09-07,Zeeny collab catalogue
+S063,https://news.mynavi.jp/article/20230420-2658908/,Mynavi News,trade_press,article,ja,4,2026-09-07,Zeeny Lights 3 x Sakuya Azusa 14800 JPY 12-month lead time
+S064,https://www.phileweb.com/news/d-av/202010/13/51295.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,Zeeny Lights x Usagi Mari 9800 JPY excl tax
+S065,https://zeeny.com/products/virtual-agent-akagami-zeeny-lights-3,Zeeny / NAIN,brand_official,product_page,ja,1,2026-09-07,Zeeny Lights 3 x Akagami
+S066,https://zeeny.com/products/special-edition,Zeeny / NAIN,brand_official,product_page,ja,1,2026-09-07,Zeeny Artist VTuber Special Edition
+S067,https://www.ear-phone-review.com/entry/news/Zeeny_Lights_×_鈴原るる,audio-sound @ hatena,community,article,ja,6,2026-09-07,Zeeny Lights x Suzuhara Ruru - discovery lead only
+S068,https://www.nikkei.com/compass/company/jNh5CvwsvEMG37ERUNQjjv,Nikkei,trade_press,company_profile,ja,4,2026-09-07,NAIN Inc corporate and funding
+S069,https://initial.inc/companies/A-16364,INITIAL,trade_press,company_profile,ja,4,2026-09-07,NAIN Inc funding history
+S070,https://morningpitch.com/startups/13841/,Morning Pitch,trade_press,company_profile,ja,4,2026-09-07,NAIN Inc startup profile
+S071,https://sg.wantedly.com/companies/NainInc,Wantedly,general_press,company_profile,ja,5,2026-09-07,NAIN founding 2014-11; founder Yamamoto Kentaro; ~30 staff; Zeeny Assistant voice-skin service; Yv licensing
+S072,https://www.famitsu.com/news/202212/21287229.html,Famitsu,trade_press,article,ja,4,2026-09-07,Universal Music 6-seiyuu earphones full spec both platforms 17050 JPY
+S073,https://store.universal-music.co.jp/products/uizz4422,Universal Music Japan,brand_official,product_page,ja,1,2026-09-07,Hatano Wataru model with BUDDY PASS
+S074,https://prtimes.jp/main/html/rd/p/000001563.000000664.html,Universal Music via PR Times,brand_official,press_release,ja,1,2026-09-07,Oto mo Radio deluxe edition 2022-12-21
+S075,https://tower.jp/article/feature_item/2022/11/24/4002,Tower Records,retailer,article,ja,4,2026-09-07,Six-seiyuu models new release
+S076,https://www.hmv.co.jp/news/article/2110141016/,HMV,retailer,article,ja,4,2026-09-07,TRUE WIRELESS STEREO EARPHONES character voice series
+S077,https://www.hmv.co.jp/news/article/221118136/,HMV,retailer,article,ja,4,2026-09-07,Oto mo Radio 3rd installment - RETURNS HTTP 403
+S078,https://www.hmv.co.jp/news/article/2011051003/,HMV,retailer,article,ja,4,2026-09-07,Seven seiyuu supervised wireless earphones 2020-11
+S079,https://tower.jp/article/feature_item/2022/03/16/4003,Tower Records,retailer,article,ja,4,2026-09-07,Seiyuu / anime / artist original-audio earphone feature
+S080,https://anime.eiga.com/news/119218/,Anime Hack,trade_press,article,ja,4,2026-09-07,AVIOT x Kiramune 13 seiyuu 39 voices 22000 JPY channels
+S081,https://kai-you.net/article/72150,KAI-YOU,trade_press,article,ja,4,2026-09-07,KPro01 - 10M JPY in 1 hour; target 3M; launched 2020-02-19
+S082,https://kai-you.net/article/74083,KAI-YOU,trade_press,article,ja,4,2026-09-07,KPro01 crossing 100M JPY
+S083,https://news.mynavi.jp/article/20200508-1033231/,Mynavi News,trade_press,article,ja,4,2026-09-07,KPro01 - 166.07M JPY and 10003 backers
+S084,https://www.oricon.co.jp/special/54697/,Oricon,general_press,article,ja,5,2026-09-07,Koiwai Kotori profile - 1億6千万円の女
+S085,https://note.com/makuake_note/n/n0850ef65b051,Makuake,crowdfunding_platform,article,ja,3,2026-09-07,KPro01 official post-mortem - 160M / 53x; Makuake Of The Year 2020 GOLD; 70M stretch goal; 4-pin connector
+S086,https://xtech.nikkei.com/atcl/nxt/column/18/00001/04387/,Nikkei xTECH,trade_press,article,ja,4,2026-09-07,KPro01 case study - product was rated poorly in internal review. MAY BE PAYWALLED
+S087,https://news.yahoo.co.jp/articles/5d44f1fc92c98074d5418fea639e4c0b07192059,KAI-YOU via Yahoo,trade_press,article,ja,4,2026-09-07,KPro01 100M JPY mirror
+S088,https://www.sony.jp/headphone/store/special/bocchitherock/,Sony,brand_official,product_page,ja,1,2026-09-07,Sony x Bocchi the Rock 3rd installment - PAGE RETURNS MOJIBAKE
+S089,https://www.sony.jp/headphone/products/WF-C710N/,Sony,brand_official,product_page,ja,1,2026-09-07,Base platform for the Bocchi collab
+S090,https://kakaku.com/item/J0000047771/,Kakaku.com,retailer,listing,ja,4,2026-09-07,WF-C710N street price 12884 JPY
+S091,https://prtimes.jp/main/html/rd/p/000000317.000045133.html,JVCKenwood via PR Times,brand_official,press_release,ja,1,2026-09-07,Victor x Disney HA-A20T four models 7150 JPY
+S092,https://www.victor.jp/headphones/disney/,Victor / JVCKenwood,brand_official,product_index,ja,1,2026-09-07,Disney Store exclusive collab line
+S093,https://store.disney.co.jp/special/jvckenwood/,Disney Store Japan,agency_official,product_page,ja,1,2026-09-07,Disney side of the Victor collab
+S094,https://news.mynavi.jp/article/20230515-2679802/,Mynavi News,trade_press,article,ja,4,2026-09-07,Victor Disney TWS four characters
+S095,https://www.victor.jp/audio/lineup/ex-dub1/,Victor / JVCKenwood,brand_official,product_page,ja,1,2026-09-07,EX-DUB1 oshigoe audio - full spec; Mami Masafumi tuning; READING/RADIO TALK/TALK SHOW modes
+S096,https://online-store.jvckenwood.com/c/audio/jvc-victor-audio/woodcone/usb-va1,JVCKenwood,brand_official,product_page,ja,1,2026-09-07,USB-VA1 Suzumura Kenichi voice content SKU
+S097,https://www.cafereogroup.com/cr-goods/groovecoaster_hololive_wirelessearphone/,Cafereo,brand_official,product_page,ja,1,2026-09-07,Groove Coaster x hololive vol.1
+S098,https://www.cafereogroup.com/cr-goods/groovecoaster_hololive_wirelessearphone_vol3/,Cafereo,brand_official,product_page,ja,1,2026-09-07,Groove Coaster x hololive vol.3
+S099,https://www.hmv.co.jp/news/article/230804138/,HMV,retailer,article,ja,4,2026-09-07,Groove Coaster x hololive Noel and Chloe
+S100,https://www.phileweb.com/news/d-av/202010/16/51326.html,PHILE WEB,trade_press,article,ja,4,2026-09-07,audio-technica Color of Life 5 seiyuu promo only
+S101,https://prtimes.jp/main/html/rd/p/000000155.000004355.html,Tribal Media House via PR Times,agency_official,press_release,ja,1,2026-09-07,audio-technica Color of Life 2nd Season
+S102,https://www.audio-technica.co.jp/news/detail/350,Audio-Technica,brand_official,press_release,ja,1,2026-09-07,ATH-SQ1TW2NC Always you Always colorful 5 seiyuu campaign
+S103,https://note.aktio.co.jp/art/20210303-1426.html,Aktio Note,general_press,interview,ja,5,2026-09-07,Koiwai Kotori audio-engineering involvement
+S104,https://www.e-earphone.jp/blogs/feature/collaboration_earphone,e-earphone,retailer,article,ja,4,2026-09-07,MASTER collab index; resale price escalation commentary; ASMR tuning as differentiator
+S105,https://e-earphone.blog/?p=1486546,e-earphone,retailer,article,ja,4,2026-09-07,Earphones for seiyuu radio and VTuber streams
+S106,https://e-earphone.blog/?p=1498537,e-earphone,retailer,article,ja,4,2026-09-07,ASMR-suitable earphones
+S107,https://www.e-earphone.jp/blogs/feature/asmr,e-earphone,retailer,article,ja,4,2026-09-07,ASMR earphone selection
+S108,https://goods-mate.com/earphones/,Goods Mate,retailer,service_page,ja,4,2026-09-07,DEDICATED BUY-BACK SERVICE for anime/game/VTuber collab earphones - secondary market infrastructure
+S109,https://cmsong-navi.com/2024/11/12/vtuberコラボイヤホンまとめ-ホロライブ-にじさんじ-な/,Arage no Susume,community,article,ja,6,2026-09-07,VTuber collab roundup - DISCOVERY ONLY; contains an error attributing COTSUBU to Sony
+S110,https://tonchinkan-ear.hatenablog.com/entry/2026/01/15/114959,Earphone Hunter,community,article,ja,6,2026-09-07,LUKLUK Aoharu01 DLsite tie-in with Moondrop involvement
+S111,https://www.moguravr.com/cover-2026-q4-earnings/,Mogura VR,trade_press,article,ja,4,2026-09-07,COVER FY2026/3 full year 493億円; merchandising 237億4700万; licensing 71億9800万
+S112,https://www.moguravr.com/cover-2026-q3-financial-results/,Mogura VR,trade_press,article,ja,4,2026-09-07,COVER Q3 cumulative 346億円 +20.2%
+S113,https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260514/20260514534025.pdf,COVER Corp,ir_filing,annual_report,ja,2,2026-09-07,COVER FY2026/3 tanshin - RETURNED UNPARSEABLE BINARY on automated fetch
+S114,https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250212/20250212570192.pdf,COVER Corp,ir_filing,quarterly_report,ja,2,2026-09-07,COVER FY2025/3 Q3 tanshin - unparseable
+S115,https://panora.tokyo/archives/131810,PANORA,trade_press,article,ja,4,2026-09-07,COVER Q3 commentary
+S116,https://finance.logmi.jp/articles/382947,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,COVER earnings call - Live/Events +68%
+S117,https://finance.logmi.jp/articles/381151,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,COVER merchandising expansion commentary
+S118,https://finance.biggo.jp/news/jpx_tdnet_140120260812518254,BigGo Finance,trade_press,filing_mirror,ja,4,2026-09-07,COVER FY2027/3 Q1 tanshin mirror
+S119,https://japanir.jp/company/company-5032/ir/5032-20260610-01_wp_financial_summary/,Japan IR,trade_press,financial_summary,ja,4,2026-09-07,ANYCOLOR FY2026 revenue 55.7億円 confirmed magnitude
+S120,https://www.moguravr.com/anycolor-fy2026-annual-results/,Mogura VR,trade_press,article,ja,4,2026-09-07,ANYCOLOR FY2026 556億円 +29.9%
+S121,https://finance.logmi.jp/articles/385001,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,ANYCOLOR FY2026 full figures; commerce ~70% of revenue; FY2027 guidance
+S122,https://finance.logmi.jp/articles/382668,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,ANYCOLOR Q1 commerce 103億9400万; events 21億1700万
+S123,https://finance.logmi.jp/articles/382128,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,ANYCOLOR Q4 upside; commerce-led fan expansion
+S124,https://finance.logmi.jp/articles/383369,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,ANYCOLOR guidance revision and dividend
+S125,https://finance.logmi.jp/articles/384031,logmi Finance,trade_press,earnings_call,ja,4,2026-09-07,ANYCOLOR double-digit growth commerce driven
+S126,https://panora.tokyo/archives/145278,PANORA,trade_press,article,ja,4,2026-09-07,ANYCOLOR FY2026 +30% revenue +23% operating profit
+S127,https://panora.tokyo/archives/134855,PANORA,trade_press,article,ja,4,2026-09-07,ANYCOLOR Q3 +45%
+S128,https://www.moguravr.com/anycolor-q3-financial-results-2026/,Mogura VR,trade_press,article,ja,4,2026-09-07,ANYCOLOR Q3 420億円 +45.4%
+S129,https://gamebiz.jp/news/417353,gamebiz,trade_press,article,ja,4,2026-09-07,ANYCOLOR 2Q +51% revenue +63% operating profit
+S130,https://gamebiz.jp/news/407238,gamebiz,trade_press,article,ja,4,2026-09-07,ANYCOLOR FY2025 comparison +34% / +31%
+S131,https://gamebiz.jp/news/422691,gamebiz,trade_press,article,ja,4,2026-09-07,ANYCOLOR goods valuation loss and guidance cut
+S132,https://www.moguravr.com/anycolor-q1-fy2026-financial-results/,Mogura VR,trade_press,article,ja,4,2026-09-07,ANYCOLOR Q1 +12% revenue +57% operating profit
+S133,https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260311/20260311579611.pdf,ANYCOLOR,ir_filing,quarterly_report,ja,2,2026-09-07,ANYCOLOR FY2026/4 Q3 IR deck - NOT YET READ
+S134,https://finance.yahoo.co.jp/quote/5032.T/financials,Yahoo Finance Japan,trade_press,financial_data,ja,4,2026-09-07,ANYCOLOR financial data
+S135,https://finance.yahoo.co.jp/quote/5253.T/financials,Yahoo Finance Japan,trade_press,financial_data,ja,4,2026-09-07,COVER financial data
+S136,https://minkabu.jp/stock/5253/settlement,Minkabu,trade_press,financial_data,ja,4,2026-09-07,COVER settlement data
+S137,https://note.com/aikessanlab/n/n09756798d4e0,AI Kessan Lab,community,article,ja,6,2026-09-07,ANYCOLOR Q1 analysis - discovery only
+S138,https://note.com/suikabatake/n/nbb7ff3ef5957,Suika,community,article,ja,6,2026-09-07,ANYCOLOR commerce analysis - discovery only
+S139,https://moondroplab.com/cn/collabs,MOONDROP,brand_official,product_index,zh,1,2026-09-07,MOONDROP full collab catalogue and prices
+S140,https://moondroplab.com/cn/about-us,MOONDROP,brand_official,corporate,zh,1,2026-09-07,MOONDROP company positioning and cultural IP ecosystem claim
+S141,https://moondroplab.com/cn/history,MOONDROP,brand_official,corporate,zh,1,2026-09-07,MOONDROP company history
+S142,https://moondroplab.com/cn/products/elven-maiden,MOONDROP,brand_official,product_page,zh,1,2026-09-07,EVIDENCE: Elven Maiden is a Miku x MOEYU collab not in-house
+S143,https://www.chwang.com/article/202179267642,Chuhai Wang,trade_press,article,zh,4,2026-09-07,MOONDROP corporate - founded 2015 Chengdu; 上亿 output value; 20+ countries; 16 VGP 2026 awards; ACG+acoustics strategy; VDSF
+S144,https://www.163.com/dy/article/L1FNSGMG0511B8LM.html,NetEase,general_press,article,zh,5,2026-09-07,MOONDROP x Luo Tianyi gift box 239 CNY; Pudding-based; 10mm; LHDC; 22nm SoC
+S145,https://finance.sina.com.cn/tech/digi/2026-05-20/doc-inhypnum1754636.shtml,Sina Tech,general_press,article,zh,5,2026-09-07,MOONDROP x Hatsune Miku 239 CNY; MIRAGE-based; Miku V3 art; leek case
+S146,https://www.smzdm.com/p/42271281/,SMZDM,retailer,listing,zh,4,2026-09-07,MOONDROP x Moeyu Aria Miku 439 CNY 0.78mm 2-pin
+S147,https://www.sohu.com/a/978705182_122511859,Sohu,general_press,article,zh,5,2026-09-07,MOONDROP x Wuthering Waves 299 CNY Jan 23 launch
+S148,https://www.taptap.cn/moment/763135895854384737,TapTap,community,forum_post,zh,6,2026-09-07,Wuthering Waves collab detail - discovery only
+S149,https://digi.ithome.com/archiver/852/628.htm,IT Home,trade_press,article,zh,4,2026-09-07,Meizu PANDAER x MOONDROP PILL - brand x brand not talent
+S150,https://www.ednchina.com/technews/40160.html,EDN China,trade_press,teardown,zh,4,2026-09-07,MOONDROP U.C.T.S. teardown - BOM inference
+S151,https://dcdv.zol.com.cn/1089/10895332.html,ZOL,trade_press,article,zh,4,2026-09-07,SONGX x Luo Tianyi 229 CNY list / 184.45 promo; ANC; HiFi positioning
+S152,https://finance.sina.com.cn/tech/roll/2025-04-06/doc-inesfyaa9088331.shtml,Sina Tech,general_press,article,zh,5,2026-09-07,SONGX x Luo Tianyi 339 CNY channel price
+S153,https://finance.sina.com.cn/tech/roll/2025-10-13/doc-infttxhi2909899.shtml,Sina Tech,general_press,article,zh,5,2026-09-07,SONGX x Luo Tianyi 290 CNY promo
+S154,https://www.smzdm.com/p/137704989/,SMZDM,retailer,listing,zh,4,2026-09-07,SONGX x Luo Tianyi JD 339 CNY
+S155,https://detail.zol.com.cn/manufacturer/index58488.html,ZOL,trade_press,company_profile,zh,4,2026-09-07,SONGX = Shenzhen Yinzhun Technology; Red Dot/iF/G-MARK; collab list
+S156,http://www.songplusaudio.com/contactus.html,SONGX,brand_official,corporate,zh,1,2026-09-07,SONGX corporate contact
+S157,https://www.cnpp.cn/pinpai/4210428.html,CNPP,community,company_profile,zh,6,2026-09-07,SONGX brand profile - discovery only
+S158,https://www.52audio.com/archives/63803.html,52audio,trade_press,teardown,zh,4,2026-09-07,SONGX SX06 teardown - sibling model BOM reference
+S159,https://www.hk01.com/數碼生活/60277309/,HK01,general_press,article,zh,5,2026-09-07,TANCHJIM anime earphone series from HKD 399
+S160,https://post.smzdm.com/p/admk22lp/,SMZDM,retailer,review,zh,4,2026-09-07,TANCHJIM BUNNY 99 CNY class
+S161,https://zhuanlan.zhihu.com/p/375558402,Zhihu,community,review,zh,6,2026-09-07,TANCHJIM Tanya review - discovery only
+S162,https://www.jmplus.com.tw/collections/tanchjim,JM-PLUS,retailer,product_index,zh,4,2026-09-07,TANCHJIM range and in-house character Asano Tanchi
+S163,https://news.qq.com/rain/a/20260712A07FZA00,Tencent News / Leibao,trade_press,article,zh,4,2026-09-07,MissEvan 12 years; own earphone launched Jul 10; platform scale metrics; Maoer Shengke attendance
+S164,https://www.sina.cn/news/detail/5318467738928627.html,Sina,general_press,article,zh,5,2026-09-07,MissEvan earphone launch Jul 10; app-exclusive entry unlock
+S165,https://www.sina.cn/news/detail/5329392450405495.html,Sina,general_press,article,zh,5,2026-09-07,Maoer Shengke 2026 event 2026-09-11 to 09-13 Changzhou
+S166,https://mall.jd.com/index-15408726.html,JD.com,retailer,storefront,zh,4,2026-09-07,MissEvan JD flagship store - earphone price NOT SURFACED
+S167,https://www.missevan.com/,MissEvan,brand_official,platform,zh,1,2026-09-07,MissEvan platform
+S168,https://baike.baidu.com/item/猫耳FM/66687089,Baidu Baike,community,encyclopedia,zh,6,2026-09-07,MissEvan background and Maoer Shengke event brand
+S169,https://www.woshipm.com/evaluating/4341626.html,Woshipm,community,product_analysis,zh,6,2026-09-07,MissEvan product analysis - discovery only
+S170,https://www.163.com/dy/article/KF31EPET0531RVQO.html,NetEase,general_press,article,zh,5,2026-09-07,Maoer Shengke sound culture commentary
+S171,https://www.fxbaogao.com/detail/5434123,Faxian Baogao,trade_press,prospectus,zh,4,2026-09-07,Maoer Shengke 2026 sponsorship prospectus - PAYWALLED
+S172,https://k.sina.cn/article_1749990115_684ebae3020017wyi.html,Sina,general_press,article,zh,5,2026-09-07,CN audio drama economics - CV fees 5000-10000/ep; Sha Po Lang 7.71M; Mo Dao Zu Shi >10M; platform pricing
+S173,https://zhongchou.modian.com/item/43338.html,Modian,crowdfunding_platform,campaign_page,zh,3,2026-09-07,Sha Po Lang audio drama merchandise crowdfunding campaign
+S174,https://wapbaike.baidu.com/tashuo/browse/content?id=9167c87c33b9f6c2f5d1c198,Baidu,community,article,zh,6,2026-09-07,Audio drama derivative market survey
+S175,https://zhuanlan.zhihu.com/p/429408388,Zhihu,community,article,zh,6,2026-09-07,Sound economy analysis via web audio drama
+S176,https://zh.wikipedia.org/zh-cn/VirtuaReal,Wikipedia,community,encyclopedia,zh,6,2026-09-07,VirtuaReal entity; bilibili wholly-owned; ANYCOLOR no equity; 61 members; 145.54M followers
+S177,https://baike.baidu.com/item/VirtuaReal/56849421,Baidu Baike,community,encyclopedia,zh,6,2026-09-07,VirtuaReal bilibili x Nijisanji joint project
+S178,https://zhuanlan.zhihu.com/p/536579302,Zhihu,community,article,zh,6,2026-09-07,VTuber revenue TOP10 - VirtuaReal H1 CNY 28.01M
+S179,https://www.caaip.cn/h-nd-934.html,CAAIP,trade_press,article,zh,4,2026-09-07,VTuber revenue TOP10 mirror
+S180,http://www.21jingji.com/article/20221017/herald/ba1a120fc11051d67958b1bb7430e168.html,21st Century Business Herald,trade_press,article,zh,4,2026-09-07,Single livestream peak CNY 1.79M Q3 2022
+S181,https://www.163.com/dy/article/H6RO2NQ40511DSSR.html,NetEase,general_press,article,zh,5,2026-09-07,VTuber company CNY 2.3bn IPO valuation
+S182,https://news.qq.com/rain/a/20220712A0950I00,Tencent News,trade_press,article,zh,4,2026-09-07,CN and JP VTuber industry; top VTuber income >CNY 10M claim
+S183,https://www.cbndata.com/information/248985,CBNData,trade_press,article,zh,4,2026-09-07,VTuber business economics commentary
+S184,https://wearable.ofweek.com/2025-03/ART-8420-5000-30658918.html,OFweek,trade_press,article,zh,4,2026-09-07,RUNTO: CN headphone market 2024 218M units +7.6%; 428亿元 +9.8%
+S185,https://m.gelonghui.com/p/877264,Gelonghui,trade_press,report_summary,zh,4,2026-09-07,Global headphone market 2023 and 2029 forecast CAGR 2.82%
+S186,https://www.chinabaogao.com/detail/668774.html,China Baogao,trade_press,report_summary,zh,4,2026-09-07,CN Hi-Fi headphone industry 2023-2030 - NOT YET READ
+S187,https://m.gelonghui.com/p/1433594,Gelonghui,trade_press,report_summary,zh,4,2026-09-07,CN headphone market 2025-2031 - NOT YET READ
+S188,https://m.chyxx.com/pdf/42/03/824203.pdf,Chyxx,trade_press,report,zh,4,2026-09-07,CN headphone market 2020-2026 PDF - NOT YET READ
+S189,https://easseen.com/index.php?ac=article&at=read&did=2947,Easseen,trade_press,report_summary,zh,4,2026-09-07,Global and CN wireless 2025-2031 - NOT YET READ
+S190,https://www.zhiyanzhan.cn/report/16483.html,Zhiyanzhan,trade_press,report_summary,zh,4,2026-09-07,CN headphone industry survey - NOT YET READ
+S191,https://www.bilibili.com/video/BV1i1StBFE2S/,bilibili,community,video,zh,6,2026-09-07,Xinghaibei x Miku M500 + YUME bundle 239 CNY - DISCOVERY ONLY needs primary
+S192,https://zhuanlan.zhihu.com/p/65158981,Zhihu,community,article,zh,6,2026-09-07,ACG marketing in CN hi-fi - context only
+S193,https://zhuanlan.zhihu.com/p/596204816,Zhihu,community,article,zh,6,2026-09-07,2022 portable hi-fi oddities - context only
+S194,https://www.headphoneclub.com/thread-731232-1-1.html,Headphone Club,community,forum_post,zh,6,2026-09-07,FitEar TO GO 335 Premium China-limited - NOT a talent collab; logged as deliberate exclusion
+S195,https://en.wikipedia.org/wiki/Fiio,Wikipedia,community,encyclopedia,en,6,2026-09-07,FiiO Guangzhou founded 2007
+S196,https://shanling.com/,Shanling,brand_official,corporate,zh,1,2026-09-07,Shenzhen Shanling Digital Technology
+S197,https://ja.wikipedia.org/wiki/プレシードジャパン,Wikipedia,community,encyclopedia,ja,6,2026-09-07,Preseed Japan background
+S198,https://v-trade.co.jp/brands12/,V-Trade,retailer,brand_page,ja,4,2026-09-07,AVIOT brand distribution
+S199,https://x.com/eXtend_info,Bunka Broadcast Extend,agency_official,social_account,ja,1,2026-09-07,Bunka Broadcast Extend official account
+S200,https://aviot.jp/news/lowvision/,AVIOT,brand_official,press_release,ja,1,2026-09-07,AVIOT Bunka Broadcasting programme sponsorship
+S201,https://dengekionline.com/article/202407/10605,Dengeki Online,trade_press,article,ja,4,2026-09-07,AVIOT TE-Q3-MNT Fuwa Minato + Q series cumulative 250000 units as of May 2024
+S202,https://prtimes.jp/main/html/rd/p/000000216.000121822.html,final Inc. via PR Times,brand_official,press_release,ja,1,2026-09-07,CATEGORY ANCHOR - final 300000 cumulative ASMR/sleep-tuned units as of Dec 2025 with footnote definition; ZE500 NYUMIN spec and Makuake campaign
+S203,https://www.makuake.com/project/kpro01/,Makuake,crowdfunding_platform,campaign_page,ja,3,2026-09-07,KPro01 campaign page - all reward tiers and stretch goals; final total now shows 計算中 so does NOT resolve the funding conflict
+S204,https://www.makuake.co.jp/5542/,Makuake Inc.,brand_official,press_release,ja,1,2026-09-07,Makuake 13th anniversary - gadget/appliance/audio genres combined +170% YoY
+S205,https://fistbump-news.jp/article/2026/09/03/2851.html,FISTBUMP,trade_press,article,ja,4,2026-09-07,ONKYO x Kagura Mea CP-TWS01E - order window 2026-09-04 to 10-09 CURRENTLY OPEN; QCC3072; 13 voice words; game mode
+S206,https://news.qq.com/rain/a/20240814A01HFO00,Tencent News,trade_press,article,zh,4,2026-09-07,MOONDROP x Singer (Hunan Satellite TV) CNY 399 full spec - NEW PARTNER CLASS tv programme IP
+S207,https://www.rainlain.com/index.php/2025/02/17/3003/,Rainlain,community,review,zh,6,2026-09-07,MOONDROP Singer review - discovery only
+S208,https://www.ithome.com/0/904/739.htm,IT Home,trade_press,article,zh,4,2026-09-07,MOONDROP RAYS AG Esports Club edition CNY 439 - NEW PARTNER CLASS esports club; pro player tuning; Delta Force
+S209,https://news.zol.com.cn/1098/10983468.html,ZOL,trade_press,article,zh,4,2026-09-07,MOONDROP x AG esports RAYS collab Delta Force tuning
+S210,https://finance.sina.com.cn/tech/digi/2025-12-13/doc-inharuwm6324292.shtml,Sina Tech,general_press,article,zh,5,2026-09-07,RAYS AG collab edition 439 CNY launch 2025-12-13
+S211,https://news.qq.com/rain/a/20250410A09QRX00,Tencent News,trade_press,article,zh,4,2026-09-07,MOONDROP RAYS base model CNY 399 - the base-SKU price enabling the only measured collab premium
+S212,https://moondroplab.com/cn/products/rays,MOONDROP,brand_official,product_page,zh,1,2026-09-07,RAYS official product page
+S213,https://finance.sina.com.cn/tech/digi/2025-04-10/doc-inessynt3298525.shtml,Sina Tech,general_press,article,zh,5,2026-09-07,RAYS 32bit/384kHz hardware decoding spec
+S214,https://m.hupu.com/bbs/628547646,Hupu,community,forum_post,zh,6,2026-09-07,ONLY CN unit datapoint - MOONDROP Robin marketplace counters Douyin ~12000 JD ~4000 Tmall ~4000. TIER 6 NOT CITABLE
+S215,https://post.smzdm.com/p/ag534vwm/,SMZDM,retailer,review,zh,4,2026-09-07,MOONDROP Robin Honkai Star Rail collab review and positioning
+S216,https://aucfan.com/intro/q-~a5b3a5e9a5dca5a4a5e4a5dba5f3/,Aucfan,retailer,auction_data,ja,4,2026-09-07,Collab earphone resale - 5 completed auctions in 30 days avg JPY 11883. DIRECT FETCH RETURNED HTTP 429
+S217,https://www.bcnretail.com/research/detail/20220131_263891.html,BCN+R,trade_press,research,ja,4,2026-09-07,JP TWS 35.0% of unit sales and price band splits. DIRECT FETCH RETURNED HTTP 404
+S218,https://smhn.info/202409-wireless-earphone-2024q2,Sumaho!!,general_press,article,ja,5,2026-09-07,JP wireless earphone shipments record high and brand shares. DIRECT FETCH RETURNED HTTP 403
+S219,https://www.globalresearch.co.jp/reports/japan-headphones-market-expert/,Global Research,trade_press,report_summary,ja,4,2026-09-07,Japan headphone market USD 738.2mn 2024 to USD 992.1mn 2034 CAGR 3.00%
+S220,https://www.marketresearch.co.jp/insights/true-wireless-headphones-market-straits/,MarketResearch.co.jp,trade_press,report_summary,ja,4,2026-09-07,Global TWS USD 13.24bn 2024 to 15.86bn 2025 CAGR 19.82%
+S221,https://www.bilibili.com/video/BV14LMD6CE8K/,bilibili,community,video,zh,6,2026-09-07,MOONDROP factory tour - title states 年销过亿 (annual sales over CNY 100mn). TIER 6; conflicts with the output-value framing elsewhere
+S222,https://www.e-earphone.jp/blogs/feature/annual_ranking_2024_tws-earphone,e-earphone,retailer,ranking,ja,4,2026-09-07,e-earphone annual TWS ranking 2024 - NOT YET READ
+S223,https://zhongchou.modian.com/all/top_money/success/96,Modian,crowdfunding_platform,ranking,zh,3,2026-09-07,Modian top-funded successful campaigns - NO earphone campaigns present; museum TRPG publishing and designer toys instead
+S224,https://www.thepaper.cn/newsDetail_forward_27931628,The Paper,trade_press,article,zh,4,2026-09-07,MOONDROP ACG audio brand strategy and its phone product
+S225,https://m.zol.com.cn/article/12306505.html,ZOL,trade_press,article,zh,4,2026-09-07,RAYS bundle 88VIP street price CNY 374
+S226,https://shop.aviot.jp/collections/all,AVIOT,brand_official,product_index,ja,1,2026-09-08,FULL CATALOGUE WALK pages 1-12 = 231 products. Source of ~30 previously uncatalogued collab SKUs plus all base-platform prices enabling the collab premium calculation. Pages 1-2 were truncated on fetch
+S227,https://shop.aviot.jp/products/te-d01v-sgr,AVIOT,brand_official,product_page,ja,1,2026-09-08,Shigure Ui TE-D01v-SGR 18700 member price; TE-D01v base platform ~120000 cumulative units
+S228,https://www.phileweb.com/news/d-av/202405/31/60451.html,PHILE WEB,trade_press,article,ja,4,2026-09-08,Shigure Ui collab - talent supervised BOTH sound quality and design
+S229,https://aviot.jp/press/te-d01v-sgr/,AVIOT,brand_official,press_release,ja,1,2026-09-08,Shigure Ui official press release
+S230,https://av.watch.impress.co.jp/docs/news/1596327.html,AV Watch,trade_press,article,ja,4,2026-09-08,Shigure Ui collab tuning for her singing voice
+S231,https://prtimes.jp/main/html/rd/p/000000203.000027368.html,Preseed Japan via PR Times,brand_official,press_release,ja,1,2026-09-08,Shigure Ui pre-order opened 2024-05-30; base TE-D01v series ~12万台 cumulative
+S232,https://shop.aviot.jp/products/wb-p1-nkn,AVIOT,brand_official,product_page,ja,1,2026-09-08,Nakayama Kinni-kun bone conduction collab
+S233,https://news.kakaku.com/prdnews/cd=kaden/ctcd=2046/id=139560/,Kakaku.com,retailer,article,ja,4,2026-09-08,WB-P1-NKN 24 newly recorded voice types; IP67; 145mAh; preorder 2024-04-09
+S234,https://aviot.jp/press/wb-p1-nkn/,AVIOT,brand_official,press_release,ja,1,2026-09-08,WB-P1-NKN official release
+S235,https://shop.aviot.jp/products/wb-p1-bk,AVIOT,brand_official,product_page,ja,1,2026-09-08,WB-P1-BK Baki Hanma bone conduction - confirms the Baki franchise named in the Toyo Keizai interview
+S236,https://ja.wikipedia.org/wiki/ななしいんく,Wikipedia,community,encyclopedia,ja,6,2026-09-08,774 inc. / Nanashi Inc agency background
+S237,https://www.moguravr.com/patra_hnst/,Mogura VR,trade_press,article,ja,4,2026-09-08,CRITICAL - Suou Patra graduated from Nanashi Inc and continues independently
+S238,https://roundup-gamers.jp/article/2023/05/09/1217.html,RUGs,trade_press,article,ja,4,2026-09-08,Patra graduation announcement; Honey Strap leader going independent
+S239,https://www.buzzfeed.com/jp/wakanayamashita/vtuber-suou-patra-graduation,BuzzFeed Japan,general_press,article,ja,5,2026-09-08,Patra subscriber count ~660000 at graduation
+S240,https://x.com/774inc_official/status/1655905551883317248,774 inc.,agency_official,social_post,ja,1,2026-09-08,OFFICIAL agency notice of Patra graduation effective 2023-05-09
+S241,https://ja.wikipedia.org/wiki/ハニーストラップ,Wikipedia,community,encyclopedia,ja,6,2026-09-08,Honey Strap unit membership
+S242,https://ja.wikipedia.org/wiki/あおぎり高校,Wikipedia,community,encyclopedia,ja,6,2026-09-08,Aogiri High School - moved Brave Group to viviON Group Apr 2023; viviON is DLsite's parent
+S243,https://vtuber-post.com/news/23950,VTuber Post,trade_press,article,ja,4,2026-09-08,Aogiri High School 1 million subscribers 2024-04-27; 11 active talents
+S244,https://kiramune.jp/kiramune.html,Kiramune,agency_official,corporate,ja,1,2026-09-08,Kiramune official label description
+S245,https://ja.wikipedia.org/wiki/Kiramune,Wikipedia,community,encyclopedia,ja,6,2026-09-08,Kiramune created by Lantis and Bandai Namco Arts; name etymology; member history
+S246,https://www.animatetimes.com/news/details.php?id=1646287572,Animate Times,trade_press,article,ja,4,2026-09-08,Kiramune member breakdown and assigned colours
+S247,https://www.81produce.co.jp/,81 Produce,agency_official,corporate,ja,1,2026-09-08,81 Produce - SEARCHED FOR AUDIO COLLABS NONE FOUND
+S248,https://www.bunkatsushin.com/varieties/article.aspx?id=3129,Bunka Tsushin,trade_press,interview,ja,4,2026-09-08,81 Produce president on expanding the voice actor business - context for why agencies do not license to hardware
+S249,https://hololive.hololivepro.com/en/news/20240816-01-95/,COVER Corp,agency_official,press_release,en,1,2026-09-08,AVIOT x hololive EN Myth English-language announcement
+S250,https://ascii.jp/elem/000/004/215/4215811/,ASCII,trade_press,article,ja,4,2026-09-08,hololive EN Myth 200+ voices JP and EN
+S251,https://shop.aviot.jp/products/te-v1r-hen,AVIOT,brand_official,product_page,ja,1,2026-09-08,hololive EN Myth product page
+S252,https://aviot.jp/press/te-v1r-hen/,AVIOT,brand_official,press_release,ja,1,2026-09-08,hololive EN Myth official release
+S253,https://yutura.net/channel/21673/,YouTube Ranking,community,channel_data,ja,6,2026-09-08,Aogiri High School channel metrics - discovery only
+S254,https://dic.pixiv.net/a/周防パトラ,Pixiv Encyclopedia,community,encyclopedia,ja,6,2026-09-08,Suou Patra background - discovery only
+S255,https://vcolle.com/other/allgenre-vtuberagency/,VTuber Collection,community,article,ja,6,2026-09-08,VTuber agency landscape overview - discovery only
+S256,https://tookabase-official.com/,Universal Music,brand_official,brand_site,ja,1,2026-09-08,TOoKA BASE FULL CATALOGUE - ~30 collab SKUs; three earphone generations; portable CD player; seiyuu and anime model prices. LARGEST UNDERCOUNT CORRECTION IN THE PROJECT
+S257,https://tookabase.com/shop/tookabase,Universal Music,brand_official,storefront,ja,1,2026-09-08,TOoKA BASE online shop
+S258,https://www.universal-music.co.jp/other/tookabase-akihabara/,Universal Music,brand_official,event_page,ja,1,2026-09-08,TOoKA BASE Akihabara store 2023 - brand-owned physical retail
+S259,https://online.stereosound.co.jp/_ct/17420441,Stereo Sound,trade_press,article,ja,4,2026-09-08,TOoKA BASE 03 launch; platform generations 01=NT01B 02=NT01L
+S260,https://www.phileweb.com/news/d-av/201907/04/47847.html,PHILE WEB,trade_press,article,ja,4,2026-09-08,Universal Music launches the TOoKA BASE brand July 2019
+S261,https://realsound.jp/tech/2022/07/post-1086590.html,Real Sound,trade_press,article,ja,4,2026-09-08,TOoKA BASE Kingdom model - three named voice actors
+S262,https://prtimes.jp/main/html/rd/p/000001541.000000664.html,Universal Music via PR Times,brand_official,press_release,ja,1,2026-09-08,TOoKA BASE Morikubo Shotaro model released 14 November
+S263,https://prtimes.jp/main/html/rd/p/000001433.000000664.html,Universal Music via PR Times,brand_official,press_release,ja,1,2026-09-08,TOoKA BASE Quintessential Quintuplets - five Nakano sisters with named voice actors
+S264,https://www.hmv.co.jp/news/article/2111171007/,HMV,retailer,article,ja,4,2026-09-08,TOoKA BASE seven seiyuu collaboration models announcement
+S265,https://www.hmv.co.jp/news/article/2106081010/,HMV,retailer,article,ja,4,2026-09-08,TOoKA BASE Jujutsu Kaisen model - four characters with original voices
+S266,https://akiba-pc.watch.impress.co.jp/docs/wakiba/find/1441738.html,Akiba PC Watch,trade_press,article,ja,4,2026-09-08,TOoKA BASE clearance sale from JPY 1100 - ONLY OBSERVED MARKDOWN BEHAVIOUR IN THE MARKET
+S267,https://tower.jp/item/5236384,Tower Records,retailer,listing,ja,4,2026-09-08,TOoKA BASE 03 retail listing
+S268,https://www.sony.jp/store/press/240830.html,Sony,brand_official,press_release,ja,1,2026-09-08,Sony Bocchi 2nd wave - WF-1000XM5 43800; bundles 93300 and 153800; four engraved character designs
+S269,https://www.sony.jp/walkman/store/special/bocchitherock/,Sony,brand_official,product_page,ja,1,2026-09-08,Sony Bocchi 1st wave - Walkman NW-A306 and NW-ZX707
+S270,https://kunkoku.jp/sonystorebocchi-12.html,Sony Shop Kunkoku,community,article,ja,6,2026-09-08,Sony Bocchi 3rd wave planned winter 2024 - discovery only
+S271,https://kunkoku.jp/sonystorebocchi-11.html,Sony Shop Kunkoku,community,article,ja,6,2026-09-08,Sony Store Bocchi in-person events and sticker giveaways
+S272,https://ascii.jp/elem/000/004/011/4011204/,ASCII,trade_press,article,ja,4,2026-09-08,final EVA2020 - FOUR SKUs; FI-EVATW 01/02/06 at 19800 and FI-EVA2020 wired at 2980; voice by Ibuki Maya CV Nagasawa Miki
+S273,https://kakakumag.com/av-kaden/?id=16293,Kakaku Magazine,trade_press,review,ja,4,2026-09-08,final Evangelion collab hands-on
+S274,https://hobby.dengeki.com/news/2793294/,Dengeki Hobby,trade_press,article,ja,4,2026-09-08,ONKYO GochiUsa AOW01 MARKII - 22000 JPY; BUYER SELECTS ONE OF SEVEN CHARACTER VOICES; 11 words each
+S275,https://hobby.dengeki.com/news/2522543/,Dengeki Hobby,trade_press,article,ja,4,2026-09-08,ONKYO Angel Next Door AOW01 - 20000 JPY; 15 voice words incl hidden commands; MEMS mic
+S276,https://onkyodirect.jp/shop/pages/EFP_HEADPHONES.aspx,ONKYO,brand_official,product_page,ja,1,2026-09-08,ANIMA AOW03 Expelled from Paradise headphones - RETURNED HTTP 404
+S277,https://zeeny.com/collections/collaboration,Zeeny / NAIN,brand_official,product_index,ja,1,2026-09-08,ZEENY FULL COLLAB INDEX page 1 - 11 SKUs incl FOUR Bluetooth SPEAKERS and a Taiwan/HK exclusive. Pages 2-3 JS-rendered no data
+S278,https://nain.zendesk.com/hc/ja/articles/900005332923,NAIN,brand_official,support_page,ja,1,2026-09-08,Zeeny collaboration shipping status page - evidence of made-to-order fulfilment tracking
+S279,https://price.zol.com.cn/1073/10731597.html,ZOL,trade_press,listing,zh,4,2026-09-08,SONGX Ling Long collab CNY 354 promo
+S280,https://www.233leyuan.com/post-detail/2061752956735426560,233 Leyuan,community,review,zh,6,2026-09-08,SONGX Ling Long dual screen and ANC review - discovery only
+S281,https://www.sina.cn/news/detail/5275956445184425.html,Sina,general_press,article,zh,5,2026-09-08,SONGX Ling Long collab earphone
+S282,https://www.sohu.com/a/692878634_99923103,Sohu,general_press,article,zh,5,2026-09-08,SONGX Wandering Earth gift box unboxing and spec
+S283,https://www.smzdm.com/p/120949667/,SMZDM,retailer,listing,zh,4,2026-09-08,SONGX Wandering Earth CNY 277.51 street; BT 5.3 IPX5 6mm N45 neodymium
+S284,https://ja.wikipedia.org/wiki/ホロライブプロダクション,Wikipedia,community,encyclopedia,ja,6,2026-09-08,hololive production 78 talents June 2026; hololive ID EN and DEV_IS integrated 2026-09-07
+S285,https://cover-corp.com/business/vtuber,COVER Corp,agency_official,corporate,ja,1,2026-09-08,COVER VTuber production business description
+S286,https://ja.wikipedia.org/wiki/にじさんじ,Wikipedia,community,encyclopedia,ja,6,2026-09-08,Nijisanji ~150 domestic livers; ~170-180 with EN
+S287,https://www.anycolor.co.jp/service/nijisanji,ANYCOLOR,agency_official,corporate,ja,1,2026-09-08,Nijisanji project official page
+S288,https://virtual-youtuber.userlocal.jp/office/nijisanji_jp,User Local,trade_press,channel_data,ja,4,2026-09-08,Nijisanji JP talent list ranked by follower count
+S289,https://kiramune-fan.info/member/,Kiramune Fan (unofficial),community,roster,ja,6,2026-09-08,KIRAMUNE FULL 20-MEMBER ROSTER by unit. Direct fetch returned 403; roster from search-surfaced summary
+S290,https://ja.wikipedia.org/wiki/IXIS,Wikipedia,community,encyclopedia,ja,6,2026-09-08,IXIS - Kiramune new 6-member unit; joined 2025-11-16; major debut 2026-03-05
+S291,https://www.lisani.jp/0000295599/,Lisani,trade_press,article,ja,4,2026-09-08,Kiramune adds first new unit in ~8 years; Kiramune Music Festival 2026
+S292,https://www.animatetimes.com/news/details.php?id=1763285910,Animate Times,trade_press,article,ja,4,2026-09-08,IXIS joins the Kiramune label
+S293,https://kiramune.jp/artist/IXIS/,Kiramune,agency_official,artist_page,ja,1,2026-09-08,IXIS official artist page
+S294,https://www.aoni.co.jp/,Aoni Production,agency_official,corporate,ja,1,2026-09-08,Aoni Production largest JP voice agency. SEARCHED FOR AUDIO COLLABS NONE FOUND
+S295,https://talent-dictionary.com/s/agencies/213,Talent Dictionary,trade_press,roster,ja,4,2026-09-08,Aoni Production roster - 492 figure
+S296,https://mausu.net/talent/,Mausu Promotion,agency_official,roster,ja,1,2026-09-08,Mausu Promotion talent roster ~155
+S297,https://ja.wikipedia.org/wiki/アイムエンタープライズ,Wikipedia,community,encyclopedia,ja,6,2026-09-08,I m Enterprise 100+ voice actors at ~3:7 male-female split
+S298,https://blitz-marketing.co.jp/column/19086/,Blitz Marketing,trade_press,article,ja,4,2026-09-08,Nanashi Inc 25 talents; >2M total YouTube subs; >1.2M X followers. viviON operates Aogiri High School
+S299,https://www.taito.co.jp/en/mob/topics/25965,Taito,brand_official,press_release,ja,1,2026-09-08,Groove Coaster x hololive - case doubles as mobile battery; gaming mode halves latency
+S300,https://prtimes.jp/main/html/rd/p/000000249.000041970.html,Taito via PR Times,brand_official,press_release,ja,1,2026-09-08,Groove Coaster x hololive vol.3 - Shirogane Noel and Sakamata Chloe
+S301,https://www.hmv.co.jp/news/article/2112171011/,HMV,retailer,article,ja,4,2026-09-08,Groove Coaster x hololive new model announcement
+S302,https://ear-headphones.allabout.co.jp/a151/,All About,general_press,ranking,ja,5,2026-09-08,JP earphone maker ranking - NAMES SKULLCANDY among collab-earphone makers alongside Moondrop qdc ANIMA and AVIOT
+S303,https://kakaku.com/kaden/headphones/itemlist.aspx?pdf_ma=530,Kakaku.com,retailer,listing,ja,4,2026-09-08,radius product range - no collab models present
+S304,https://www.bandainamcomusiclive.co.jp/,Bandai Namco Music Live,agency_official,corporate,ja,1,2026-09-08,Kiramune co-operator; music label and management under Bandai Namco Holdings
+S305,https://aviot.jp/press/,AVIOT,brand_official,press_archive,ja,1,2026-09-08,CHRONOLOGICAL PRESS ARCHIVE - recovered 15 release dates and revealed the Piyahon PNK line plus TE-V1R-JK1/JK2/JK3 and UST/UQN/UHV. Most efficient date-backfill source found
+S306,https://aviot.jp/news/,AVIOT,brand_official,news_archive,ja,1,2026-09-08,AVIOT news - POP UP SHOP activations for Blue Archive (Shibuya Modi) and Oshi no Ko (OIOI); NO shipment milestone announcements
+S307,https://shop.aviot.jp/collections/pnk,AVIOT,brand_official,product_index,ja,1,2026-09-08,PIYAHON / PIDDHONE dedicated Pierre Nakano supervised collection page. NOT YET WALKED
+S308,https://aviot.jp/press/te-zx1-pnk/,AVIOT,brand_official,press_release,ja,1,2026-09-08,Piyahon 7 TE-ZX1-PNK JPY 49500; 5 drivers (1 planar + 1 dynamic + 3 BA); talent supervised design AND tuning
+S309,https://cmsong-navi.com/2025/12/11/aviot-te-u1-pnk,Arage no Susume,community,article,ja,6,2026-09-08,Piyahon 9 TE-U1-PNK JPY 9980; three original sound modes supervised by Pierre Nakano; released January 2026
+S310,https://www.phileweb.com/news/d-av/202608/20/65789.html,PHILE WEB,trade_press,article,ja,4,2026-09-08,AVIOT Bookworm TE-Q3R-HZK 22880 JPY; Iguchi Yuka and Hayami Sho; Q SERIES CUMULATIVE ~370000 UNITS as of Aug 2026
+S311,https://prtimes.jp/main/html/rd/p/000000306.000027368.html,Preseed Japan via PR Times,brand_official,press_release,ja,1,2026-09-08,Bookworm collab official - preorder 2026-08-20 ship mid-Feb 2027
+S312,https://www.tobooks.jp/booklove/wireless_earphone/,TO Books,agency_official,product_page,ja,1,2026-09-08,Bookworm collab IP-owner special site
+S313,https://prtimes.jp/main/html/rd/p/000000285.000027368.html,Preseed Japan via PR Times,brand_official,press_release,ja,1,2026-09-08,AVIOT x Uta no Prince-sama three models; preorder 2025-12-25 via Broccoli Online
+S314,https://www.phileweb.com/news/d-av/202511/26/63908.html,PHILE WEB,trade_press,article,ja,4,2026-09-08,Jujutsu Kaisen THREE models 22880 JPY each; 12 characters and 250+ voices combined
+S315,https://av.watch.impress.co.jp/docs/news/2066427.html,AV Watch,trade_press,article,ja,4,2026-09-08,JUJUTSU KAISEN COLLAB SOUND-TUNED BY THE ANIME SCORE COMPOSER - co_tuned not cosmetic
+S316,https://onkyodirect.jp/shop/pages/Mary_Saionji.aspx,ONKYO,brand_official,product_page,ja,1,2026-09-08,Saionji Mary CP-TWS01E official page
+S317,https://www.dreamnews.jp/press/0000350819,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-08,Saionji Mary collab - design based on the talent own proposal; 13 voice words
+S318,https://panora.tokyo/archives/144608,PANORA,trade_press,article,ja,4,2026-09-08,Saionji Mary limited-period made-to-order sale
+S319,https://tinpanblog.com/onkyo-mary-saionji-wireless-earphone-june5-2026-guide/,Tinpan Blog,community,article,ja,6,2026-09-08,Saionji Mary pricing - earphone 20000 and charger 4500; window 2026-06-05 to 07-17
+S320,https://onkyodirect.jp/shop/g/gMO1_KANOKARI1TWS01E01B/,ONKYO,brand_official,product_page,ja,1,2026-09-08,Rent-a-Girlfriend Mizuhara Chizuru CP-TWS01E model
+S321,https://www.bcnretail.com/news/detail/20251129_574920.html,BCN+R,trade_press,research,ja,4,2026-09-08,CURRENT JP TWS MARKET - price bands 40/20/40; channel 60-70% physical; polarisation began ~2020; sales peaks March July December
+S322,https://news.yahoo.co.jp/articles/6b8fb46ca4df04b77c70bdd18fcbe4aa1c21af07,BCN via Yahoo,trade_press,article,ja,4,2026-09-08,BCN 2026 H1 TWS TOP 10 - NO COLLAB BRAND PRESENT. Xiaomi overtook Anker and Sony
+S323,https://www.bcnaward.jp/award/gallery/detail/contents_type=221,BCN AWARD,trade_press,award_data,ja,4,2026-09-08,Audio accessories share - audio-technica 22.7% RANK 1; Sanwa Supply 17.3%; Elecom 13%
+S324,https://tookabase.com/shop/people1/news_list.php,Universal Music,brand_official,news_archive,ja,1,2026-09-08,TOoKA BASE NEWS ARCHIVE - all items Nov 2025 to Jul 2026 are PEOPLE 1 band merchandise. NO collab earphone announcements. EVIDENCE OF CATEGORY DORMANCY
+S325,https://finance.sina.com.cn/stock/t/2026-01-22/doc-inhieiky2823029.shtml,Sina Finance,general_press,article,zh,5,2026-09-08,Moondrop x Wuthering Waves U.C.T.S. ear-clip CNY 299 on sale 2026-01-23; switchable male/female Rover voice; dynamic + micro-planar dual driver; LHDC-V and LC3
+S326,https://zhuanlan.zhihu.com/p/2071606266082890087,Zhihu,community,article,zh,6,2026-09-08,Moondrop 2026 autumn launch at the 20th SIAS Shenzhen audio show 2026-08-14 incl Darkside flagship planar headphone - current activity evidence
+S327,https://www.dreamnews.jp/press/0000346883,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,BEST COLLAB VOLUME DISCLOSURE IN THE DATASET - ONKYO annual order volume exceeded 100000 units for the first time in 2025; announced 2026-04-21; 9 base collab platforms; direct-only; H-01A launched 1970
+S328,https://www.onkyo.net/en/collabo,ONKYO,brand_official,product_index,en,1,2026-09-09,ONKYO collaboration index WITH DATES - ten launches Aug-Sep 2026 incl Neo-Porte Yozuna Niu; Haruhi 20th; Gundam X 30th; Keroro; Milky Subway; Sumeragi Miona; LUPICIA tea; and an Angel Next Door SCALP CARE product
+S329,https://www.dreamnews.jp/press/0000329316/,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,The Summer Hikaru Died collab JPY 20000; order 2025-09-12 to 2025-10-31
+S330,https://www.dreamnews.jp/press/0000337156/,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,774 inc. Souya Ichika collab; made-to-order from 2025-12-24 18:00
+S331,https://www.dreamnews.jp/press/0000356927,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,Love Live! Sunshine!! AOW01 MARKII collab announced 2026-07-23
+S332,https://www.dreamnews.jp/press/0000346830,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,Nijisanji Saeki Ittetsu JPY 18000; order 2026-05-15 to 2026-06-05
+S333,https://www.dreamnews.jp/press/0000361004,ONKYO via DreamNews,brand_official,press_release,ja,1,2026-09-09,Kagura Mea collab JPY 22000 CONFIRMED; order from 2026-09-04 15:00
+S334,https://www.dreamnews.jp/company/0000013350/16/,ONKYO via DreamNews,brand_official,press_archive,ja,1,2026-09-09,ONKYO full DreamNews press archive - chronological source for collab dates
+S335,https://onkyoanime.com/info,ONKYO Oto-Ani,brand_official,news_archive,ja,1,2026-09-09,Oto-Ani news archive with dates for the Aug-Sep 2026 launches
+S336,https://prtimes.jp/topics/keywords/Zeeny,Zeeny / NAIN via PR Times,brand_official,press_archive,ja,1,2026-09-09,ZEENY PRESS ARCHIVE - ten collab dates all between 2022-12 and 2023-09. NOTHING AFTER SEPT 2023 - evidence of category dormancy. Reveals Amane Mina ASMR tuning and the ZIP-FM radio collab
+S337,https://ja.wikipedia.org/wiki/オンキヨーホームエンターテイメント,Wikipedia,community,encyclopedia,ja,6,2026-09-09,Onkyo Home Entertainment legacy entity - founded 1946; merged 2020-10-01; BANKRUPTCY MAY 2022; 146 employees; capital JPY 11.74bn
+S338,https://ja.wikipedia.org/wiki/オンキヨー,Wikipedia,community,encyclopedia,ja,6,2026-09-09,Current Onkyo Corporation is a THIRD-GENERATION entity via management buyout carrying none of the old debts
+S339,https://audio-kaitori-site.com/blog/86322/,Real Audio,community,article,ja,6,2026-09-09,ONKYO bankruptcy and current business analysis - corroborates the MBO successor structure
+S340,https://gamebiz.jp/news/428299,gamebiz,trade_press,article,ja,4,2026-09-09,SANRIO FY2026/3 record revenue and profit; licensing driven by Hello Kitty plus My Melody Kuromi Pompompurin anniversaries; Japan 58.5%
+S341,https://investalk.jp/8136/sanrio-2026-03-earnings/,Investalk,trade_press,article,ja,4,2026-09-09,Sanrio FY2026/3 revenue 1940億円 and adjusted operating profit 784億円; 5th consecutive growth year
+S342,https://gamebiz.jp/news/420865,gamebiz,trade_press,article,ja,4,2026-09-09,Sanrio Q3 operating profit +51% to 623億円
+S343,https://finance.biggo.jp/news/5b95ddba-578a-415a-b97e-753654e36c74,BigGo Finance,trade_press,article,ja,4,2026-09-09,Sanrio FY2027/3 Q1 revenue 520億円 record but profit constrained by overseas costs
+S344,https://www.nikkei.com/article/DGXZRST0576716T20C26A6000000/,Nikkei,trade_press,article,ja,4,2026-09-09,Sanrio FY2027/3 net income forecast +16.8%
+S345,https://gamebiz.jp/news/425799,gamebiz,trade_press,article,ja,4,2026-09-09,BANDAI NAMCO HD FY2026/3 revenue 1兆3482億円 +8.6% record; Visual and Music segment 955億円 +5.3% - the segment containing Bandai Namco Music Live and therefore Kiramune
+S346,https://gamebiz.jp/news/420829,gamebiz,trade_press,article,ja,4,2026-09-09,Bandai Namco HD Q3 cumulative crossed JPY 1 trillion for the first time
+S347,https://gamebiz.jp/news/420469,gamebiz,trade_press,article,ja,4,2026-09-09,Bandai Namco Gundam IP Q3 revenue 1881億円 +62.5%
+S348,https://www.bandainamco.co.jp/files/ir/financialstatements/pdf/20260513_Presentation.pdf,Bandai Namco HD,ir_filing,presentation,ja,2,2026-09-09,FY2026/3 results presentation - IP axis strategy and music business expansion. NOT FULLY READ
+S349,https://gamebiz.jp/news/370175,gamebiz,trade_press,article,ja,4,2026-09-09,BANDAI NAMCO MUSIC LIVE FY2023/3 net income 46億2600万円 +82% - the direct operator of Kiramune
+S350,https://gamebiz.jp/news/425884,gamebiz,trade_press,article,ja,4,2026-09-09,Square Enix HD FY2026/3 revenue 2976億円 -8.3%; operating profit 547億円 +34.9%
+S351,https://gamebiz.jp/news/427891,gamebiz,trade_press,article,ja,4,2026-09-09,TAITO FY2026/3 revenue 729億4400万円 +1.7%; operating profit 56億8500万円 +6.1%
+S352,https://www.globenewswire.com/news-release/2026/08/27/3351838/0/en/bilibili-inc-announces-second-quarter-2026-financial-results.html,bilibili via GlobeNewswire,ir_filing,earnings_release,en,2,2026-09-09,bilibili Q2 2026 revenue RMB 7.94bn +8%; ads RMB 3.13bn +28%; DAU 116.5mn; gross margin 37.1% 15th consecutive quarter of expansion
+S353,https://www.globenewswire.com/news-release/2026/05/19/3297243/0/en/Bilibili-Inc-Announces-First-Quarter-2026-Financial-Results.html,bilibili via GlobeNewswire,ir_filing,earnings_release,en,2,2026-09-09,bilibili Q1 2026 revenue RMB 7.47bn +7%; ads RMB 2.59bn +30%; net profit RMB 202mn; DAU 115.2mn
+S354,https://www.stcn.com/article/detail/3663609.html,Securities Times,trade_press,article,zh,4,2026-09-09,bilibili FY2025 revenue 303.5亿元 +13% - FIRST FULL-YEAR PROFIT IN COMPANY HISTORY
+S355,https://finance.matsui.co.jp/stock/2489/settlement/index,Matsui Securities,trade_press,financial_data,ja,4,2026-09-09,ADWAYS FY2026/12 guidance revenue 118億円 -3.4%; operating profit 15億円 +404.7%; H1 63億円 +7.1%. LISTED PARENT OF 774 inc. and smaller than either big-two agency. VTuber business not broken out
+S356,https://rtbsquare.work/archives/52018,RTB Square,trade_press,article,ja,4,2026-09-09,Adways and 774 inc. joint X advertising product Amplify
+S357,https://premium.kai-you.net/article/922,KAI-YOU Premium,trade_press,interview,ja,4,2026-09-09,774 inc. first-ever interview on what makes a good VTuber agency
+S358,https://vivion.jp/news/50,viviON,brand_official,press_release,ja,1,2026-09-09,viviON group FY2021 total sales 354億円 up from 250億円
+S359,https://gamebiz.jp/news/369392,gamebiz,trade_press,article,ja,4,2026-09-09,viviON group FY2022 total sales 454億円 +28%
+S360,https://0115765.com/archives/73771,Otaku Soken,trade_press,article,ja,4,2026-09-09,viviON group FY2023 total sales 529億円; owns DLsite and Aogiri High School; focusing on VTubers
+S361,https://sg.wantedly.com/companies/www-vivion-co/post_articles/297605,viviON,brand_official,corporate_blog,ja,1,2026-09-09,DLSITE VOICE/ASMR SEGMENT ~85億円 from ~1.1 million annual purchasers - SIZES THE JAPANESE DOUJIN VOICE AND ASMR CONTENT MARKET
+S362,https://netkeizai.com/articles/detail/8921,Nihon Net Keizai Shimbun,trade_press,article,ja,4,2026-09-09,viviON revenue growth driven by digital comics and overseas expansion
+S363,https://www.yostar.co.jp/about,Yostar,brand_official,corporate,ja,1,2026-09-09,Yostar established Jan 2017; Japanese subsidiary of Shanghai Yostar Network Technology; publishes Azur Lane Mahjong Soul Arknights Blue Archive; owns Yostar Pictures
+S364,https://news.denfaminicogamer.jp/news/230217k,Denfaminicogamer,trade_press,article,ja,4,2026-09-09,Blue Archive cumulative worldwide revenue over USD 240 million to Jan 2023 with JAPAN AT 75%
+S365,https://gamebiz.jp/news/364747,gamebiz,trade_press,article,ja,4,2026-09-09,Blue Archive ~30% of Yostar Japan revenue and its number 2 title; Sensor Tower data
+S366,https://finance.sina.com.cn/stock/roll/2026-01-22/doc-inhiecav4723330.shtml,Sina Finance,general_press,article,zh,5,2026-09-09,miHoYo 2025 revenue ~780亿元 +38%; Genshin over 400亿; HONKAI STAR RAIL ~280亿; net profit ~429亿 on an ASSUMED 55% margin
+S367,https://www.chinaventure.com.cn/news/116-20250515-386302.html,ChinaVenture,trade_press,article,zh,4,2026-09-09,miHoYo growth analysis; Honkai Star Rail over 150mn downloads and overseas revenue share 58%
+S368,https://36kr.com/p/3309248924359430,36Kr,trade_press,article,zh,4,2026-09-09,miHoYo portfolio analysis after the Genshin peak
+S369,https://prtimes.jp/main/html/rd/p/000000466.000044525.html,Brave group via PR Times,brand_official,press_release,ja,1,2026-09-09,Brave group and Neo-Porte management integration; Neo-Porte founded by Shibuya Haru Crazy Raccoon Mafumafu and Soraru
+S370,https://news.denfaminicogamer.jp/news/2502192b,Denfaminicogamer,trade_press,article,ja,4,2026-09-09,Brave group holds VSPO! and HIMEHINA and integrated Neo-Porte 2025-02-01
+S371,https://virtual-youtuber.userlocal.jp/office/neoporte,User Local,trade_press,channel_data,ja,4,2026-09-09,Neo-Porte talent list - 21-22 members across generations 0-6
+S372,https://finance.logmi.jp/articles/384738,logmi Finance,trade_press,earnings_call,ja,4,2026-09-09,COVER FY2026/3 - Live/Events and Licensing/Tie-up led double-digit growth
+S373,https://www.nikkei.com/nkd/disclosure/tdnr/20260514534184/,COVER Corp,ir_filing,presentation,ja,2,2026-09-09,COVER FY2026/3 results presentation - LOCATED NOT READ
+S374,https://www.aoni.co.jp/,Aoni Production,agency_official,corporate,ja,1,2026-09-09,Aoni Production ~492 talents per talent database; industry largest; zero audio hardware collabs
+S375,https://rtbsquare.work/archives/61430,RTB Square,trade_press,article,ja,4,2026-09-09,SHUEISHA 85th term - 事業収入 EXCEEDED 1100億円 AND SURPASSED PUBLISHING SALES FOR THE FIRST TIME. Revenue 2289億5400万円 -0.1%
+S376,https://news.yahoo.co.jp/expert/articles/840f7fc0c3c132d959b2a4b2ae56cf944948b49f,Yahoo Expert Kawamura,trade_press,analysis,ja,4,2026-09-09,Shueisha analysis - business income passing publishing sales marks the transition to a comprehensive content company
+S377,https://www.shinbunka.co.jp/archives/14127,Shinbunka Online,trade_press,article,ja,4,2026-09-09,Shueisha slight decrease in revenue and profit; business income exceeds publishing sales
+S378,https://www.bunkanews.jp/article/464887/,The Bunka News,trade_press,article,ja,4,2026-09-09,SHOGAKUKAN 88th term revenue 1035億6700万円 -5.5%; ordinary 22億9300万円 -53.0%; digital income also declined
+S379,https://www.bunkanews.jp/article/424058/,The Bunka News,trade_press,article,ja,4,2026-09-09,SHOGAKUKAN 87th term 版権収入等 157億2900万円 +26.8% DRIVEN BY FILM AND TV ADAPTATIONS OF ITS MANGA
+S380,https://gamebiz.jp/news/422754,gamebiz,trade_press,article,ja,4,2026-09-09,KODANSHA 87th term revenue 1691億6900万円 -1.1%; operating profit 104億円
+S381,https://www.bunkanews.jp/article/454118/,The Bunka News,trade_press,article,ja,4,2026-09-09,KODANSHA FULL REVENUE SPLIT - products 430億 digital 861億 RIGHTS 285億4000万 -11.8% advertising 69億 real estate 30億
+S382,https://gamebiz.jp/news/428879,gamebiz,trade_press,article,ja,4,2026-09-09,SHOPRO FY2026/3 net income 24億1500万円 -9.6% - the joint licensing arm of Shogakukan and Shueisha
+S383,https://gamebiz.jp/news/428597,gamebiz,trade_press,article,ja,4,2026-09-09,ANIPLEX FY2026/3 revenue 2115億9500万円 +45.1%; operating profit 390億8300万円 +62.2%; net 310億5800万円 +46.3%
+S384,https://gamebiz.jp/news/408246,gamebiz,trade_press,article,ja,4,2026-09-09,Aniplex FY2025/3 revenue 1458億3200万円 -3.5%; operating profit 240億9800万円 +3.4%
+S385,https://kanpo-kanpo.blog.jp/archives/44774991.html,Kanpo Blog,trade_press,filing_notice,ja,4,2026-09-09,Aniplex FY2025/3 official gazette settlement notice - gross profit 453億5100万円
+S386,https://finance.yahoo.co.jp/quote/9605.T/financials,Yahoo Finance Japan,trade_press,financial_data,ja,4,2026-09-09,TOEI FY2026/3 revenue 1853億3300万円 +3.0%; operating profit 360億9600万円 +2.7%; five segments
+S387,https://www.toei.co.jp/ir/library/result/__icsFiles/afieldfile/2025/11/14/251114.pdf,Toei,ir_filing,quarterly_report,ja,2,2026-09-09,Toei FY2026/3 H1 tanshin - NOT FULLY READ
+S388,https://gamebiz.jp/news/425677,gamebiz,trade_press,article,ja,4,2026-09-09,TOEI ANIMATION FY2026/3 UPWARD REVISION - revenue 936億円 operating 310億円 driven by OVERSEAS LICENSING ABOVE PLAN
+S389,https://data.swcms.net/file/toei-anim/dam/jcr:c0ab61b4-a572-4db1-a9b8-e304a70fbb76/140120260513529444.pdf,Toei Animation,ir_filing,supplementary_data,ja,2,2026-09-09,TOEI ANIMATION 版権事業 SEGMENT 489億500万円 from 505億8200万円 - ~52% of revenue and THE BEST LICENSING BENCHMARK IN THE PROJECT
+S390,https://data.swcms.net/file/toei-anim/dam/jcr:d5cc69bf-e3f4-4ea6-9e7c-e9c732deba84/140120260512527159.pdf,Toei Animation,ir_filing,annual_report,ja,2,2026-09-09,Toei Animation FY2026/3 tanshin
+S391,https://www.tsuburaya-fields.co.jp/ir/j/files/press/2026/press_20260512c.pdf,Tsuburaya Fields HD,ir_filing,presentation,ja,2,2026-09-09,TSUBURAYA PRODUCTIONS FY2026/3 revenue 138億7000万円 -15.4%; operating profit 9億3000万円 -67.0%; Ultraman 60th and STRATEGIC COLLABORATIONS TO RAISE IP VALUE; China licensing decline
+S392,https://gamebiz.jp/news/420882,gamebiz,trade_press,article,ja,4,2026-09-09,Tsuburaya Fields HD Q3 operating profit +97% to 185億円 driven by pachinko not IP
+S393,http://animationbusiness.info/archives/15196,Animation Business Journal,trade_press,article,ja,4,2026-09-09,Tsuburaya China licensing had doubled previously - trading cards toys theme parks; context for the later decline
+S394,https://gamebiz.jp/news/425889,gamebiz,trade_press,article,ja,4,2026-09-09,KADOKAWA FY2026/3 operating profit -51.3%; LICENSING INCOME -21.1%; anime and live-action segment SWUNG TO AN OPERATING LOSS
+S395,https://japanir.jp/company/company-9468/ir/9468-20260514-01_wp_financial_summary/,Japan IR,trade_press,financial_summary,ja,4,2026-09-09,KADOKAWA FY2026/3 revenue 2829億円 net income 12億円
+S396,https://www.khara.co.jp/info/,Khara,brand_official,corporate,ja,1,2026-09-09,KHARA company profile - founded 2006-05-17 by Hideaki Anno; business includes RIGHTS OWNERSHIP; HQ Suginami
+S397,https://ja.wikipedia.org/wiki/カラー_(映像制作会社),Wikipedia,community,encyclopedia,ja,6,2026-09-09,Khara established GROUNDWORKS as a rights-management subsidiary - THE ACTUAL EVANGELION LICENSING COUNTERPARTY
+S398,https://www.khara.co.jp/history/,Khara,brand_official,corporate,ja,1,2026-09-09,Khara corporate history
+S399,https://ja.wikipedia.org/wiki/ニトロプラス,Wikipedia,community,encyclopedia,ja,6,2026-09-09,NITROPLUS founded 2000; Super Sonico originated as the image character for the NITRO SUPER SONIC live event
+S400,https://www.nikkei.com/article/DGXZQOUC2689K0W4A620C2000000/,Nikkei,trade_press,article,ja,4,2026-09-09,CYBERAGENT ACQUIRED NITROPLUS FOR JPY 16.7bn - 72.5% from 2024-07-01. FY2023/8 revenue 40億円 net income 6億2300万円
+S401,https://pdf.cyberagent.co.jp/C4751/d0Ia/PFRP/VdJ2.pdf,CyberAgent,ir_filing,disclosure,ja,2,2026-09-09,CyberAgent official disclosure of the Nitroplus share acquisition
+S402,https://news.yahoo.co.jp/articles/74d93d0bc5c39bba5299dd9ffb9874c68a36714d,Otaku Soken via Yahoo,trade_press,article,ja,4,2026-09-09,COLOPL FY2026/9 H1 revenue 100億8800万円 -28.2%; entertainment segment returned to operating profit
+S403,http://animationbusiness.info/archives/7706,Animation Business Journal,trade_press,article,ja,4,2026-09-09,BROCCOLI FY2019/2 revenue 59億7500万円 with Uta no Prince-sama MORE THAN HALF of revenue
+S404,https://www.sbbit.jp/article/cont1/117515,SB Bit,trade_press,analysis,ja,4,2026-09-09,Uta no Prince-sama scale analysis - franchise valued at 100-300億円
+S405,https://www.joqr.co.jp/annai/corporate_profile/,Bunka Broadcasting,brand_official,corporate,ja,1,2026-09-09,Bunka Broadcasting company profile - radio production internet radio multimedia film broadcast technology real estate
+S406,https://otonal.co.jp/radioad_dl/28247,Otonal,trade_press,media_kit,ja,4,2026-09-09,Bunka Broadcasting A&G MEDIA DATA - ~30 terrestrial programmes plus ~100 on the internet channel
+S407,https://ja.wikipedia.org/wiki/文化放送エクステンド,Wikipedia,community,encyclopedia,ja,6,2026-09-09,Bunka Broadcast Extend exists to MONETISE RADIO-BORN CONTENT; housed in Bunka Broadcasting Media Plus
+S408,https://finance.yahoo.co.jp/quote/9404.T/financials,Yahoo Finance Japan,trade_press,financial_data,ja,4,2026-09-09,NIPPON TV HD FY2026/3 revenue 4844億円 +4.9%; operating profit 693億円 +26.2%
+S409,https://www.ntvhd.co.jp/data_cms/pdf/news/38_3q.pdf,Nippon TV HD,ir_filing,quarterly_report,ja,2,2026-09-09,Nippon TV merchandise sales revenue 262億7500万円 at Q3 up 7億1700万円
+S410,https://www.universal-music.co.jp/company/,Universal Music Japan,brand_official,corporate,ja,1,2026-09-09,UNIVERSAL MUSIC JAPAN ~550 employees; capital 295億200万円; founded 1990-04-20 as PolyGram; REVENUE NOT DISCLOSED
+S411,https://the-shashi.com/tse/5032/workforce/,The Shashi,trade_press,financial_data,ja,4,2026-09-09,ANYCOLOR 532 employees plus 34 temporary; average tenure 2.3 years; average age 31.8
+S412,https://www.nikkei.com/nkd/company/salary/?scode=5032,Nikkei,trade_press,company_data,ja,4,2026-09-09,ANYCOLOR average annual salary 496万円
+S413,https://www.nikkei.com/nkd/company/salary/?scode=5253,Nikkei,trade_press,company_data,ja,4,2026-09-09,COVER average annual salary 610万円
+S414,https://edinetdb.jp/company/E38478/text,EDINET DB,ir_filing,annual_report,ja,2,2026-09-09,COVER full securities report text - headcount rose +142 staff YoY; exact total PAYWALLED
+S415,https://www.jpx.co.jp/listing/stocks/new/cg27su000000198z-att/03COVER-1s.pdf,JPX,ir_filing,ipo_prospectus,ja,2,2026-09-09,COVER IPO prospectus - NOT READ
+S416,https://gamebiz.jp/news/427878,gamebiz,trade_press,article,ja,4,2026-09-09,BANDAI NAMCO FILMWORKS FY2026/3 net income 33億1900万円 -43.8%
+S417,https://gamebiz.jp/news/407548,gamebiz,trade_press,article,ja,4,2026-09-09,Bandai Namco Filmworks FY2025/3 net income 59億600万円 +48.8%
+S418,https://gamebiz.jp/news/387495,gamebiz,trade_press,article,ja,4,2026-09-09,Bandai Namco Filmworks FY2024/3 net income 39億7000万円 -25.6%
+S419,https://ja.wikipedia.org/wiki/バンダイナムコミュージックライブ,Wikipedia,community,encyclopedia,ja,6,2026-09-09,KIRAMUNE LINEAGE RESOLVED - Music Live was formerly LANTIS then Bandai Namco Live Creative; Filmworks was formerly BANDAI VISUAL
+S420,https://salesnow.jp/db/companies/jcb03244mh8t77m2x,SalesNow DB,trade_press,company_data,ja,4,2026-09-09,YOSTAR 319 employees as of 2026-01-01; revenue NOT DISCLOSED by company policy
+S421,https://vivion.jp/company/groupcompany/,viviON,brand_official,corporate,ja,1,2026-09-09,viviON group companies incl Axis which operates DLsite
+S422,https://recgame.jp/company/detail/1371,RecGame,trade_press,company_data,ja,4,2026-09-09,viviON group 694 employees as of March 2025; DLsite revenue grown 24 consecutive years
+S423,https://www.bunkanews.jp/article/380892/,The Bunka News,trade_press,article,ja,4,2026-09-09,Shogakukan 86th term - rights advertising and digital all grew
+S424,https://media-radar.jp/contents/meditsubu/publisher_ranking/,Media Radar,trade_press,ranking,ja,4,2026-09-09,Japanese publisher revenue ranking 2026 - comparison of the four majors
